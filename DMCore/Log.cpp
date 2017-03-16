@@ -72,6 +72,7 @@
 // D: Exit on fatal error flag
 //-----------------------------------------------------------------------------
 
+auto my_logger = spd::basic_logger_mt("basic_logger","/home/alex/c++/DM/logs/log.txt");
 bool bExitOnFatalError; 
 
 //-----------------------------------------------------------------------------
@@ -206,43 +207,54 @@ void DisableAllLoggingStreams() {
 
 // D: the log function (works like a printf)
 int Log(string sLoggingStream, const char* lpszFormat, ... ) {
-/*  va_list pArgs;*/
-  //int returnCode = 0;
+  va_list pArgs;
+  int returnCode = 0;
 
-  //// check if the logging stream exists
+  // check if the logging stream exists
   //TLoggingStreamsHash::iterator iPtr;
-  //// if the stream is not defined, return
+  // if the stream is not defined, return
   //if((iPtr = lshLogStreams.find(sLoggingStream)) == lshLogStreams.end()) {
     //Log(WARNING_STREAM, "Attempt to log on undefined logging stream: " + 
       //sLoggingStream);
     //return 0;
   //}
 
-  //// get the current time
+  // get the current time
   //_int64 liTimestamp = GetCurrentAbsoluteTimestamp();
 
-  //// put it on the screen, if the stream is to be displayed
-  //va_start(pArgs, lpszFormat);
+  // put it on the screen, if the stream is to be displayed
+  va_start(pArgs, lpszFormat);
   //if(iPtr->second.bDisplayed) {
-        //// construct the string
-        //char lpszBuffer1[STRING_MAX];
-        //char lpszBuffer2[STRING_MAX];
+        // construct the string
+  //char lpszBuffer1[STRING_MAX];
+  char lpszBuffer[STRING_MAX];
 
-    //_snprintf(lpszBuffer1, STRING_MAX-1, "[%s@%s (%d)] ", sLoggingStream.c_str(), 
-                 //TimestampToString(liTimestamp).c_str(), 
-                 //GetSessionTimestamp(liTimestamp));
-    //_vsnprintf(lpszBuffer2, STRING_MAX-1, lpszFormat, pArgs);
-        //strncat(lpszBuffer1, lpszBuffer2, STRING_MAX-2-strlen(lpszBuffer1));
-        //strncat(lpszBuffer1, "\n", STRING_MAX-1-strlen(lpszBuffer1));
-        //// display it
+ /** snprintf(lpszBuffer1, STRING_MAX-1, "[%s@%s (%d)] ", sLoggingStream.c_str(), 
+                 TimestampToString(liTimestamp).c_str(), 
+                 GetSessionTimestamp(liTimestamp));
+                 **/
+  vsnprintf(lpszBuffer, STRING_MAX-1, lpszFormat, pArgs);
+  //strncat(lpszBuffer1, lpszBuffer2, STRING_MAX-2-strlen(lpszBuffer1));
+  strncat(lpszBuffer, "\n", STRING_MAX-1-strlen(lpszBuffer));
+        // display it
         //SetConsoleTextAttribute(hStdOutput, (WORD)lshLogStreams[sLoggingStream].iColor);
         //DWORD cWritten;
         //WriteFile(hStdOutput, lpszBuffer1, lstrlen(lpszBuffer1), &cWritten, NULL);
-  //}
+  if (sLoggingStream == "WAR"){
+    my_logger->warn(static_cast<string>(lpszBuffer));
+  } else if (sLoggingStream == "ERR") {
+    my_logger->error(static_cast<string>(lpszBuffer));
+  } else if (sLoggingStream == "FATAL_ERROR"){
+    my_logger->error(static_cast<string>(lpszBuffer));
+  }else {
+    string output = sLoggingStream + "|" + static_cast<string>(lpszBuffer);
+    my_logger->info(output);
+  }
+   //my_logger->info(static_cast<string>(lpszBuffer1));
 
-  //// also send it to the file if logging is initialized
-  //// and the stream is to enabled for logging
-  //if(fileLog && iPtr->second.bEnabled) {
+  // also send it to the file if logging is initialized
+  // and the stream is to enabled for logging
+  /*if(fileLog && iPtr->second.bEnabled) {*/
 
     //// then do the printf into the file
     //fprintf(fileLog, "[%s@%s (%d)] ", sLoggingStream.c_str(), 
@@ -250,10 +262,10 @@ int Log(string sLoggingStream, const char* lpszFormat, ... ) {
                  //GetSessionTimestamp(liTimestamp));
     //returnCode = vfprintf(fileLog, lpszFormat, pArgs);
     //fprintf(fileLog, "\n");
-    //fflush(fileLog);
+    /*fflush(fileLog);*/
   //}
 
-  //return(returnCode);
+  return returnCode;
 }
 
 // D: another variant of the log function, just marshalls info
@@ -335,21 +347,21 @@ void TerminateLogging() {
 
 // D: Warning
 void __Warning(const char* lpszWarning, char* lpszFile, int iLine) {
-	//Log(WARNING_STREAM, "%s <file %s, line %d>.", lpszWarning, lpszFile, iLine);
+  Log(WARNING_STREAM, "%s <file %s, line %d>.", lpszWarning, lpszFile, iLine);
 }
 
 // D: NonFatal error. 
 void __Error(const char* lpszError, char* lpszFile, int iLine) {
-	//Log(ERROR_STREAM, "%s <file %s, line %d>.", lpszError, lpszFile, iLine);
+  Log(ERROR_STREAM, "%s <file %s, line %d>.", lpszError, lpszFile, iLine);
 }
 
 // D: Fatal error. Quit after dealing with it
 #pragma warning (disable:4127)
 void __FatalError(const char* lpszError, char* lpszFile, int iLine) {
-	//Log(FATALERROR_STREAM, "%s <file %s, line %d>.", lpszError, lpszFile, iLine);
-    //if(!bExitOnFatalError) {
-        //while(1);   
-    //}
-	//exit(1);
+ // Log(FATALERROR_STREAM, "%s <file %s, line %d>.", lpszError, lpszFile, iLine);
+  //  if(!bExitOnFatalError) {
+   //     while(1);   
+   // }
+  //exit(1);
 }
 #pragma warning (default:4127)

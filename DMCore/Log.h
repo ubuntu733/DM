@@ -70,7 +70,8 @@
 
 #include "Core.h"
 #include "Utils/Utils.h"
-
+#include "spdlog/spdlog.h"
+namespace spd = spdlog;
 //-----------------------------------------------------------------------------
 // Logging streams: definition and functions
 //-----------------------------------------------------------------------------
