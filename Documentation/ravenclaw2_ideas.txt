@@ -1,0 +1,169 @@
+#######################################################
+# This document contains thoughts on proposed changes
+# to RavenClaw to move towards a real-time interaction    
+# framework, as opposed to a strict turn-taking framework
+
+From Turn-Based Dialogue Management to Event-Based Dialogue Management
+
+# Antoine Raux 10/2005
+
+
+Examples of dialogues that we want to deal with:
+
+
+Example 1:
+----------
+S1: What can I do for you?
+U2: I need to go from Carnegie Mellon (1) to the airport (2) tomorrow at five
+S3: (1 from Carnegie Mellon)
+S4: (2 to the airport)
+S5: Leaving at five pm. 
+S6: Let me check that for you.
+...
+
+What happens:
+- DM executes S1
+  - IM realizes S1
+  - DM gets S1 output notification
+- IM detects U2(1)
+- DM gets U2(1) input notification
+  - DM executes implicit confirm S3
+  - IM realizes S3
+  - DM gets S3 output notification
+- IM detects U2(2)
+- DM gets U2(2) input notification
+  - DM executes implicit confirm S4
+  - IM realizes S4
+  - DM gets S4 output notification
+- IM detects complete U2
+- DM gets U2 complete input notification
+  - DM executes implicit confirm S5
+  - IM realizes S5
+  - DM executes task prompt S6
+  - IM realizes S6
+  - DM gets S5 output notification
+  - DM gets S6 output notification
+
+
+Example 2:
+----------
+S: What can I do for you?
+U: I would like schedule information...
+S: aha
+U: What bus goes from Carnegie Mellon to the airport?
+S: ...
+
+Example 3:
+----------
+S: What can I do for you?
+U: I want the schedule of the 28X
+S: The 28X, (1) where are you leaving from?
+U: (1 yes)
+U: Carnegie Mellon
+S: From Carnegie Mellon, (2) and what is your destination?
+U: (2 aha)
+U: The airport
+...
+Example 4:
+----------
+S: What can I do for you?
+U: I want to take the bus at ####### to go to downtown because I ...
+S: Sorry, where did you say you want to take the bus at?
+U: Squirrel Hill
+S: Okay, Squirrel Hill. Going to downtown?
+U: yes
+S: Alright. When do you wanna travel?
+
+Example 5 (TeamTalk task):
+----------
+U: Clyde, (1) go to the end of the corridor.
+C: (1 yes)
+C: Okay.
+U: Bashful, (1) can you patrol...
+B: (1 yes)
+C: I found a potentially dangerous object 10 meters from
+   the end of the corridor!
+U: Can I have a visual on it?
+
+Example 6 (RoomLine task):
+----------
+S: What can I do for you?
+U: I need a room for next Tuesday between 10am and noon.
+S: Next tuesday, between 9 and ...
+U: no ten
+S: Between 10 and noon (1). Do you need a projector?
+U: (1 yes)
+U: no
+
+############################################################################
+
+Ideas
+-----
+
+Event-based DM allows to deal with non-turn synchronous phenomena such as:
+- understanding of partial user utterances
+- backchannels (both from user and system)
+- real-world tasks (e.g. robots)
+
+Changes to the core loop
+------------------------
+2 alternatives to allow events to be interpreted and acted upon at any time 
+(not only waiting for user inputs):
+
+1) Agent in focus (on top of the stack) ALWAYS gets executed after each event 
+BUT what "execution" entails depends on context (e.g. for a request agent
+how long ago was the question last asked). Decision is made by 
+OutputManager.
+
+-> 2) DMCore has a flag indicating who has (will have) the floor at each
+dialogue state. Each agent has a flag (virtual method) to state
+if it requires the floor to be executed or not. At each incoming event,
+agent in focus gets executed if:
+        - the system has the floor
+or      - the agent in focus does not require the floor
+
+Speculative Execution
+---------------------
+One additional problem that has become salient with event-based processing
+is that we need to roll-back agents (mostly inform/requests) that were
+executed but not realized by the IM yet (i.e. they never reached the user).
+I'm planning to use 2 mechanisms for that:
+1) an "Undo" method on agents that cancels their execution
+2) a "IsConversationSynchronous" flag on agents that, if set, prevents
+   them from being executed until the conversation actually reaches
+   their dialogue state
+   
+Canceling Sub-dialogues
+-----------------------
+This issue is not really related to event-based DM (i.e. it is already
+a (potential) problem in RavenClaw 1.0) but came up during our discussions.
+Let us consider request agent R scheduled by an agency A that has 
+precondition X. Assume X is true when A is planned by its own parent agency.
+Now assume that when answering to R, the user produces an input that makes X 
+false. Should we remove A and its descendants (including X) from the stack?
+Currently, we don't. It seems that there are clear cases where we should. 
+
+E.g.:
+U: I need a flight to Baltimore.   (ASR=GIVE ME RENTACAR INFORMATION)
+S: okay, car rental information. In which city do you want a car?
+U: No, flight information.
+...
+
+At this point, it seems we should completely remove from the stack the 
+"CarRental" agency which was triggered by the misrecognized 
+(and "misgrounded") user utterance. 
+Here are two possible solutions to this problem: 
+   1) during the "RemoveCompletedAgentsFromStack" phase of the core loop,
+      remove agents whose preconditions have become false (instead of only the
+      ones whose completion criterion has become true)
+or 2) add a FAIL_WHEN_PRECONTION_FALSE directive that the dialogue designer
+      can put in the task specification which is equivalent to:
+      FAIL_WHEN(~precondition) (maybe with a special type of fail?)
+      
+Incremental Processing of Events
+--------------------------------
+Some events have a duration (e.g. user utterances) and are detected 
+incrementally, i.e. the system gets notifications of the current progress
+of the event while the event is progressing and a final notification
+once the event is deemed complete. Need to look into Allen and Ferguson
+(Actions and Events in Interval Temporal Logic).

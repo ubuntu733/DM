@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+   <FileVersion major="1" minor="6" />
+   <Project>
+      <Option title="DM" />
+      <Option makefile_is_custom="1" />
+      <Option compiler="gcc" />
+      <Option virtualFolders="CMake Files\;" />
+      <Build>
+      <Target title="all">
+         <Option working_dir="/home/alex/c++/DM" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/alex/c++/DM/Makefile&quot;  VERBOSE=1 all" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/alex/c++/DM/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/alex/c++/DM/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/alex/c++/DM/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="edit_cache">
+         <Option working_dir="/home/alex/c++/DM" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/alex/c++/DM/Makefile&quot;  VERBOSE=1 edit_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/alex/c++/DM/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/alex/c++/DM/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/alex/c++/DM/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="rebuild_cache">
+         <Option working_dir="/home/alex/c++/DM" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/alex/c++/DM/Makefile&quot;  VERBOSE=1 rebuild_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/alex/c++/DM/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/alex/c++/DM/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/alex/c++/DM/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="RAVENCLAW">
+         <Option output="/home/alex/c++/DM/RAVENCLAW" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/alex/c++/DM" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/alex/c++/DM" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.8" />
+            <Add directory="/usr/include/c++/4.8/backward" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.8" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/alex/c++/DM/Makefile&quot;  VERBOSE=1 RAVENCLAW" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/alex/c++/DM/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/alex/c++/DM/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/alex/c++/DM/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="RAVENCLAW/fast">
+         <Option output="/home/alex/c++/DM/RAVENCLAW" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/alex/c++/DM" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/home/alex/c++/DM" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/4.8" />
+            <Add directory="/usr/include/c++/4.8/backward" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/4.8" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/alex/c++/DM/Makefile&quot;  VERBOSE=1 RAVENCLAW/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/alex/c++/DM/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/alex/c++/DM/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/alex/c++/DM/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      </Build>
+      <Unit filename="/home/alex/c++/DM/DMCore/Agents/Agent.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Agents/CoreAgents/DMCoreAgent.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Agents/CoreAgents/DTTManagerAgent.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Agents/CoreAgents/InteractionEventManagerAgent.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Agents/CoreAgents/OutputManagerAgent.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Agents/CoreAgents/StateManagerAgent.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Agents/CoreAgents/TrafficManagerAgent.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Agents/DialogAgents/BasicAgents/DialogAgency.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Agents/DialogAgents/BasicAgents/MAExecute.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Agents/DialogAgents/BasicAgents/MAExpect.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Agents/DialogAgents/BasicAgents/MAInform.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Agents/DialogAgents/BasicAgents/MARequest.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Agents/DialogAgents/DialogAgent.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Agents/DialogAgents/DiscourseAgents/AllDiscourseAgents.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Agents/DialogAgents/DiscourseAgents/DAHelp.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Agents/DialogAgents/DiscourseAgents/DANonUnderstanding.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Agents/DialogAgents/DiscourseAgents/DAQuit.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Agents/DialogAgents/DiscourseAgents/DARepeat.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Agents/DialogAgents/DiscourseAgents/DAStartOver.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Agents/DialogAgents/DiscourseAgents/DASuspend.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Agents/DialogAgents/DiscourseAgents/DATerminate.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Agents/DialogAgents/DiscourseAgents/DATimeout.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Agents/Registry.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Concepts/BoolConcept.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Concepts/Concept.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Concepts/FloatConcept.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Concepts/FrameConcept.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Concepts/IntConcept.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Concepts/StringConcept.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Concepts/StructConcept.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/DMCore.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Events/InteractionEvent.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingActions/GAAccept.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingActions/GAAskRepeat.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingActions/GAAskRephrase.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingActions/GAAskShortAnswerAndReprompt.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingActions/GAAskShortAnswerAndWhatCanISay.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingActions/GAAskStartOver.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingActions/GAExplainMore.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingActions/GAExplicitConfirm.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingActions/GAFailRequest.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingActions/GAFullHelp.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingActions/GAGiveUp.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingActions/GAImplicitConfirm.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingActions/GAInteractionTips.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingActions/GAMoveOn.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingActions/GANoAction.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingActions/GANotifyNonunderstanding.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingActions/GARepeatPrompt.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingActions/GASpeakLessLoudAndReprompt.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingActions/GAWhatCanISay.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingActions/GAYieldTurn.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingActions/GroundingAction.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingModels/AllGroundingModels.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingModels/GMConcept.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingModels/GMRequestAgent.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingModels/GMRequestAgent_Experiment.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingModels/GMRequestAgent_HandCrafted.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingModels/GMRequestAgent_LR.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingModels/GMRequestAgent_NumNonu.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingModels/GroundingModel.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingUtils.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Log.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Outputs/FrameOutput.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Outputs/Output.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DialogTask/DialogTask.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/Utils/Utils.cpp">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Agents/Agent.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Agents/AllAgents.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Agents/CoreAgents/AllCoreAgents.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Agents/CoreAgents/DMCoreAgent.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Agents/CoreAgents/DTTManagerAgent.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Agents/CoreAgents/InteractionEventManagerAgent.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Agents/CoreAgents/OutputManagerAgent.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Agents/CoreAgents/StateManagerAgent.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Agents/CoreAgents/TrafficManagerAgent.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Agents/DialogAgents/AllDialogAgents.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Agents/DialogAgents/BasicAgents/AllBasicAgents.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Agents/DialogAgents/BasicAgents/DialogAgency.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Agents/DialogAgents/BasicAgents/MAExecute.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Agents/DialogAgents/BasicAgents/MAExpect.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Agents/DialogAgents/BasicAgents/MAInform.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Agents/DialogAgents/BasicAgents/MARequest.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Agents/DialogAgents/DialogAgent.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Agents/DialogAgents/DiscourseAgents/AllDiscourseAgents.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Agents/DialogAgents/DiscourseAgents/DAHelp.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Agents/DialogAgents/DiscourseAgents/DANonUnderstanding.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Agents/DialogAgents/DiscourseAgents/DAQuit.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Agents/DialogAgents/DiscourseAgents/DARepeat.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Agents/DialogAgents/DiscourseAgents/DAStartOver.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Agents/DialogAgents/DiscourseAgents/DASuspend.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Agents/DialogAgents/DiscourseAgents/DATerminate.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Agents/DialogAgents/DiscourseAgents/DATimeout.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Agents/Registry.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Concepts/AllConcepts.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Concepts/BoolConcept.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Concepts/Concept.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Concepts/DateTimeConcept.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Concepts/FloatConcept.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Concepts/FrameConcept.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Concepts/IntConcept.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Concepts/StringConcept.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Concepts/StructConcept.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Core.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/DMCore.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Events/InteractionEvent.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/Grounding.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingActions/AllGroundingActions.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingActions/GAAccept.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingActions/GAAskRepeat.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingActions/GAAskRephrase.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingActions/GAAskShortAnswerAndReprompt.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingActions/GAAskShortAnswerAndWhatCanISay.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingActions/GAAskStartOver.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingActions/GAExplainMore.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingActions/GAExplicitConfirm.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingActions/GAFailRequest.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingActions/GAFullHelp.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingActions/GAGiveUp.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingActions/GAImplicitConfirm.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingActions/GAInteractionTips.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingActions/GAMoveOn.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingActions/GANoAction.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingActions/GANotifyNonunderstanding.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingActions/GARepeatPrompt.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingActions/GASpeakLessLoudAndReprompt.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingActions/GAWhatCanISay.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingActions/GAYieldTurn.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingActions/GroundingAction.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingActions/SpeakLessLoudAndReprompt.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingModels/AllGroundingModels.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingModels/GMConcept.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingModels/GMRequestAgent.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingModels/GMRequestAgent_Experiment.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingModels/GMRequestAgent_HandCrafted.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingModels/GMRequestAgent_LR.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingModels/GMRequestAgent_NumNonu.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingModels/GroundingModel.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Grounding/GroundingUtils.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Log.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Outputs/FrameOutput.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DMCore/Outputs/Output.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/DialogTask/DialogTask.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/Utils/Utils.h">
+      </Unit>
+      <Unit filename="/home/alex/c++/DM/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\" />
+      </Unit>
+   </Project>
+</CodeBlocks_project_file>

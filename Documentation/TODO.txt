@@ -1,0 +1,664 @@
+
+[ ] Things that might still need to happen in concepts
+
+	... the various types of updates, might need to improve things there... so far
+	things (the naive probabilistic updates) are done in the ValConf sets
+	but that might need to move somewhere else
+	
+	[ ] need to also sort out the order and how precisely the "always" update
+		updates will happen
+		
+	- maybe want to add a IsValid (on a CHyp... which will tell me if there's 
+	  anything in there with confidence > 0)
+	- add index checks everywhere in CValConfSet
+	- potentially it's not necessary to write reopen in all the atomic classes
+	- potentially it's not necessary to write update_Set in all the atomic classes
+	- potentially it's not necessary to write update_NaiveProbabilistic in all the atomic
+		classes
+
+[ ] Why all these ON_COMPLETION(RESET) instead of ON_COMPLETION(REOPEN)
+	[X] Changed them at least in the Help agents... seems fine so far
+
+01-26-04
+-------------------------------------------------------------------------------
+[X] Make the output manager store pointers to the concepts for notifications
+[X] Rearrange the dialogagent.h and cpp files
+[X] Add logging for the binding history information
+[ ] Figure out how to compute the time-series features, and also how to log
+    them
+[X] Develop some of the non-understanding strategies
+    [ ] Discuss them with alex
+
+-------------------------------------------------------------------------------
+
+// [2004-03-03] (dbohus): added RestartTopic in the DMCore so that you can 
+//  restart various agents as desired
+
+- added SAME_AS_TRIGGER, so that you can write
+    PRECONDITION(SAME_AS_TRIGGER) if you need the agent to be executed only
+    when the trigger holds, and not planned for otherwise
+    - actually you can obtain the same effect by saying PRECONDITION(FALSE)
+      but this makes for a nicer reading i think since PRECONDITION(FALSE)
+      might be a bit confusing...
+    
+
+- made changes to Generic.gra and DateTime to handle time durations
+
+//   [2004-04-18] (dbohus):  renamed MergedHistory to 
+//                            CreateMergedHistoryConcept and added a 
+//                            MergeHistory function which merges the history
+//                            up into the current value for a concept
+
+- added grounding models on dialogue agents
+  (you have to say SUBAGENT(X, CX, none) for now
+
+- removed USE_ALL_GROUNDING_ACTIONS from CORE_CONFIGURATION (you will need to 
+remove it to compile)
+- added grounding_manager_configuration = no_grounding | full_grounding in the
+configuration file. You can set it to no_grounding and everything should run
+as before. 
+- RoomLine.pm the getActObject changed so that we do a regexp identification of the
+object (this allow explicit confirms to just send the object)
+  Antoine will need to change BusLine.pm and the rest of the systems also will
+  need to change their NLGs 
+- Changed the behavior of HasCompleted and HasFailed so that they don't set the
+completion status on the agent
+    (this actually might lead to some problems if for instance an agency completes
+     but later on you directly affect some of its concepts for instance in a way
+     which would cause its success criterion to not be satisfied any more)
+- Added some macros: FINISH_AGENT, RESET_AGENT, REOPEN_AGENT, REOPEN_CONCEPT, RESTORE_CONCEPT
+- Moved both the focus claims and the grounding management phases out of the input 
+  phase. Right now they will both get executed at each execution cycle, but only
+  if the core is signaled to do so. Performing an input phase automatically signals
+  the core to do so. You can also signal it manually (SignalGroundingPhase, etc)
+- The grounding agents have dynamic ids corresponding to the concept or agent 
+  which they are grouding
+- Changed the structure ITEM definition so that it includes a grounding model
+  I recommend not using nested grounding models;
+- Changed the ARRAY concept definition to include a groudning model
+- Changed TTY to display stuff that helios sends to the DM, and to send tty
+  as an input source
+    - to use the new TTY you need to make changed to your hub.pgm file:
+        - add process_parse as an operation on tty-server
+        - add a rule similar to the one that trigger DialogManager.process_parse
+          make it trigger tty-sphinx.process_parse, and put the rule before the 
+          one that triggers the dialog manager in your pgm file. 
+    
+    [X] more changes will be needed to tty to make sure it works with the changes
+        antoine made. also i need a way of sending the confidence scores from 
+        the tty to helios
+        
+
+
+[X] Added stuff for input and output classes so that no defines any more
+[X] Bug fix for output when no notifications from output device
+[X] Bug fix for repeat taking itself off teh stack
+[X] Bug fix in execution policy getting called twice
+[X] Added dynamic agent ids and # shortcut for using it
+[X] Added EXECUTION_POLICY macro
+
+[ ] Might want to add beautifiers for defining agents 
+[X] and for completing agents
+
+[ ] Might be nice to add a WhenWasTopicLastAddressedByUser and 
+    WasTopicAddressedByUserInLastTurn (these might make sense only
+    on agencies and request agents)
+
+RavenClaw BUGFIX: Start dialog with a backend called used to fail
+
+BUG: [ ] In TimeoutTerminate some expectations for yes are always open, and so 
+         they catch on fire sometimes although they shouldn't. Once you fix
+         that, reset the agent to be used in Madeleine         
+         - Actually, turns out this is happening when there is no main topic
+         of conversation well defined at the beginning of the conversation. In 
+         this case, the expectation will be open
+
+[X] Made a version of SplitOnFirst which also takes into account quoted
+     substrings; changed the output manager and the traffic manager to 
+     handle sending out values that are strings with spaces...
+[X] Added ; in ON_COMPLETION so that if you have a single line you 
+    don't have to add the semicolon yourself
+        [X] notify the world
+
+
+Older stuff
+--------------------------------------------------------------------------------
+
+Questions:
+    - incorporating flags by expanding the underlying state
+    - once we have this model, how do we expand it???
+
+SOONER:
+
+[X] do the version info
+[X] made it so that the exit on fatal error is controlled
+[X] Why are the dialog.logs not created ?  - because you need to run it from 
+    the bin folder for those to get created
+[X] make sure the prompts are right on all the discourse agents
+[X] Changed stuff so that the open request agent actually works properly 
+[X] Bug (probably on barge-in, can't find some concepts to set conveyance flags)
+    (seems irreproducible) - says cannot locate concept ...
+    [X] Fixed stuff so that the outputs are identified by the session id
+[ ] Bug in repeat - for some reason it now crashes when i say repeat
+[X] Bug on output notifications, make it so that it sends the whole string
+    describing the session and the dialog manager server
+    
+[ ] Update the NLG
+    [ ] Do Old versus new information in the NLG
+    [X] And <concept=string> (antoine did this)
+    [X] Added logging and a act/object/version structure
+    
+[X] Update the automatic generation of explain_more and what_can_i_say prompts
+    
+[ ] Grounding
+    [ ] Do the explicit confirms
+    [ ] Do the implicit confirms
+
+[X] Set confidence on forced inputs to the system (i.e. timeouts), so that you
+    don't get a warning
+[X] Fix the warnings in the Release version of things...
+
+LATER:
+[ ] The whole conveyance updating business
+[ ] Documentation
+[ ] Understand what the hell the bargein -1, -2 
+[ ] Introduce operators for string comparisons, and maybe integers and floats
+[ ] Make a nice script for synchrozing prompts between the DM and the NLG
+[ ] Check the Concepts, make SetConveyance work virtually, put comments
+    in the h files. 
+[ ] Look at implementing a library agency for a set of requests
+[ ] Check everywhere you use STRING_MAX and cut down the strings if they are too long
+[ ] Update state manager, see what state the Core needs to expose (for now)... started
+    with the iConceptsBound, need to add the others, but also other stuff...
+[ ] Figure out how to represent expectation agenda as a string in a 
+    more complete manner.
+[ ] How can we have something execute on a concept binding ? Is that a 
+	good idea ? I.E. we need right now to have an ExpectStepDone and 
+	a ProcessStepDone that triggers on that. Maybe we should have 
+	some sort of ON_BIND for request and expect agents...
+	    [ ] Need to see how we can do on-completion on expected
+
+
+[ ] Debugging: add a dumpstatus on agencies. what exacly should
+	it dump ?
+
+[ ] When an agency has no way of continuing, deal with it in 
+    some manner... have a discourse agent for BSOD
+   
+[ ] Log everything that happens to the concepts, and think in which
+    form...
+
+[ ] implement blocking conditions on agents 
+
+[ ] DM CORE improvements	
+	[ ] Implement binding policies
+		[ ] change the level description so that an entire level can be blocked
+		[ ] look again at bindings in light of binding policies
+			[ ] see what you want to log in there
+	[ ] Logging in the DM core
+	[ ] Complete bindings and input passes
+	[ ] Deal with ambiguous focus shifts...
+
+
+04-17-03 ------------------------------------------------------------------------
+
+[X] how do we isolate the concepts framework, so that it can be
+    used by other modules, too ? The answer is that's not easily possible
+    Postpone it until we really need it
+
+[X] Implement an iterator for array concepts ? - NOT for now
+
+[X] Introduced support for *-type expectations
+
+[X] Where else can we use macros with optional parameters
+    [X] no real use for them so far
+
+[X] Added Restore on concepts
+
+[X] Fixed output manager bug on cloning on repeats
+
+[X] Implemented a Quit discourse agency.
+
+[X] Created OnCreation and OnInitialization
+
+[X] Change last turn updated to lastbindingturnnumber
+
+[X] Design for the grounding engine
+    [X] How do you do with concepts that don't want to have a grounding model 
+    [X] How about grounding on TRIGGERED_BY_COMMANDS
+
+[X] Do we want HasCompleted to check thoroughly if the agent has completed ?
+    [X] We'll try that for now. If we crash horribly, we'll see... :)
+
+
+[X] What do you do for when you don't really want to ask the question
+    unless it times out. Is that related to multiple questions ?
+    That's just yielding the turn and can be implemented using a 
+    TIMEOUT_PROMPT on an empty request
+
+03-19-03 ------------------------------------------------------------------------
+
+[X] added macros for specifying server name and port
+
+[X] Change FocusClaims so that they are pruned ... 
+
+[X] Check out all the library agents. Why doesn't timeout work anymore?
+
+[X] Review all discourse agents
+
+[X] Look at IsAvailable(), what happens when you push something empty on history
+    - it should still be not available
+
+[X] Do the ValueToString changes...
+
+03-14-03 --------------------------------------------------------------------------
+
+[X] Changes to increase readability (hopefully/somewhat)
+    [X] USE_LIBRARY_AGENT("CRepeat", "Repeat", RegisterRepeatAgent) becomes
+        USE_LIBRARY_AGENT(CRepeat, Repeat, RegisterRepeatAgent)
+    [X] ITEM(start_time, CIntConcept) becomes
+        INT_ITEM(start_time), etc BOOL/STRING/FLOAT/CUSTOM
+    [X] SYSTEM_CONCEPT(CStringConcept, "user_name") becomes
+        STRING_SYSTEM_CONCEPT(user_name) etc , same for user concepts
+    [X] A("Logout").HasCompleted() becomes
+        COMPLETED(Logout)
+    [X] SUBAGENT(CPresentResults, "PresentResults") becomes
+        SUBAGENT(PresentResults, CPresentResults)
+    [X]	REQUEST_CONCEPT("user_name") becomes
+        REQUEST_CONCEPT(user_name)
+    [X] EXPECT_CONCEPT("room_query.room_number") becomes
+      	EXPECT_CONCEPT(room_query.room_number)
+    [X] A("Logout").HasFailed() becomes
+        FAILED(Logout), similarily SUCCEEDED
+    [X] C("want_reservation").IsAvailable() becomes
+        AVAILABLE(want_reservation). there's also a NOT_AVAILABLE and an UPDATED
+    [X] ((int)C("room_query.date_time.start_time") != (int)C("room_query.date_time.end_time")) becomes
+        (C("room_query.date_time.start_time") != C("room_query.date_time.end_time"))
+    [X] C("want_reservation").IsAvailable() && (bool)C("want_reservation") becomes
+        IS_TRUE(want_reservation)   also, IS_FALSE
+    [X] DECLARE_DIALOG_TASK_ROOT(CRoomLine, "RoomLine") becomes
+        DECLARE_DIALOG_TASK_ROOT(RoomLine, CRoomLine)
+
+[X] Figure out why the RESULTS system concept in roomline appears to have noname
+[X] Also the reserve_room concept
+
+[X] Added StartOver agency
+
+[X] Added NOT_UPDATED
+
+[X] Added ClearHistory
+
+[X] Fixed IsAvailable()
+
+[X] Implement equality/comparison operators on concepts
+
+[X] Define shortcuts for concept types: CInt, CString, etc...
+
+[X] Add support for Merged history objects in output prompts
+
+
+01-28-03 --------------------------------------------------------------------------
+
+[X] ReOpen on agents does not "ReOpen" the concepts too. It just reopens
+    the topic for conversation. The ReOpening of the concepts has to 
+    be done independently... Hmm, still don't like this too much
+        - [X] Maybe ReOpen, ReOpenTopic and ReOpenConcepts ?
+        - [X] What does it mean to leave a topic open, versus just reopening 
+            the concepts it contains ? 
+
+[X] Extended syntax for grammar mappings to @(agent,agent)[slot] so that 
+    you can specify more precisely when to bind
+
+[X] Add ResetCounter and ReOpenCounter s
+    [X] ReDo those now once you've redone the Close
+
+
+01-21-03 ------------------------------------------------------------------------------
+
+[X] Check if the expectation binds to the same concept, then don't consider it doubled
+
+[X] Fix grammar mapping syntax for slots to [A.B.C].... right now it's [B | A]
+
+[x] Fix memory leak on merged history objects in traffic manager
+
+[x] Make the triggers work with reopens ? is there any reason for that ?
+    - no, not really
+
+[x] Check all the Clear()s to see if they do the right thing
+    [x] Add a ClearCurrentValue
+
+[x] Check whay happens when the core terminates... how do we notify the outside world ?
+
+[x] Make history happen on concepts...
+
+[x] Changed completion to success + failure completion
+    [x] but might still need to make it explicit ? maybe ?
+
+[x] Make the open request behavior on the default    
+
+[x] Fix discourse agents to reflect MAX_ATTEMPTS
+    [x] Check that MAX_ATTEMPS really works properly
+    
+[x] Put a check when no function name is given on a module in the traffic manager
+
+[x] Review all discourse agents
+	[x] help
+	[x] repeat
+	    [x] Check that OutputManager::Repeat works when you put the new discourse agent
+	[x] suspend
+	[x] terminate
+	[x] TimeoutSuspend
+		[x] to make this one work, make sure binding is case-insensitive
+		[x] Also add a TimeoutTerminate
+		[x] rename the file
+		[x] briefly check that it all works
+	[x] implement the context reestablishment for resume/suspend
+
+[x] Made logging configurable
+	[x] add more giDisplay messages to reflect incoming frames
+	[x] add variable to RavenClaw configuration to disable dmiDisplays
+		[x] actually did it with verbosities
+
+[x] Make use of non-interruptable
+
+[x] Make use of non-blocking
+
+
+10-18-02 -----------------------------------------------------------------------
+
+[x] Created project so that dialog task is separated
+	[x] Created separate projects for BusLine, RoomLine, LARRI
+
+[x] Change RUNProgramTests to RunDebugTests or something more reasonable
+
+[x] The use of discourse agents is now configurable
+
+[x] How can you re-start the dialog manager ?
+	[x] added the end_session [TERMINATE]
+	[x] but still need a terminate session agent
+	    [x] check on why init_session fails though afterwards
+
+[x] Actually check on the output manager
+    Use a MUTEX object to ensure concurrency in the outputmanager
+	- i.e. maybe critical sections would be best:
+		InitializeCriticalSection
+	- or with mutex
+		CreateMutex 
+	- ACTually, did it using Critical Sections
+
+[x] Check out all of Drew's work on the output manager
+    [x] Solve the concurrency control issue
+	[x] Check on whoever uses Output::Create to check for false returns and do the right thing
+	[x] what is the CFrameOutput::create auxiliary function used for ? 
+	    - nothing, so took it out
+	[x] Who deallocates cloned concepts ?
+	[x] Look at Repeat and Notify
+	[x] Introduce output history stream
+	[x] Do the prompt parsing in the same way as in the TrafficManager agent
+	[x] Object is better terminology than content, so let's do that
+	[x] Eliminate checks for valid acts
+	[x] Made sure LFOutput is in synch and nice
+
+-----------------------------------------------------------------------
+
+[x] What's the best way of doing Delete, Insert, GetSize on concept
+	arrays ? ... Given that we want polymorphism ?
+	Just have them in there for now. Dynamic cast complicates the syntax
+	too much
+
+[x] Do we have a function that indicates if a certain agent is a topic
+	of conversation ? 
+	[x]	We do have an IsActiveTopic, but that seems to work at the level
+		of tree, when it should actually work at the stack level, right ?
+
+[x] Do we ever use or plan to use multiple output history ojects in 
+    the output manager - no , so got rid of sDialogName and startid
+    
+[x] Make sure concept duplication in the output classes is ensured or not, 
+    depending on how we want to do it... 
+
+[x] Solve the interesting problem of recurring logs on undefined streams
+    when deallocating agents. Which agents are allocated statically ?
+	- fixed. it was because of the NULL agent trying to unregister itself
+
+[x] how do you guard files so that they get compiled only under the right 
+    configuration ?
+
+[x] fix the galaxy includes so that they are not included any more in the OAA 
+    version, define OAA, define GALAXY in the project
+	[x] but still have to take out the input manager ones
+
+[x] figure out a way to name the "common" interface, and do it
+	- DMInterfaces
+
+==============================================================================
+
+[x] Keep writing on document
+
+
+[x] check out the topics stuff, and think more about how the stack
+	is implemented, what does it mean to be a main topic, etc, etc
+
+[x] how do you make a trigger disabled when the agency is under the 
+    main topic
+	[x] Added IsActiveTopic
+	[x] document it
+	[x] test it, and with verbose/terse
+
+[x] Add the comments at the begginning of each file
+
+[x] probably need some sort of "NonExecutable" agent, that is 
+	never planned for execution - NOT REALLY, solved it naturally
+
+05-25-02
+----------------------------------------------------------------------
+
+[x] Keep writing on document
+
+[x] Continue on with LARRI
+	[x] Finish the handling of steps in verbose mode
+		[x] notes
+		[x] cautions
+		[x] phase transitions
+	[x] Do some more testing in verbose mode
+	[x] Figure out which are the main topics
+	[x] Inspect the logs
+	[x] Do a notification of task completion
+	[x] Do the logout
+	[x] Test suspend
+	[x] Do the terse mode
+	[x] Really update and clean the grammar
+		[x] Send generic grammar to Tina
+	[x] Create a new VSS project for all this stuff
+		[x] Put the resources in
+
+[x] Eliminated dispatch
+[x] Rearranged DMCore so that construction/destruction of core takes
+    place not in the DMCoreAgent any longer, but rather in DMCore
+
+[x] Should focus claims check for their preconditions ? Yes.
+
+[x] Implement a MountArrayOfAgents ?
+
+[x] Look at the Galaxy Interface Stuff
+
+[x] Do Mount versions with underscore and macros...
+	[x] Actually, that's wrong. Do it without the underscores, but 
+	    with special shortcut functions, like in the registry
+	[x] Change that everywhere
+
+[x] Rename/Rearrange dialogtask
+
+[x] Relook at all warnings, see which are warnings, and which are really
+	errors
+
+
+05-18-02
+----------------------------------------------------------------------
+
+[x] Elaborate the PopAgentFromExecutionStack routine to pop up even things that
+    are not on top of it
+    [x] Is that really needed ?
+
+[x] Continue on with LARRI
+	[x] completed tree building, including phase closing
+	[x] and in more detail through the basic execution step
+	[x] Start implementing them
+
+[x] Add OnCompletion functionality for dialog agents ...
+	[x] when is OnCompletion triggered ? 
+		[x] changed it to when the agent is pulled off the stack
+	[x] eliminated Finished with, move completed agent cleaning
+		in the core
+	[x] including Block and Reset
+
+[x] See if you can do format string to return a string - ask Chris
+
+[x] rename the private functions
+
+[x] Add/correct to concept framework operators . References are ok.
+
+[x] why does it freeze when mounting something unregistered
+	- it doesn't, it actually returns a fatal error, but the streams
+	  were not there. added logging error logging :)
+
+[x] Start document
+
+[x] talk to Drew about OM, NLG, Kevin
+	[x] Give feedback on outputmanager
+	[x] modify Coding style
+
+[x] Maybe Mount should take a reference to the agent instead of a pointer
+	maybe NOT !
+
+[x] Do type checks on equality operators
+
+[x] Fixed copy constructor in macro definition for structures
+	[x] need it for arrays too ?	
+	
+[x] Need to fix operator= for CConcept& or not ? Talk to Chris
+
+[x] Added ExpectCondition on expect agencies
+
+05-04-02
+----------------------------------------------------------------------
+
+[x] Make distinction between topic and main topic
+
+[x] Added GetSize on arrays.
+
+[x] Changed the C() and A() functions to return pointers and
+	overload them to work like printfs
+
+[x] talk to Drew about OM, NLG, Kevin
+	[x] Drew will get the changes in the OM
+	[x] retouch the OM
+	[x] email Drew Tue
+	[x] once OM is done, do the nlg
+
+[x] Add block upon completion functionality for dialog agents
+
+[x] Introduced logging on the agenda
+
+[x] Benchmark logging
+	2.8 w Display and commit
+	1.8 w Commit
+	0.1 w/o
+	[x] see if flush would work - seems to.
+	
+[x] changed backend symphony agents and task structure
+
+[x] Change HasCompleted with SuccessCriteria
+	[x] See what to do about expect agents in this case
+
+
+05-04-02
+----------------------------------------------------------------------
+[x] implement the blocking stuff in the agenda
+
+[x] Add timeout to request agent
+
+[x] Add binding policy to request agent (for now)
+
+[x] Move dialogagent outside the basic agents
+
+[x] Implement resume/suspend agency
+	[x] restrict dialog - do binding policy
+	[x] check what happens when you say resume during other stuff
+
+[x] Implement binding policies
+	[x] change the agenda stuff to include blocked/non-blocked information
+
+[x] talk to Drew about OM, NLG, Kevin
+	[x] email Drew Tue
+[x] Added resetuponcompletion functionality for dialog agents
+
+04-27-02
+----------------------------------------------------------------------
+[x] talk to Drew about, Kevin
+	[x] email kevin about the nlg
+	[x] finish the help agency, decide what's domain.topic.subtopic
+	    for discourse acts...
+	    So, for certain agents, we can have
+	    inform  (help.agentname)		Right now, I need you to tell me you name. 
+	    inform  (context.agentname)		I'm trying to log you into the system. 
+				(summarize.agentname)	Where are we ?
+	    inform  (whatcanisay.agentname)	You can say ... 
+	    
+	    Well, I jusr decided we'll have an agent field
+
+[x] Continue on with Symphony
+	[x] Do the task retrieval and negotiation
+
+[x] Update grammar for symphony with the task-independet slots
+	[x] Help, repeat, suspend, resume
+
+[x] Implement discourse methods on dialog agents
+	[x] help
+	[x] establish_context
+
+[x] Implement execution policies for agencies
+	[x] left-to-right open and left-to-right closed
+
+[x] Do the casting operators for concepts
+
+[x] Help - grammar for Symphony check that... 
+
+[x] Do the "TRIGGERED_BY+CONCEPT" agency
+	[x] So I think this functionality occurs often enough that 
+		we can just plug it in the Dialog Agent (plus it's 
+		just more complicated at this point to do it in 
+		other ways)
+	[x] Once that's done, redo the repeat 
+	[x] and the help agencies...
+
+[x] Switch the whole damn thing to construct/initialize/reset
+
+[x] Make sure types for dialog agents, is the same as the one
+     in the registry agentome
+
+04-17-02
+----------------------------------------------------------------------
+[x] Log termination phase for the DMCore more appropriately
+	[x] also for the DTTManager
+
+[x] Start thinking about how to implement the discourse agents
+	that attach to the tree (see Repeat)
+		[x] Mount
+		[x] Unmount
+	
+[x] Implement the "ClaimsFocus" functionality
+
+[x] Finish the includes (you left it at CoreAgents
+
+[x] Finish the agenda
+	[x] make sure it does the right thing (at least so far)
+	
+[x] Do the concepts = sign
+
+[x] StateManager
+	
+[x] InputTurns (handled in the Input Manager)
+	[x] How does the input manager handle things if they queue up ?
+	
+[x] Finish the galaxy calls 

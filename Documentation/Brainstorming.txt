@@ -1,0 +1,1443 @@
+Now, with respect to logging the appropriate information for the belief 
+updatign scheme... There seem to be several "belief update functions" for
+which we need to machine learn them:
+
+BIND -> this was the UpdatedWithConcept, but need to write new stuff for it
+EXPLICIT_CONFIRM
+IMPLICIT_CONFIRM
+maybe a CARRY -> by default this leaves the value as it, but in the future
+it might actually do things to it...
+
+Now, in order to machien learn these functions, we need to know when they
+happen, so we need to log it on the concepts. 
+
+The other thing we need to know is the correct value, and that might be a 
+bit trickier. Maybe we can have a semi-automatic labeling scheme, in which
+we start automatically by taking the information from the parsed transcripts
+and the history of the parsed transcripts and using it. 
+After that, a human annotator might need to go through the data since 
+it's not clear how the parsed transcripts history should be taken into 
+account...
+
+At any rate, need to add a concept logging stream, and put stuff on it...
+- figure out precisely where and when
+
+----------------------------------------------------------------------------
+
+There seem to be 2 alternatives in terms of signaling concept changes
+
+- the micro-version: any micro operation on a concept signals a change and 
+  they're all queued and deal with
+
+- the macro-version: any change on a concept has to be a macro change, and 
+  notifies only once. We still have to deal with repeated notifications and
+  broken seals, but in this case at least we know what the updates that 
+  occured were...
+
+---
+
+
+New grounding gate specification:
+For concepts:
+
+The gruonding manager will maintain a list of grounding requests (which 
+are signaled on individual concepts). In each grounding phase, the grounding
+manager will try and place grounding actions on the stack and at the same
+time it will ensure that they are taken immediately: 
+
+- no more than one EC at a time (max is EC + IC + IC)
+- no focus shifts happen
+- no other agents get added on the stack by grounding while some are already
+  there...
+  
+Plus, the requests list will seal the concepts once they get in, and they 
+will be removed from there once the EC terminates and teh ICI terminates...
+ComputeState will be called just once, since the concept is sealed. 
+
+What happens though if the concept becomes unsealed? and if a new grounding
+phase is requested (during pending and during executing).
+During pending it's all okay, we just leave it there and seal it again.
+During executing: it's just removed from the requests list, and added 
+again as a simple request...  and the next popCompletedFromExecution will 
+take care of the agents on the stack since they will have a corresponding 
+completion criteria.
+
+
+Each entry, it will therefore be marked as pending or executing
+
+
+
+Problems with IsUndergoingGrounding and GroundingInProgressOnItem and frames
+
+Turns out the definitions of the above things are not very clear.
+
+Problem 1: how to avoid launching multiple grounding actions on the same
+concept. So far i was relying on this IsUndergoingGrounding stuff, which is 
+defined by looking on the stack and seeing if there are any gronding agents 
+(by dyn_id) related to that concept. That introduces a small problem for 
+implicit confirms, in that the dyn_id should be only on the inform part
+or both on the inform and expect part? 
+
+There are 2 cases here, detail what doesn't work in each of them
+- so here we have this problem for implicit confirms, since it's not clear
+how long those concepts are undergoing grounding
+
+[X] Problem 2: on frames, the updatedandgrounded function checks that we're not
+currently undergoing grounding. Actually what it should check is that all
+items are either not updated, or both updated and grounded + there is at 
+least one that's updated. 
+-> i think this one is pretty clear and i should go ahead and reimplement it
+
+Problem 3: what happens on multiple explicit / implicit confirmations when 
+there is a trigger inbetween them...
+
+
+Seems like it would be really needed to do the iterations between grounding
+and completion until no grounding is being signaled.... In fact we actually
+have that in right now, since on_completion some concepts are set and taht 
+signals a grounding phase... the iteration appears anyways with execution, 
+so it might as well be in there as a loop before we move on to execution. 
+
+This however introduces some problems... But then the problem
+is what exactly is the state of the model, in the sense of training. 
+For instance say that inbetween 2 turns we do 3 grounding stages... In that
+case
+- how does the gating heuristic work across stages
+- should we actually keep track of stages, and make a gating function that 
+  works across stages?
+- when do models take a step? (initially i said on each turn, but it appears
+to be more complicated than that...)... can some of the models take a step
+only when their action is actually taken in the world? EC/IC/NOA
+
+I need to try and see if i can somehow stick to the simpler model, with 
+input/grounding/input/grounding by making the grounding flag automatic
+when a concept value is set. So basically we need to see how grounding phases
+are signaled and stuff...
+
+To do that, i need to see how many times and from where is grounding signaled
+
+
+Heuristic update scheme for concept updating
+--------------------------------------------
+
+So the scheme will treat the confidence scores as probabilities 
+(although they are not) and will heuristically update them so that 
+the results of the updates are "reasonable" in terms of dialogue
+behavior. 
+
+Both schemes:
+-treat the incoming confidence scores as probabilities
+-set the probability to 1 on explicit confirm
+-set the probability to 0 (delete the hypothesis on explicit 
+ disconfirm)
+-for updates
+Scheme 1. Uses multiplication and renormalization for updates
+  - this seems somewhat more theoretically justified, 
+	although not really and it requires knowing the 
+	"cardinality" of the concepts
+    in this scheme we also need to ensure that a certain 
+    probability mass remains to be distributed over
+    the "other" values...
+Scheme 2: Uses addition and renormalization
+  - in this case we don't need to know "cardinality". Also 
+	these scheme is not so far to drop out hypotheses that we
+	have heard only once, i.e. (A,B) + (A) ... B will 
+	still have a say
+
+In Scheme1, if we use multiplication, we need to make sure that 
+the free probability mass remains assigned to "others" even on assigns
+	
+So the addition one seems to have a number of advantages, like
+no need for minimum other probability mass and cardinality. 
+
+
+User language in explicit confirms
+----------------------------------
+
+Yes/No/none
+concept Value (new/old/none)
+another concept value (new/old/none)
+confidence score (L/H)
+
+Test battery - go through all of these
+[X] after explicitly confirming, since value is 1, no new hyp can 
+    actually do something to that in the naive probabilistic update
+    mode
+    - okay, so if i lower it 0.95, if a new hypothesis comes in, it will
+    set both confidences to something quite lower, and hence
+    give an opportunity for dismissing the first one...
+[X] Yes / L
+[X] Yes / H
+[X] No / L
+[X] No / H
+[X] old concept value / L   (would need to be ceiled)
+[X] old concept value / H
+[X] Yes old concept value / L
+[X] Yes old concept value / H
+[X] new concept value L
+[X] new concept value H
+[X] No new concept value / L
+[X] No new concept value / H
+[X] yes another concept value / L   [X] test it again when that is also
+                                           being confirmed
+[X] yes another concept value / H
+[X] no another concept value / L    [ ] test it again when that is also
+                                           begin confirmed
+[X] no another concept value / H
+[X] yes old concept value another concept value / L [ ] test it when new 
+                                                        concept is being 
+                                                        confirmed                                                            
+[X] yes old concept value another concept value / H
+[X] no old concept value another concept value / L  [ ] also test it when 
+                                                        new concept is being
+                                                        confirmed
+[X] no old concept value another concept value / H
+
+somewhat odd cases are:  (basically in this cases teh YES/NO take precedence)
+[X] yes new concept value / L
+[X] yes new concept value / H
+    - this is not really cosher. what happens is that the new value
+        gets updated and then the explicit confirm basically erases it
+        and sets a very high confidence on the old value, actually this
+        is quite okay, since another potential value is probably a 
+        misrecogition if it was a yes
+[X] no old concept value / L (works fine ... negates it)
+[X] no old concept value / H (works fine ... negates it)
+
+Grounding concepts:
+- there is one problem now in that the explicit and implicit confirmation
+agencies are not added to the tree, but only to the dialogue stack. that
+creates some problems with the disablign expectation process since that 
+seems to operate on the tree: 
+
+So far, the adopted solution (which is not very nice is as follows)
+The idea is that the behavior of the grounding agents needs to be rather
+fantomatic, and the system developers do not need to worry about those. 
+Hence for instance if one of these grounding agents gets put on the stack
+the current main topic and task focused agent should still be the same. 
+
+So what i've done is to introduce a notion of "task agents" versus the 
+grounding agents (which return 0 on the IsTaskAgent virtual function). 
+Clearly this is not the best way of making the distinction, so i should be
+thinking more about that. 
+
+
+! -> agent is focused
+    Well, there are 2 functions: GetTaskAgentInFocus which returns the 
+        task agent in focus
+    and GetAgentInFocus, which returns the agent on top of the stack
+    
+    so to establish "!" we call this->AgentIsInFocus() and the AgentIsInFocus
+        function actually checks if this agent is in focus
+        
+    An alternative way of solving this uniformly would be to have a 
+    symbol, like !! for in focus, and a ! for is active on stack 
+    (then the semantics would mostly be preseved) and we would have 
+    everything sorted out automatically
+    
+    The problem also has to do with the fact that there is no direct
+    relationship between the explicit confirm agent and the request
+    agent for the concept
+    
+
+[ ] -> agent under current main topic
+
+    GetCurrentMainTopic is now basically transparent for non-task 
+    agents, and the current main topic is still the same
+
+@(a,a,..) -> focused agent under one of the specified agents
+    
+    This function uses the GetTaskAgentInFocus, and hence is again
+    insensitive to whether or not there's a non-task agent on top
+    of the grounding stack
+    
+
+
+
+-----------------------------------------------------------------------
+Communicator DM - Current status, issues, opportunities for improvement
+-----------------------------------------------------------------------
+
+- Agenda Mechanism, handlers - great idea for allowing mixed-initiative
+- But
+	- handlers written in C, which is very powerful, but also
+	  opportunity for a lot of hacking to implement certain dialog
+	  behavior
+	- this complicates maintenance and development
+	- it's hard to do any sort of learning. No hope of learning the
+	  handlers, as they are now
+	- there's no clear-cut solution for integrating confirmation and
+	  clarification at this point
+	- logs could be more structured
+	- interaction with the nlg could be more structured
+		- i.e. automatic implicit confirmations, etc
+		- handling of barge-ins, 
+	- moving into another, not so slot-filling domain (Symphony) 
+   	  kind of causes trouble...
+
+	Basically I think we started with a very good idea but ended up  
+	with a lot of hacking. 
+
+What's in that code that makes it so complex ?
+- Task-structure related code
+	- control (blocking, unblocking nodes, handling exceptional 
+		   situations)
+	- data (handling dependencies between datapoints, leads to 
+		more code)
+	- a lot of code (sometimes unclear) for accessing the 
+	  other components in the system (Backend, etc)
+
+- Dialog Mechanisms 
+	- mostly concentrated in the CCatchAll node:
+		- handles (repeated) non-understandings 
+
+	- but not only. There's actually a lot scattered through the 
+	  other nodes, too, like:
+		- help
+		- clarifications (i.e. there's a node for CClarifyAirport,
+		  while in other situations (city), clarifications are
+		  handled in the city node, by setting/using special
+		  flags
+		- implicit confirmations
+		- asking a question a limited number of times
+
+So, what do we want ?
+---------------------
+- Build a dialog management architecture able to handle complex, 
+  goad-directed dialogs: 
+	- support complex, asynchronous tasks
+	- go beyond the slot-filling paradigm.
+
+- Make the life of the developer easier.
+
+- Achieve a cleaner separation between discourse, dialog, and task. Let
+  the developer focus only on the dialog-task part... 
+	- 3way separation: core + dialog-task + domain. 
+
+- automatically ensure minimum feature set of discourse specific mechanisms
+	- HOW: a task-description language 
+		- let the developer describe and focus only on the task 
+		- automatically generate the task-independent behavior
+			- but still let the user easily overwrite those
+			  and provide specific mechanisms to handle more
+			  complex cases
+		- maybe allow change for dialog behavior automatically
+		  (i.e. switch from system directed to mixed-initiative
+		  on the fly, since the user describes only the 
+		  minimal "task" constraints)
+
+- Open up the architecture for learning & dynamic SDS generation
+	- maybe the structure of handlers could be learnt for some
+	  types of tasks (i.e. ala Collagen)
+	- the "optimal scheduling" of the dialog activites could 
+	  maybe be learned at the local agency level
+	- learn even dialog-task specific knowledge with time 
+		(i.e. multiple bindings, focus resolution)
+	- a task description could be generated "on-the-fly" from 
+	  some other source (i.e. technical specification of task
+	  in Symphony)
+
+	HOW?: these 2 would maybe be achievable if the "task description
+		language" remains simple enough.
+
+
+How do we go about it ?
+-----------------------
+0. Make a clean separation between: 
+	core
+	dialog-task
+	domain-knowledge
+
+1. Separate concepts from task (ensure the data <-> control separation)
+
+2. Figure out a set of necessary primitives of the task description 
+   language.
+
+3. Figure out a way to handle most task-independent dialog mechanisms
+	- automatically
+	- but still allowing users to write their own...
+
+
+1. SEPARATE THE CONCEPTS FROM THE TASK
+--------------------------------------
+WHY ?
+- We want to do this since I've observed that a lot of the complexity in
+  Communicator comes from handling various types of concepts, and 
+  operations on them (like confirmations, etc). Although 
+  Comm has a form of "concepts" (the *_var types), those were meant
+  mainly towards easy interaction with backend, etc, rather than for
+  providing a framework for "reasoning on/about concepts".
+
+- So we want to provide a framework in which the DMcore can automatically
+  reason, and trigger the right behavior about the data that it holds.
+  This will allow hopefully for automatically generated clarification
+  / confirmation behaviors.
+
+HOW ?
+- What's a concept ? How is it different from a simple piece of data?
+  A concept should have:
+
+	- a name
+	- an underlying TYPE 
+		- simple: int, string, float, bool
+		- aggregated: struct, array 
+	- maybe a history of values should be maintained
+	- current ValConf VC = { <value, conf> }
+	- a set of flags indicating different aspects about the concept
+		- ambiguous - card(VC) > 1
+		- grounded  - (card(V) == 1) and conf>=threshold
+		- unconfident - conf<threshold
+		- unknown   - card(VC) = 0
+		- user/system concept:
+			- a user concept can be obtained from the user
+			- a system concept will always be "inferred" 
+			  by the system
+	  (using this set of flags the DMcore can initiate various 
+	   discourse agencies related to a particular status of that
+	   concept: i.e. confirmation/clarification, etc...)
+
+  - Still need to figure out here the full-blown interface 
+      that the CConcept class needs to implement
+
+  - And need to figure out how to give access to concepts by name
+
+
+2. Figure out a set of necessary primitives of the task description 
+   language
+-------------------------------------------------------------------
+
+The fundamental concepts are the micro-agent, and the agency, which 
+holds and schedules a set of microagents.
+
+The microagent has is able to execute and to handle_input. 
+The agency is able to execute, and does that by planning the 
+execution of the microagents in a particular order. 
+
+
+Microagent/Agency specification:
+--------------------------------
+
+AGENCY 
+  precond: user specified (by default it is true).
+
+  triggered_by_concept: it's merely a shortcut to a larger construct which
+	                includes an EXPECT microagent which looks for that 
+		        concept and triggers this agency in it's effect. 
+			(?does this really work in the execution model?)
+
+  triggered_by: a user_specified function (default FALSE) which activates the 
+ 		agency when it becomes TRUE. Preconditions still have to hold.
+		And the agency has to be "open".
+
+  achieves_when: a user_specified function, which indicates when the agency
+		 completes it's execution. 
+
+  effect: user specified. effect is executed when the agency has achieved, 
+	  immediately after it has been removed from the stack.
+
+  concepts: the list of concepts that this agency handles/uses/generates. 
+	    The list can contain both user and system concepts. 
+
+  help: a help prompt (automatically generated), explaining what the agency's
+	role is (i.e. CUserIdentification.help = I'm trying to figure out
+	whom I am talking to)
+	(?this already goes into the TIDM part?... should it be really in 
+	 here or where else?)
+
+
+Microagents:
+------------
+There are 3 types of microagents, INFORM, EXPECT, REQUEST (which can probably)
+  be implemented as a function of the 2 above, and EXECUTE. Actually we might
+  want to maybe have a unified INFORM/EXPECT/EXECUTE agent, and the others
+  are merely derived off it. 
+(? exactly what is the execution model ?)
+
+MICROAGENT:
+  - all the stuff an agency has, except for:
+	- achieves_when : is predefined for a given type of microagent, 
+			  and cannot be overwritten
+	- concepts: there's no list of concepts for a microagent
+
+  help_context_agency: pointer to an agency which holds the context for this 
+                       microagent
+  (?again this is TIDM stuff? - should it go here, if not where else?)
+
+  prompt (INFORM and REQUEST):
+	 by default, it will generate a prompt called "request_concept", 
+	 but this can too be overwritten/described by the user, and can take 
+	 the form prompt_name [parameter_list/concepts]
+
+  mapping (REQUEST and EXPECT):
+	 maps the slots to values for the concept. Can be in the form
+	 [slot_name], which means that we take the value of the slot
+	 [slot_name] -> <value>, which means that if slot_name occurs, then
+			the concept takes the value <value>
+	 by default, a slot will be expected only when the agent is under
+	 the main topic of conversation
+	 a @ sign in front of the slot_name means that the respective slot
+	 is expected always
+	 a ! sign in front of the slot_name means that the respective slot
+	 is expected only when the agent has the focus
+
+  max_attemps(REQUEST agents):  
+	 number of times to try the request. If it fails after this many
+	 times, then the request agent will complete and REQUEST.failed
+	 will be registered
+	 
+  help, explain_more:
+	 additional prompts generated automatically for each REQUEST agent, 
+	 so that we can provide local help and explain how to answer the
+	 request.
+
+  help_context_agency:
+	 this is a pointer to the help context agency (by default, the parent 
+	 agency)
+	
+  call: 
+
+
+3. Figure out a way to handle most dialog, task-independent mechanisms
+----------------------------------------------------------------------
+Here's a list of the various task-independent mechanisms that are 
+implemented here and there throughout the Communicator:
+
+- Misunderstanding/NonUnderstanding/Confirmation/Clarification
+- Repeats
+- Help
+- Undos
+- Timeouts/BargeIn control
+- Focus Changes
+- Summarization
+- Backchannel absorbtion
+- Suspend
+- Querying the system's beliefs/knowledge
+
+Okay, now let's take them one at a time and see what we can do 
+about each of them.
+
+1, Misunderstandings, Confirmations and Clarifications
+------------------------------------------------------
+
+For the problem of Confidence,&  Confirmations
+3 main components:
+	1. Determining the values of 2 thresholds to use for each
+	   user concept: t1, t2. Decisions attached to them are
+	   grounded, implicit confirm, explicit confirm
+	2. Having a process that generates the confidence scores
+		- initially from the input
+		- then, affecting them on the fly. what are the 
+		  sources ? 
+			* unattacked implicit confirms
+			* attacked implicit confirms
+			* time ?
+			
+			What is the right model for all of these ?
+			- So far I have only an arbitrary scheme 
+			  (maybe based on a sigmoid)
+			but how does that play with the threshold...
+			i.e. you don't want to confirm twice ...			
+			* 
+		  task sources ? consistency ?
+	3. Having a process which decides to insert explicit 
+	   or implicit confirmation agencies on the fly. 
+	   Okay, so that can stay in the agency... 
+	   
+	  
+
+
+2. Repeats
+----------
+SOmewhat connected to NLG acts, as we shall later see:
+NLG Acts we have right now:
+  say
+  query
+  inform
+  hotel
+  unhappy
+  help
+
+What should we keep: inform, query. JUst these 2 ? 
+
+
+A study of the corpus has indicated we have 2 types of repeats:
+- repeats with no referent 
+	- examples: repeat, could you please say that again, what ?
+	- these repeats kinda channel level and they can be deal
+ 	  with by the Output manager itself.
+	- however, there are certain portions of the utterances which
+	  need not be repeated on a repeat:
+		- explicit confirms
+		- misunderstanding signals, backchannels, etc
+	  for this purpose, each of the output acts will be 
+	  adorned with a system attribute indicating that they are 
+ 	  not to be repeated. This attribute can be so far determined
+	  by the output manager itself, based on the nlg act. This
+	  suggest we should also have acts like: confirms, clarifys,
+	  etc... what's the complete set, and which are non-repeatable ?
+
+	  Alternatively the attribute can be set by the microagents 
+	  which generate the respective utterances.
+
+
+- repeats with referents 
+	- examples: 	repeat the car information, 
+			can you repeat my itinerary,
+	- these are domain specific, and they are semantically 
+	  equivalent with asking a summary on certain nodes. They need 
+	  to be dealt with in the task specification. 
+
+A brief corpus analysis has indicated that 7 out of 193 (3.6%) are
+with referents. This might of course be very different on another 
+domain. 
+
+3. Help
+-------
+- There are multiple types of help. 
+	- For each REQUEST agent, we should have the possibility of
+	  giving local help
+		- help prompt: the help indicating what/why we are
+			issuing this request
+
+		- help_context pointer: pointer to an ancestor 
+			agency whose help_prompt will be issued
+			to describe the context:
+		i.e. I'm trying to figure out whom I am talking to.
+		Right now I need you to tell me if you are registered
+		user. 
+
+		- explain_more: a prompt for explaining to the user
+		  in more detail how the user should respond. This
+		  can be activated on repeated misunderstandings 
+		  and also on a [what_can_I_say] request from the
+		  user. 
+
+	- Help could be implemented as a discourse agent, which is
+	  always on the agenda (?can task agents control discourse
+	  agents and how?). When invoked by [help], they would 
+	  contact the focus agent, and issue a "Help" call which
+	  allows the agent to respond with a prompt, or not. 
+
+	- There is also a [give_me_tips] help which could be 
+		implemented as a default discourse agent, 
+		with an elaborated prompt. 
+
+	InformHelp: INFORM
+	  triggered_by: [help]
+
+	InformWhatCanISay: INFORM
+	  triggered_by: [what_can_I_say]
+
+	InformTips: INFORM
+	  triggered_by: [give_me_tips]
+
+	  
+
+7. Summarization
+----------------
+- Summarization is really task dependent
+	- so Add a Summarize call to the root-level agency
+	- Add a discourse agency which looks for [Summarize], and
+	  calls Summarization, then gives the Summary to the user
+	  (?hmm, described like that, or directly optimized?)
+	  / see help.
+
+	Summarize: AGENCY
+	  triggered_by: [summarize]
+	  concept: summary(FRAME)
+	  achieves_when: InformSummary
+
+		DoComputeSummary: EXECUTE
+		  call: (root).Summarize -> summary
+		
+		InformSummary: INFORM
+		  precond: summary
+		  prompt: summarize summary
+		
+
+
+
+BRAINSTORMING ==========================================================================
+Q: Still have to convince myself that it might support learning
+
+Q: maybe write a NL description of dialog system ?
+	
+Q: it might pay to also look @ alternatives (universal planning, etc)
+A: looked @ universal planning, doesn't seem to fit in here
+
+Q: do we want to put effects in the agents ?
+A: Maybe not, if we want to regard them
+   as strictly dialog agents, but we're kinda not doing that anyways... 
+   HMM, there's not such good separability in this scheme for control
+   Maybe control can be described in terms of rules rather than preconditions ? 
+	But that's not so good, because we're focusing on what the system "Can do!"
+   And, then rules tend to clutter up things
+
+   but for the execute agents, we should have a mechanism for calling the 
+     other agencies to execute specific functions
+
+   Well, a reformulation of the question is:
+	- how much can we do without specific "task-control" effects... ?
+
+
+
+Q: but this type of approach still is bound to the type of grammar we're using
+Q: formalize what are the demands from the grammar...
+A: or maybe separate out the "acquisition of concepts" from the DM core, and
+    isolate it in the "InputWrapper" agent
+
+Q: the mechanism of dependents is used sometime for validation/checking/redoing... 
+	e.g. summary becomes invalid when a leg has changed
+
+O: we want to describe a the set of possible solutions in the simplest terms possible
+   - do we regard it as a planning problem, or not really ?
+	1st impulse: not really, we already know the solution
+	2nd thought: but if it makes it easy to specify with a simple forward search
+			planner... 
+	* I Also need to look at UNIVERSAL & HIERARCHICAL PLANNING (Rune)
+
+Q: the microagent, maybe it should be in a more encompassing form ? 
+	* REQuEST_PROMPT
+	* INPUT
+	* EXECUTE
+	* OUTPUT
+   - that might help to describe quicker certain parts of the system...
+   - but still, that's not the basic unit of execution. So maybe we could have
+	a frame agency, which can be easily defined/prototyped
+
+Q: 
+
+
+TaskIndependentMechanisms needed
+
+- Misunderstanding/NonUnderstanding/Confirmation/Clarification
+
+  Key Issues
+	- do not easily accept unconfident input
+		- have a way to clarify it, before accepting it
+		- e.g. run a clarification micro-agent... 
+	   Q: but didn't our experiments show that overwriting is less costly?
+	   A: Ok, all this means is that you need to use this carefully...
+  	   Q: what do you do when it's not in focus ? 
+
+	- have a mechanism for implicit, explicit confirmations
+
+	- accept backchannels, and use them to boldster confidence scores
+
+	- have an invalidation mechanism, which triggers necessary invalidations
+
+	- have a verification mechanism (i.e. So you where leaving from Pittsburgh ?)
+
+	- take bargein decision at the DM level (this might be needed for accepting backchannels) ? 
+
+
+- Repeats
+
+- Undos
+
+- Timeouts
+
+- Focus Changes (biggie ! it seems it's both task and discourse)
+
+- Backchannels
+
+- BargeIn Control
+
+- Suspend
+
+- Ability of query system's beliefs ? 
+
+
+Q: Should all these be implemented as subagents/microagents in the agent that 
+   handles a concept... The reason would be modularity and interchangability
+A: So they should be implemented as "agencies" (they can in fact be micro-agents
+   which are triggered by the DM core. The user can write his own. If no such
+   are found, then the default will be used
+
+Q:  Or maybe the fundamental unit should be the concept, and it could have
+    all sorts of dialog mechanisms attached: i.e. get, clarify, confirm_explicit, confirm_implicit, etc.
+    HMM, this also sounds nice... ??? Would it maybe work ? 
+	Problems is we can't simply have a hierarchy of concepts, we're modeling
+	action here...
+	Correct, so let's put the concepts in the agencies, and have the DM
+  	proof-checker ask the developer about all the agents linked to the 
+ 	concepts that appear somewhere
+
+   A: Right, so the answer to this one is NO. In small dialog-to-task distance
+	systems, you are really planning for the "dialog actions", so
+	the fundamental unit is the "action" not the concept itself. 
+      In IR systems, it could maybe work with concepts.... 
+
+
+
+TaskRepresentation/Control issues:
+	- representation is hierarchy of agents... 
+	- control is at the session/agency level 
+	- need to encapsulate mechanism for dynamic generation of structure...
+
+AGENCY 
+  triggered_by_concept: it's merely a shortcut to a larger construct which
+	                includes an EXPECT microagent which looks for that 
+		        concept and triggers this agency in it's effect. 
+
+  precond: user specified (by default it is true).
+
+  triggered_by: a user_specified function (default FALSE) which activates the 
+ 		agency when it becomes TRUE. Preconditions still have to hold.
+
+  achieves_when: specifies when the agency completes.  
+
+  effect: user specified. effect is executed when the agency has achieved, 
+	  immediately after it has been removed from the stack.
+
+  concepts: the list of concepts that this agency deals with. The list can
+            contain both user and system concepts. 
+
+  help: a help prompt (automatically generated), explaining what the agency's
+	role is (i.e. CUserIdentification.help = I'm trying to figure out
+	whom I am talking to)
+
+REQUEST(concept)
+  precond:
+	 by default, it is concept.unknown, but it can be changed to other 
+	 logical expressions. when changing it, we still keep the 
+	 concept.unknown stuff.
+	 precond can also be specified by the user in a piece of code
+
+  prompt:
+	 by default, it will generate a prompt called "request_concept", 
+	 but this can too be overwritten by the user, and can take the form
+	 prompt_name [parameter_list]
+
+  mapping:
+	 maps the slots to values for the concept. Can be in the form
+	 [slot_name], which means that we take the value of the slot
+	 [slot_name] -> <value>, which means that if slot_name occurs, then
+			the concept takes the value <value>
+	 a @ sign in front of the slot_name means that the respective slot
+	 is expected even when the agent is not focused
+
+  effect:
+	 this routine is executed once the request "achieves"
+
+  max_attemps: 
+	 number of times to try the request. If it fails after this many
+	 times, then the request agent will complete and REQUEST.failed
+	 will be registered
+	 
+  help, explain_more:
+	 additional prompts generated automatically for each REQUEST agent, 
+	 so that we can provide local help and explain how to answer the
+	 request.
+
+  help_context_agency:
+	 this is a pointer to the help context agency (by default, the parent 
+	 agency)
+	
+EXPECT(concept)
+  precond: idem
+  mapping: idem
+
+INFORM
+  precond: can be user defined (by default it is TRUE)
+  prompt: user_specified, (by default takes the name of the agent)
+  
+EXECUTE
+  precond: can be user defined (by default it is TRUE)
+  stall_prompt: a prompt to be given to the user while the system is stalling
+		in the call... (by default is NONE), and no prompt is given
+		but it could also be "AUTO" or specified...
+  call: 
+    	 this is a call to an Agent, which can be a dialog agency, or rather
+	 one of the other dialog agents (Backend, etc)
+	 The form of the call is:
+	  AgentName.FunctionCall [parameter_list], [return_values_list]
+
+Types of agents:
+- INFORM	
+- ABSORB (this one would have a limited life-time and could be used for backchannels)
+- REQUEST
+- EXPECT ... these nodes do not have output, they just "expect" a command from the user, and that 
+		brings stuff into focus... need to work this focus thing out. 
+- FRAME agent ?? maybe ?? 
+- REQUEST_EXECUTE_INFORM agent maybe ??
+
+
+We could have a stack of goals, call Execute on each one, then as an agency executes, it 
+sets one of its children as the current goal, then returns continue_execute, etc. 
+
+The REQUEST type children may return process_input, which moves the system into a 
+process input mode. The agenda is constructed, the input is taken, and bindings are done.
+Then, execute is called again... 
+
+INFORM: Run: ... do stuff, then return PROCESS_INPUT
+REQUEST_EXCLUSIVE/VALUE: 	Run: Output+RequstInput w. return PROCESS_INPUT
+
+EXPECT:				Run: nothing
+				ProcessInput -> AGENCY.Update
+
+Is it the case that just the FOCUSED node gets to output stuff ? 
+
+
+OTHER IDEAS:
+	- automatic generation of NLG prompts set, and parse concepts set. 
+	- hmm, maybe need to read first where others have gotten stuck : DDL, previous Comm schema
+	- this is a description, but also it's more cryptic maybe to read ? or maybe not ?
+
+
+
+Q: I'm John Doe, and I want to fly to Pennsylvania. 
+ 	- what happens when Pennsylvania is unconfident ? ... nothing, it will be dealt with at that point
+	  Q: but what needs to happen for that to happen ? 
+
+Q: Come up with multiple mechanisms like this one, and try and see if the right thing always happens
+
+
+Types of Agents:
+INFORM - has a simple prompt, achieves once information is transmitted to the user
+	BTW, there;s a question here: how can we make sure that the info was transmitted to the user
+	     or even less, how do we make sure that the user didn't barge in over this prompt ?
+
+Dialog: AGENCY
+  achieves_when: GoodBye 
+
+	InformWelcome: INFORM
+	  prompt: welcome
+
+	Travel: AGENCY
+  	  precond: InformWelcome
+	  achieves_when: Evaluation
+		
+		UserIdentification: AGENCY
+		  concepts: registered(BOOL), name(STRING), id(STRING), profile(FRAME/System), 
+			    profile_found(BOOL/System)
+		  achieves_when: (profile && InformGreetUser) || InformProfileNotFound || InformGreetGuestUser
+
+			AskRegistered: REQUEST(registered)
+			  mapping: {[yes],[no],[guest]->1,0,0}
+	
+								## this work. Otherwise, it will fail, and AskFullName.failed will be 
+								## registered
+
+			InformGreetUser: INFORM
+			  precond: name
+
+			AskID: REQUEST_VALUE(id)
+			  precond: registered==yes
+			  mapping: @[user_id]
+
+			DoProfileRetrieval: EXECUTE
+			  precond: name || id
+			  call: Profile.Call name, id, -> profile, name, profile_found
+
+			InformProfileNotFound: INFORM
+			  precond: !profile_found
+
+			InformGreetGuestUser: INFORM
+			  precond: AskFullName.failed
+		
+
+		FlightsReservation: AGENCY
+		  achieves_when: Leg[Leg.Count], or all_children_achieved, or a more complicate user-defined
+				 function.
+
+			Leg[1]: AGENCY
+			  concept: last_leg(BOOL)
+			  achieves_when: DoExtendDialog || (Flight && last_leg)
+
+				Flight: AGENCY
+				  achieves_when: 
+
+					GetConstraints: AGENCY
+					  achieves_when: "enough constraints" :). ... task dependent function ?,
+							 right, the user can come in here and just write it...
+
+						GetDepartureLocation: AGENCY
+						  concepts: departure_city(STRING)
+							    departure_state(STRING)
+							    departure_country(STRING)
+							    departure_airport(STRING)
+						  achieves_when: departure_city && departure_state && departure_country && departure_airport
+							GetDepartureLocation: REQUEST_VALUE()
+							  helpcontext: GetConstraints							  
+							ExpectDepartureCity: EXPECT_VALUE(departure_city)
+							  mapping: @[city | departloc]
+
+							ExpectDepartureState: EXPECT_VALUE(departure_state)
+							  mapping: @[state | departloc]
+
+							ExpectDepartureCountry: EXPECT_VALUE(departure_country)
+							  mapping: @[country | departloc]
+
+							ExpectDepartureCityState: EXPECT_VALUE(departure_citystate)
+							  mapping: @[city_state | departloc]
+
+							ExpectDepartureAirport: EXPECT_VALUE(departure_airport)
+							  mapping: @[airport_name | departloc] @[airport_code | depart_loc]
+
+	# 2 alternatives here:
+	1 - have effects in each of the EXPECTS, which would schedule "DoGeoResolution" as the next goal,
+	2 - have DoGeoResolution to be "itchy": as soon as it's preconditions are satisfied, bring it into 
+	    focus, set it to be the current goal. Think we're going with 2.
+
+							DoGeoResolution: EXECUTE
+							  triggered_by: departure_city || departure_state ||
+									departure_country || departure_city_state ||
+									departure_airport
+							  call: Backend.GeoResolution
+
+
+						GetDate: AGENCY
+						  concepts: depart_date_description(STRING), depart_date(INT),
+							    arrive_date_description(STRING), arrive_date(INT), 														    reference_date(INT)
+						  achieves_when: depart_date || arrivedate
+
+							DoSetReferenceDate: EXECUTE
+							  triggered_by: true
+							  call: GetDate.SetReferenceDate	# call to an agency routine
+
+							AskDepartureDate: REQUEST_VALUE(departure_date_description)
+							  mapping: @[date_slot | departure]
+
+							ExpectArrivalDate: EXPECT(arrival_date_description)
+							  mapping: @[date_slot | arrival]
+
+							DoSolveDate: EXECUTE(asap)
+							  triggered_by: departure_date_description || arrival_date_description
+							  precond: reference_date
+							  call: ParseDateTime -> departure_date, arrival_date, 
+										 start_time, end_time
+
+							# in here this returns not only the departure date, but also 
+							# the allowable start and end times.. ie tomorrow morning
+							# so we need to figure out how to make these visible here
+							# 1. search parents and siblings... ie the whole tree
+							# 2. search only parents (then need to put it there)
+							# 3. prefix them with the exact path ie ../GetTime/start_time
+
+						GetTime: AGENCY
+						  concepts: time_description(STRING), exact_time(INT)
+
+
+						ExpectAirline: AGENCY
+						  concepts: airline(STRING), airline_code(STRING)
+						  achieves_when: airline.unknown || (airline && airline_code)
+
+							ExpectAirline: EXPECT(airline)
+							  mapping: @[Airline_Name]
+							  effect: trigger ExpectAirline
+
+							DoAirlineRetrieval: EXECUTE
+							  precond: airline
+							  call: Backend.AirlineName2Code -> airline_code
+
+							InformInvalidAirline: INFORM
+							  precond: code_invalid
+							  prompt: did_not_find_airline
+
+							
+						
+
+					DoRetrieval: EXECUTE
+					  precond: GetConstraints
+					  stall_prompt: inform_web_stall
+					  call: BAckend.get_flights constraints -> flights_list, flights_description
+	
+					PresentSolutionAndNegotiate: AGENCY
+					  precond: flights_list, flights_description
+					  achieves_when: 
+					
+				WhatNext: AGENCY
+				  precond: !(Parent).last_leg ... or written more explicitly by the user
+				  concepts: return(BOOL), go_on(BOOL), 1way(BOOL), 2way(BOOL)
+				  achieves_when: (return==1) || go_on
+			
+					AskReturn: REQUEST(return)
+					  prompt: query_returning Leg[1].departurecity, (Parent).ArrivalCity
+					  mapping: {[yes], [no]->1,1,0}  ## one solution is to add 2way here
+
+					AskGoOn: REQUEST(go_on)
+					  precond: return==0
+					  prompt: query_go_on (Parent).ArrivalCity
+					  mapping: {@[yes], X[go_on], X[continue_to], [1way], @[no]->1,1,1,0,0,0}
+
+					Expect1Way: EXPECT(1way)
+					  precond: number_of_legs==1
+					  mapping: [1way]->1
+					  effect: return=0 && go_on=0
+
+				  	Expect2Way: EXPECT(2way)
+					  precond: number_of_legs==1
+					  mapping: [2way]->1
+					  effect: return = 1
+
+				DoExtendDialog: EXECUTE
+				  precond: (return==1) || (go_on==1)
+				  call: FlightsReservation.AddNewLeg
+
+	
+		Price:
+
+		Hotels:
+
+	
+		Summary: AGENCY	            --- done ---
+		  concepts: wantsummary(BOOL), summary(FRAME/System)
+		  achieves_when: (wantsummary==FALSE) || InformSummary
+
+# the behavior here is that if the user says he wants a summary, he will get one. What do we do about  
+# a general "summarize" request. That I think should be dealt with separately, as a dialog
+# mechanism. It should have a self-triggered agency, which responds to that ...
+# Therefore in here [Summary] should be not @-ed because the generic mechanism would capture that
+			
+			AskWantSummary: REQUEST(wantsummary)
+			  mapping: {[yes], [Summary], [no] -> 1,1,0}
+
+			DoSummary: EXECUTE
+			  precond: wantsummary==TRUE
+			  call: Travel.Summarize -> summary # this is a call to a agency-routine
+
+			InformSummary: INFORM
+			  precond: summary
+			  prompt: give_summary summary
+	
+		Evaluation: AGENCY
+		  concepts: satisfied(BOOL), realtrip(BOOL)
+		  achieves_when: BookFlight && satisfied && realtrip		
+
+			BookFlight: AGENCY 	
+			  concepts: book_flight(BOOL), 
+			  achieves_when: book_flight==FALSE || ConfirmEmailSent.achieved
+			
+				QueryBookFlight: REQUEST(book_flight)
+				  mapping: {[yes], @[send_itinerary], [no], [continue] -> 1,1,0,0}
+				
+				DoSendEmail: EXECUTE
+				  precond: book_flight==TRUE && flightinfo && profile.emailaddress 
+				  call: NLG.SendEmail flightinfo, profile.emailaddress
+# this also leads to a better organization of the NLG/etc...
+
+				ConfirmEmailSent: INFORM
+				  precond: DoSendEmail.achieved
+			
+				InformEmailNotSent: INFORM
+				  precond: (!profile.emailaddress) || DoSendEmail.failed
+
+# HOW would we solve the following problem: the user requests a copy of that email to another address
+# we could for example have another agency, which handles that situation. That agency should not
+# be open unless we have discussed this and sent the email. 
+
+			QuerySatisfied: REQUEST(satisfied)
+			  precond: BookFlight
+			  mapping = {[yes], [satisfied], [no]->1,1,0})
+
+			QueryRealTrip: REQUEST(realtrip)
+			  precond: QuerySatisfied
+			  mapping: {[yes],[no]->1,0})
+		
+		
+	GoodBye: INFORM
+	  prompt: good_bye
+
+
+Control Types:
+ left-to-right-enforced: achieve 1, the others blocked, then unblock 2, achieve 2, etc...
+ left-to-right-open: everything is open, try focusing left-to-right w/ obeying preconds
+ undirectional-open: everything is open, focus at random w/ obeying preconds
+
+- the predominant one seems to be left-to-right-open, do we really need the other ones ?... maybe yes... 
+Q: it would be interesting to see if you can do "system vs mixed" initiative this way... 
+
+ 
+
+-----------------------------------
+RECENT DISCUSSIONS BRAINSTOMING:
+
+02.13.02
+--------
+We started discussing a possible skeleton for a task/dialog execution engine. 
+The basic idea is that agencies (and microagents) are executed off a stack. 
+When an agency executes, it actually plans one of its children for execution 
+(push it on the stack and return). When a microagent executes, it will 
+typically (unless it's a backend call agent) request an input pass, which 
+goes as:
+- an agenda of all the open concepts is assembled (agenda assembly phase)
+- the input comes from the user 
+- the values are filled in (concept binding phase)
+- clarification behavior can be initiated
+- possible a "focus-shift" analysis phase
+Then the execution resumes from the agency currently on the stack. 
+
+Also there was another interesting idea which we might switch back to, 
+that of having an agenda which shifts from an agenda of concepts to one of 
+"agents", in which each of the agents would maybe get a chance to execute 
+after the input pass. That's a different model, we should keep the idea 
+around.
+
+The hard part is still to come:
+- how is the agenda actually assembled (reordering the tree or not ?, 
+  what are the tradeoffs there)
+- what happens on focus changes
+- what happens on overwrites, etc...
+
+
+
+02.18.02
+--------
+
+We discussed the way the agenda gets generated and used. Some of the main 
+points where:
+- maybe the ordering between  topics which are down in the agenda is not 
+directly useful (in the sense that using it does not always yield the best
+results). In the current system, it is used to resolve positional ambiguity 
+(or intention recognition/referent resolution) between concepts. But we came 
+up with examples, where using the ordering bias to solve positional 
+ambiguities is artificial. For instance, in a banking domain if U gives a 
+number, and it needs to be bound to checking# or savings#. There should be 
+no preference here.
+
+- we went on then to separate the problem of focus shift from concept 
+binding. Concepts are first bound (based on the input and on the 
+agenda-ordered list of expectations), and then the focus shift occurs, 
+or doesn not occur, as necessary. I think this is a good idea, especially 
+since so far concept binding seems to be more abstractable-away from the 
+task than focus shifts. 
+
+- input concept positional ambiguity could maybe be solved in the following 
+manner:
+	- the agenda organized in 3 sections: focus, main_topic, the_rest
+	- the "focus" preferred to "main_topic" preferred to "the_rest" parts 
+	  in the agenda. (i.e. if an input concept is to bind to 2 handlers 
+	  in 2 different of these areas, it will only get bound to the most 
+	  preferred on). This creates a "current context"-bias in intention 
+	  recognition. 
+	- if the ambiguity is within a single area of the agenda:
+		- one option would be to trigger a position resolution 
+		  agent (but the criticism to that is that it kinda barges 
+		  in, and does a focus shift ,and that's not what we wanted.
+		- another approach would be to basically "postpone" the 
+		  problem, and do some sort of passive binding of the 
+		  input concept to both handlers. Then, when the handler 
+		  becomes active (be it naturally, or as a focus shift 
+		  triggers it), it will see that it has some "volunteered", 
+		  and possibly ambiguous piece of concept, and it will do 
+		  something (confirm) to make it permanent. This is still 
+		  not very clear. Also, "volunteered", and "volunteered but 
+		  also to some other handler, too" seem like maybe different 
+		  situations to me (i'll need to hear the argument for why 
+		  that's not that way again :)). 
+
+- finally, we concluded that focus shift can occur 
+	- in a sort of task-independent, highly abstractable fashion, 
+	  ala [I want to talk about X now]
+	- or in a task dependent way, and we therefore need to figure out 
+	  a way to specify that (i.e. when this red bulb comes on, we need to 
+	  immediately shift focus here)
+
+Did I miss anything ? 
+
+02.19.02
+--------
+- focus shift is an independent process, which occurs right after the concept
+  bindings. Each active agent has a "focus_trigger" condition, which, if
+  satisfied after the binding stage will shift focus to that agent
+- we still NEED TO SOLVE THE focus shift ambiguity, in case it occurs. 
+  (how exactly do we do that?)
+- another conclusion was that it would be nice to come up with a set of rules, 
+  , which actually reflect a set of discourse principles, which govern 
+  concept bindings in the agenta, along the lines of:
+      - multiple bindings are solved based on preference for agenda areas
+      - unconfident concepts are not bound in the "bottom" area
+      - ... ?
+- another idea was that solving multiple passive bindings can be learned by 
+  the system throughout its life. It would be great if the relationship 
+  between the multiple bindings of a single concept (OR, XOR, etc) could
+  be learnt. 
+
+02.25.02
+--------
+
+Here's a table describing how a councept gets bound in various areas of the
+agenda:
+
+         Confident			Unconfident
+--------------------------------------------------------------
+Focus: | Bind there, finished       | Bind there, finished
+--------------------------------------------------------------
+Main:  | Single: Bind there, finish | Bind there, finished
+       | Multiple: Bad design       | Bad Design
+--------------------------------------------------------------
+Rest:  | Single: Bind there         | Ignore
+       | Multiple: Bind there       | Ignore
+--------------------------------------------------------------
+Nowhere| Need a behavior for nonunderstanding
+--------------------------------------------------------------
+
+02.28.02
+--------
+
+We basically discussed the last line of teh previous table. 
+In the current system, we just signal the misunderstanding to the user, 
+and we repeat the question. If this happens more than a number of times, we 
+hang-up.
+
+A better approach is to try and detect the type source of the 
+misunderstanding and communicate it to the user. This hopefully will make
+the user change the condition that lead to misunderstanding in the first 
+place. 
+
+There are a couple of sources of knowledge that could be used for
+diagnosis at each level:
+
+Channel: 	SNR
+		Clipping (maybe 2 types: maxout, and rectangular)
+
+Decoding:	Acoustic Confidence Score
+		Prosody pattern (hyperarticulation, silences (too slow) etc)
+
+Parsing:	Garble
+
+Dialog Level:	Concepts in the parse that don't bind anywhere
+
+Q: are there any other sources that we could use ?
+
+Immediately after the concept binding process, the nonunderstanding
+component will come into play, and :
+- label each input with information obtained from the knowledge source
+  above
+- in case of a non-understanding, create a diagnosis
+- conveys that diagnosis to the user
+
+There should also be an algorithm which takes the trace of nonunderstandings
+and of the same one occurs repeatedly, takes maybe some other appropriate
+fall-back action. 
+
+
+03.14.02
+--------
+We discussed where the line between dialog management and backend activity
+should be drawn and what is the right way to think about these things. 
+
+Here are a couple of domains:
+- dialog system which plays chess
+- dialog system which plays "Weakest Link"
+- MovieLine
+- Communicator
+- Symphony
+
+The conclusion what that, there are 2 things:
+- domain knowledge which is there even if dialog is not there (playing chess)
+- domain knowledge regarding how do you talk in that domain. Examples:
+	- The task structure in communicator, symphony
+	- The basic rules of chess (i.e. I move, you move)
+	- The fact that first you need to acquire constraints, then do
+	  a database search in MovieLine/Communicator
+	- The turn-taking and voting rules in Weakest Link (the task 
+	  structure)
+
+In light of this, we concluded that in order to achieve a clean separation
+between dialog and task, we will have a 3 layer architecture:
+- the core DM - handles and provides support only for
+  generic discourse stuff. Apart from the core engine that drives the 
+  dialog, it also provides default mechanisms which 
+  can be called upon by the task layer for most discourse mechanisms: 
+  confimration, clarifications, disambigution, etc.
+- a task (maybe need a better name) layer which manages the dialog task 
+  in the domain
+- a backend : which manages domain knowledge independent of the dialog
+  (that can be abstracted away from the dialog)
+
+Ideally (if we do a good job), the CORE is never touched when going to 
+another domain. The Task needs to be rewritten (but hopefully with a 
+minimal effort), and the backend is not our job. 
+
+Also, we envision providing libraries for writing certain types of tasks
+easier: i.e. one first thing would be the typical "slot-filling", 
+"information-access" system.
+
+
+04.05.02
+--------
+We discussed more about the assembly of the agenda and the problem
+of multiple bindings. Do we want or not to have the ordering of the
+tree happening. Need to better understand what exactly that does
+and if it does the right thing in most cases. Can we do the same
+thing without the reordering ?
+
+
+04.09.02
+--------
+Let's clear out the problem of bindings in the agenda. So the problem
+is having multiple possibilities for binding, how do we determine which
+is the right one ? This is the problem of INTENTION RECOGNITION. 
+
+Well, to recognize where to bind to, we must integrate 2 types
+of knowledge:
+	- discourse knowledge about context: history + local context
+	- task knowledge (for binding to something not addressed so far)
+	
+	
+What does tree reordering do ?
+	- it prefers local contexts (because of the DFS)
+	- on the same level, it prefers all history (in reverse chronological
+	  order) before all future topics (in task structure order)
+	  OBS: prefering all local history is not that good, especially in
+		   symphony-like wide trees. 
+		   
+So what's the right way to integrate:
+	- locality of context (arc distance)
+	- history
+	- future expected task structure
+	
+	
+Ideas:
+	- locality of context should always take precedence ... right ? 
+	- within the same context:
+		- within history should be solved by reverse chronological order
+			- with or without overriding the context ? 
+		- within future should be solved by expected task structure
+			- use task structure ... left-to-right property
+			- learn a model (use LTR task structure as a prior, and try 
+				to learn from examples)... things could get interesting
+				but I'm afraid the opportunities are low
+		- combining history and future ? ... history should maybe take
+		  precedence, but not "old" history
+		  
+Can we somehow combine all of these in a simple model ? activation based ?
+
+07.03.02
+--------
+Sorting out what kind of prompts we have for dealing with non-understandings,
+explain more, help, where are we, etc, etc. 
+
+Now, here are the things that we need to worry about:
+- NonUnderstanding
+- Help ? are there more types of help ?
+- WhatCanISay
+
+Here are a couple of request examples:
+
+- Nothing: this is the initial offer floor to the user, expecting him to 
+say "load water procedure"...
+
+
+- Are you ready to start working on this procedure ?
+	NU: At this point I need you to tell me if you are ready to start working
+		on this procedure. When you are ready please say ready to work
+	HELP: (idem)
+	WHAT CAN I SAY: When you are ready to start working, please say
+					ready to work
+	
+- Do you want me to read this note to you ?
+	NU: I need you to tell me if you want me to read this note to you ? 
+	HELP: (idem)
+	WHAT CAN I SAY: If you want me to read the note, say yes. Otherwise, say no. 
+	You can say 
+
+- Give step instructions ? Give caution ?
+
+- Where are you flying from ?
+
+
+
+

@@ -1,0 +1,1989 @@
+Scanning dependencies of target RAVENCLAW
+[  1%] Building CXX object CMakeFiles/RAVENCLAW.dir/DialogTask/DialogTask.cpp.o
+In file included from /home/alex/c++/DM/DMCore/DMCore.h:67:0,
+                 from /home/alex/c++/DM/DMCore/Core.h:95,
+                 from /home/alex/c++/DM/DialogTask/DialogTask.h:69,
+                 from /home/alex/c++/DM/DialogTask/DialogTask.cpp:60:
+/home/alex/c++/DM/Utils/Utils.h:173:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimLeft(string sString, char * pToTrim = " \n\t");
+                                                         ^
+/home/alex/c++/DM/Utils/Utils.h:176:58: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimRight(string sString, char * pToTrim = " \n\t");
+                                                          ^
+/home/alex/c++/DM/Utils/Utils.h:179:53: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string Trim(string sString, char * pToTrim = " \n\t");
+                                                     ^
+[  2%] Building CXX object CMakeFiles/RAVENCLAW.dir/DMCore/Agents/Agent.cpp.o
+In file included from /home/alex/c++/DM/DMCore/Agents/Agent.h:65:0,
+                 from /home/alex/c++/DM/DMCore/Agents/Agent.cpp:61:
+/home/alex/c++/DM/Utils/Utils.h:173:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimLeft(string sString, char * pToTrim = " \n\t");
+                                                         ^
+/home/alex/c++/DM/Utils/Utils.h:176:58: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimRight(string sString, char * pToTrim = " \n\t");
+                                                          ^
+/home/alex/c++/DM/Utils/Utils.h:179:53: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string Trim(string sString, char * pToTrim = " \n\t");
+                                                     ^
+In file included from /home/alex/c++/DM/DMCore/Agents/Agent.cpp:62:0:
+/home/alex/c++/DM/DMCore/Agents/Agent.cpp: In static member function ‘static CAgent* CAgent::AgentFactory(std::string, std::string)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Agents/Agent.cpp:91:2: note: in expansion of macro ‘FatalError’
+  FatalError("AgentFactory called on CAgent (abstract) class.");
+  ^
+[  4%] Building CXX object CMakeFiles/RAVENCLAW.dir/DMCore/Agents/CoreAgents/DMCoreAgent.cpp.o
+In file included from /home/alex/c++/DM/DMCore/Agents/Registry.h:65:0,
+                 from /home/alex/c++/DM/DMCore/Agents/CoreAgents/DMCoreAgent.cpp:64:
+/home/alex/c++/DM/Utils/Utils.h:173:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimLeft(string sString, char * pToTrim = " \n\t");
+                                                         ^
+/home/alex/c++/DM/Utils/Utils.h:176:58: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimRight(string sString, char * pToTrim = " \n\t");
+                                                          ^
+/home/alex/c++/DM/Utils/Utils.h:179:53: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string Trim(string sString, char * pToTrim = " \n\t");
+                                                     ^
+In file included from /home/alex/c++/DM/DMCore/Core.h:96:0,
+                 from /home/alex/c++/DM/DMCore/Agents/CoreAgents/DMCoreAgent.cpp:65:
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/DMCoreAgent.cpp: In member function ‘void CDMCoreAgent::RegisterBindingFilter(std::string, TBindingFilterFunct)’:
+/home/alex/c++/DM/DMCore/Log.h:187:56: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __Warning(string(sWarning).c_str(), __FILE__, __LINE__)
+                                                        ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/DMCoreAgent.cpp:440:9: note: in expansion of macro ‘Warning’
+         Warning(FormatString("Could not add binding filter %s, as it already "\
+         ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/DMCoreAgent.cpp: In member function ‘void CDMCoreAgent::computeCurrentSystemAction()’:
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/DMCoreAgent.cpp:572:59: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+      SplitOnFirst(sAgentName, "[", sFoo, sConfirmedConcept);
+                                                           ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/DMCoreAgent.cpp:573:58: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+      sConfirmedConcept = TrimRight(sConfirmedConcept, "]");
+                                                          ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/DMCoreAgent.cpp:590:59: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+      SplitOnFirst(sAgentName, "[", sFoo, sConfirmedConcept);
+                                                           ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/DMCoreAgent.cpp:591:58: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+      sConfirmedConcept = TrimRight(sConfirmedConcept, "]");
+                                                          ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/DMCoreAgent.cpp: In member function ‘std::string CDMCoreAgent::systemActionToString(TSystemAction)’:
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/DMCoreAgent.cpp:636:34: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  sResult = TrimRight(sResult, ",");
+                                  ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/DMCoreAgent.cpp:643:34: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  sResult = TrimRight(sResult, ",");
+                                  ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/DMCoreAgent.cpp:650:34: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  sResult = TrimRight(sResult, ",");
+                                  ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/DMCoreAgent.cpp:657:34: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  sResult = TrimRight(sResult, ",");
+                                  ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/DMCoreAgent.cpp: In member function ‘std::string CDMCoreAgent::expectationAgendaToBroadcastString(TExpectationAgenda)’:
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/DMCoreAgent.cpp:942:41: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+         sResult = TrimRight(sResult, ",");
+                                         ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/DMCoreAgent.cpp:945:27: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  return Trim(sResult, "\n");
+                           ^
+In file included from /home/alex/c++/DM/DMCore/Core.h:96:0,
+                 from /home/alex/c++/DM/DMCore/Agents/CoreAgents/DMCoreAgent.cpp:65:
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/DMCoreAgent.cpp: In member function ‘void CDMCoreAgent::bindConcepts(TBindingsDescr&)’:
+/home/alex/c++/DM/DMCore/Log.h:187:56: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __Warning(string(sWarning).c_str(), __FILE__, __LINE__)
+                                                        ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/DMCoreAgent.cpp:1096:11: note: in expansion of macro ‘Warning’
+           Warning(FormatString("Multiple binding for grammar "\
+           ^
+/home/alex/c++/DM/DMCore/Log.h:187:56: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __Warning(string(sWarning).c_str(), __FILE__, __LINE__)
+                                                        ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/DMCoreAgent.cpp:1253:5: note: in expansion of macro ‘Warning’
+     Warning("Helios binding features are different from RavenClaw "\
+     ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/DMCoreAgent.cpp: In member function ‘void CDMCoreAgent::performConceptBinding(std::string, std::string, float, int, bool)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/DMCoreAgent.cpp:1295:13: note: in expansion of macro ‘FatalError’
+             FatalError(FormatString("Could not find binding filter :%s for "\
+             ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/DMCoreAgent.cpp: In member function ‘void CDMCoreAgent::resolveFocusShift()’:
+/home/alex/c++/DM/DMCore/Log.h:187:56: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __Warning(string(sWarning).c_str(), __FILE__, __LINE__)
+                                                        ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/DMCoreAgent.cpp:1575:3: note: in expansion of macro ‘Warning’
+   Warning(sMessage.c_str());
+   ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/DMCoreAgent.cpp: In member function ‘void CDMCoreAgent::RestartTopic(CDialogAgent*)’:
+/home/alex/c++/DM/DMCore/Log.h:187:56: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __Warning(string(sWarning).c_str(), __FILE__, __LINE__)
+                                                        ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/DMCoreAgent.cpp:1799:3: note: in expansion of macro ‘Warning’
+   Warning("Cannot restart the " + pdaDialogAgent->GetName() +
+   ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/DMCoreAgent.cpp: In member function ‘int CDMCoreAgent::popCompletedFromExecutionStack()’:
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/DMCoreAgent.cpp:1875:36: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+         sAgents = TrimRight(sAgents);
+                                    ^
+In file included from /home/alex/c++/DM/DMCore/Core.h:96:0,
+                 from /home/alex/c++/DM/DMCore/Agents/CoreAgents/DMCoreAgent.cpp:65:
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/DMCoreAgent.cpp: In member function ‘void CDMCoreAgent::popAgentFromExecutionStack(CDialogAgent*, TStringVector&)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/DMCoreAgent.cpp:1891:3: note: in expansion of macro ‘FatalError’
+   FatalError("Cannot pop the " + pdaADialogAgent->GetName() + 
+   ^
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/DMCoreAgent.cpp:1905:3: note: in expansion of macro ‘FatalError’
+   FatalError("Cannot pop the " + pdaADialogAgent->GetName() +
+   ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/DMCoreAgent.cpp: In member function ‘void CDMCoreAgent::popTopicFromExecutionStack(CDialogAgent*, TStringVector&)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/DMCoreAgent.cpp:1931:3: note: in expansion of macro ‘FatalError’
+   FatalError("Cannot pop the " + pdaADialogAgent->GetName() + 
+   ^
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/DMCoreAgent.cpp:1945:3: note: in expansion of macro ‘FatalError’
+   FatalError("Cannot pop the " + pdaADialogAgent->GetName() +
+   ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/DMCoreAgent.cpp: In member function ‘const TBindingsDescr& CDMCoreAgent::GetBindingResult(int)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/DMCoreAgent.cpp:2111:9: note: in expansion of macro ‘FatalError’
+         FatalError("Out of bounds index on access to binding history.");
+         ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/DMCoreAgent.cpp: In member function ‘void CDMCoreAgent::PopAgentFromExecutionStack(CDialogAgent*)’:
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/DMCoreAgent.cpp:2369:36: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+         sAgents = TrimRight(sAgents);
+                                    ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/DMCoreAgent.cpp: In member function ‘void CDMCoreAgent::PopTopicFromExecutionStack(CDialogAgent*)’:
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/DMCoreAgent.cpp:2390:36: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+         sAgents = TrimRight(sAgents);
+                                    ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/DMCoreAgent.cpp: In member function ‘void CDMCoreAgent::PopGroundingAgentsFromExecutionStack()’:
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/DMCoreAgent.cpp:2411:36: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+         sAgents = TrimRight(sAgents);
+                                    ^
+[  5%] Building CXX object CMakeFiles/RAVENCLAW.dir/DMCore/Agents/CoreAgents/DTTManagerAgent.cpp.o
+In file included from /home/alex/c++/DM/DMCore/Agents/CoreAgents/DTTManagerAgent.h:70:0,
+                 from /home/alex/c++/DM/DMCore/Agents/CoreAgents/DTTManagerAgent.cpp:66:
+/home/alex/c++/DM/Utils/Utils.h:173:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimLeft(string sString, char * pToTrim = " \n\t");
+                                                         ^
+/home/alex/c++/DM/Utils/Utils.h:176:58: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimRight(string sString, char * pToTrim = " \n\t");
+                                                          ^
+/home/alex/c++/DM/Utils/Utils.h:179:53: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string Trim(string sString, char * pToTrim = " \n\t");
+                                                     ^
+In file included from /home/alex/c++/DM/DMCore/Core.h:96:0,
+                 from /home/alex/c++/DM/DMCore/Agents/DialogAgents/DiscourseAgents/DARepeat.h:73,
+                 from /home/alex/c++/DM/DMCore/Agents/DialogAgents/DiscourseAgents/AllDiscourseAgents.h:63,
+                 from /home/alex/c++/DM/DMCore/Agents/DialogAgents/AllDialogAgents.h:66,
+                 from /home/alex/c++/DM/DMCore/Agents/CoreAgents/DTTManagerAgent.cpp:68:
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/DTTManagerAgent.cpp: In member function ‘void CDTTManagerAgent::MountAgent(CDialogAgent*, CDialogAgent*, TMountingMethod, std::string)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/DTTManagerAgent.cpp:202:5: note: in expansion of macro ‘FatalError’
+     FatalError("Cannot mount " + pdaWho->GetName() + " to NULL.");
+     ^
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/DTTManagerAgent.cpp:207:5: note: in expansion of macro ‘FatalError’
+     FatalError("Cannot mount " + pdaWho->GetName() + " to NULL.");
+     ^
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/DTTManagerAgent.cpp:212:5: note: in expansion of macro ‘FatalError’
+     FatalError("Cannot mount " + pdaWho->GetName() + " to NULL.");
+     ^
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/DTTManagerAgent.cpp:217:5: note: in expansion of macro ‘FatalError’
+     FatalError("Cannot mount " + pdaWho->GetName() + " to NULL.");
+     ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/DTTManagerAgent.cpp: In member function ‘void CDTTManagerAgent::UnMountAgent(CDialogAgent*)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/DTTManagerAgent.cpp:247:4: note: in expansion of macro ‘FatalError’
+    FatalError("Cannot unmount a root dialog agent.");
+    ^
+/home/alex/c++/DM/DMCore/Log.h:193:52: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __Error(string(sError).c_str(), __FILE__, __LINE__)
+                                                    ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/DTTManagerAgent.cpp:251:3: note: in expansion of macro ‘Error’
+   Error("Cannot unmount NULL agent.");
+   ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/DTTManagerAgent.cpp: In member function ‘std::string CDTTManagerAgent::GetParentName(std::string)’:
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/DTTManagerAgent.cpp:297:46: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  SplitOnLast(sAgentPath, "/", sParent, sAgent);
+                                              ^
+[  7%] Building CXX object CMakeFiles/RAVENCLAW.dir/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp.o
+In file included from /home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.h:68:0,
+                 from /home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:64:
+/home/alex/c++/DM/Utils/Utils.h:173:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimLeft(string sString, char * pToTrim = " \n\t");
+                                                         ^
+/home/alex/c++/DM/Utils/Utils.h:176:58: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimRight(string sString, char * pToTrim = " \n\t");
+                                                          ^
+/home/alex/c++/DM/Utils/Utils.h:179:53: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string Trim(string sString, char * pToTrim = " \n\t");
+                                                     ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp: In member function ‘void CGroundingManagerAgent::SetConfiguration(std::string)’:
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:121:64: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   PartitionString(gmcConfig.sGroundingManagerConfiguration, ";");
+                                                                ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:137:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    SplitOnFirst(vsTokens[i], ":", sSlot, sValue);
+                                                ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp: In member function ‘virtual void CGroundingManagerAgent::LoadPoliciesFromString(std::string)’:
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:177:60: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  vector<string> vsPolicies = PartitionString(sPolicies, ";");
+                                                            ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:184:71: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+         if(SplitOnFirst(vsPolicies[i], "=", sModelName, sModelFileName)) {
+                                                                       ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:187:53: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+             sModelName = ToLowerCase(Trim(sModelName));
+                                                     ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:188:47: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    sModelData = loadPolicy(Trim(sModelFileName));
+                                               ^
+In file included from /home/alex/c++/DM/DMCore/Core.h:96:0,
+                 from /home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:65:
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp: In member function ‘virtual void CGroundingManagerAgent::LoadPoliciesFromFile(std::string)’:
+/home/alex/c++/DM/DMCore/Log.h:187:56: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __Warning(string(sWarning).c_str(), __FILE__, __LINE__)
+                                                        ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:211:9: note: in expansion of macro ‘Warning’
+         Warning(FormatString(
+         ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:233:74: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+         if(SplitOnFirst((string)lpszLine, "=", sModelName, sModelFileName)) {
+                                                                          ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:236:53: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+             sModelName = ToLowerCase(Trim(sModelName));
+                                                     ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:237:47: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    sModelData = loadPolicy(Trim(sModelFileName));
+                                               ^
+In file included from /home/alex/c++/DM/DMCore/Core.h:96:0,
+                 from /home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:65:
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp: In member function ‘virtual void CGroundingManagerAgent::LoadBeliefUpdatingModel(std::string)’:
+/home/alex/c++/DM/DMCore/Log.h:187:56: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __Warning(string(sWarning).c_str(), __FILE__, __LINE__)
+                                                        ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:305:9: note: in expansion of macro ‘Warning’
+         Warning(FormatString(
+         ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:320:39: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   string sLine = Trim((string)lpszLine);
+                                       ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:334:40: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+       ToLowerCase(Trim((string)lpszLine)) != "end"){
+                                        ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:336:34: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     sLine = Trim((string)lpszLine);
+                                  ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:338:43: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     SplitOnFirst(sLine, "=", sParam, sCoef);
+                                           ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:341:29: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+      ToLowerCase(Trim(sParam)), (float)atof(sCoef.c_str())));
+                             ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:351:42: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    SplitOnFirst(sLine, "(", sFoo, sAction);
+                                          ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:352:39: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    sAction = TrimRight(sAction, " \n)");
+                                       ^
+In file included from /home/alex/c++/DM/DMCore/Core.h:96:0,
+                 from /home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:65:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:358:5: note: in expansion of macro ‘FatalError’
+     FatalError(FormatString(
+     ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:368:40: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+       ToLowerCase(Trim((string)lpszLine)) != "end"){
+                                        ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:370:34: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     sLine = Trim((string)lpszLine);
+                                  ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:372:43: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     SplitOnFirst(sLine, "=", sParam, sCoef);
+                                           ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:373:55: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     TStringVector vsCoefs = PartitionString(sCoef, ";");
+                                                       ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:380:29: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+      ToLowerCase(Trim(sParam)), vfCoefs));
+                             ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:395:40: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    SplitOnFirst(sLine, "(", sFoo, sFoo2);
+                                        ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:396:35: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    sFoo2 = TrimRight(sFoo2, " \n)");
+                                   ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:397:51: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    SplitOnFirst(sFoo2, ":", sConcept, sConceptType);
+                                                   ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:404:40: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+       ToLowerCase(Trim((string)lpszLine)) != "end"){
+                                        ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:406:34: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     sLine = Trim((string)lpszLine);
+                                  ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:407:56: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     TStringVector vsItems = PartitionString(sLine, "\t");
+                                                        ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:414:33: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+      ToLowerCase(Trim(vsItems[0])), vfParams));
+                                 ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp: In member function ‘virtual void CGroundingManagerAgent::SetBeliefUpdatingModelName(std::string)’:
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:443:81: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  if(SplitOnFirst(gmcConfig.sBeliefUpdatingModelName, "(", sModelName, sModelFile)) {
+                                                                                 ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:448:47: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    sModelFile = TrimRight(sModelFile, ") \t\n");
+                                               ^
+In file included from /home/alex/c++/DM/DMCore/Core.h:96:0,
+                 from /home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:65:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:452:4: note: in expansion of macro ‘FatalError’
+    FatalError(FormatString(
+    ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp: In member function ‘virtual STRING2FLOATVECTOR& CGroundingManagerAgent::GetBeliefUpdatingModelForAction(std::string)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:472:3: note: in expansion of macro ‘FatalError’
+   FatalError(FormatString(
+   ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp: In member function ‘virtual float CGroundingManagerAgent::GetConstantParameter(std::string)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:488:9: note: in expansion of macro ‘FatalError’
+         FatalError(FormatString("Could not find constant parameter %s",
+         ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp: In member function ‘virtual void CGroundingManagerAgent::PrecomputeBeliefUpdatingFeatures(CConcept*, CConcept*, std::string)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:501:3: note: in expansion of macro ‘FatalError’
+   FatalError("Cannot precompute belief updating features on NULL concept.");
+   ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp: In member function ‘virtual float CGroundingManagerAgent::GetGroundingFeature(std::string)’:
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:725:70: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  if(SplitOnFirst(sFeatureName, "[", sClassFeature, sClassFeatureValue)) {
+                                                                      ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:727:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   sClassFeatureValue = TrimRight(sClassFeatureValue, "]");
+                                                         ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:744:62: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+      TStringVector vsWords = PartitionString(sHypothesis, " ");     
+                                                              ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:755:62: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+      TStringVector vsWords = PartitionString(sHypothesis, " ");
+                                                              ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:759:80: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+           return ToLowerCase(sClassFeatureValue) == ToLowerCase(Trim(vsWords[0]));
+                                                                                ^
+In file included from /home/alex/c++/DM/DMCore/Core.h:96:0,
+                 from /home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:65:
+/home/alex/c++/DM/DMCore/Log.h:187:56: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __Warning(string(sWarning).c_str(), __FILE__, __LINE__)
+                                                        ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:771:3: note: in expansion of macro ‘Warning’
+   Warning(FormatString(
+   ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp: In member function ‘virtual std::string CGroundingManagerAgent::GetGroundingFeatureAsString(std::string)’:
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:800:70: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  if(SplitOnFirst(sFeatureName, "[", sClassFeature, sClassFeatureValue)) {
+                                                                      ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:802:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   sClassFeatureValue = TrimRight(sClassFeatureValue, "]");
+                                                         ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:819:62: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+      TStringVector vsWords = PartitionString(sHypothesis, " ");     
+                                                              ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:831:62: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+      TStringVector vsWords = PartitionString(sHypothesis, " ");
+                                                              ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:836:42: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+               ToLowerCase(Trim(vsWords[0])))?"1":"0";
+                                          ^
+In file included from /home/alex/c++/DM/DMCore/Core.h:96:0,
+                 from /home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:65:
+/home/alex/c++/DM/DMCore/Log.h:187:56: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __Warning(string(sWarning).c_str(), __FILE__, __LINE__)
+                                                        ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:844:3: note: in expansion of macro ‘Warning’
+   Warning(FormatString(
+   ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp: In member function ‘virtual float CGroundingManagerAgent::GetPriorForConceptHyp(std::string, std::string)’:
+/home/alex/c++/DM/DMCore/Log.h:187:56: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __Warning(string(sWarning).c_str(), __FILE__, __LINE__)
+                                                        ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:887:4: note: in expansion of macro ‘Warning’
+    Warning(FormatString(
+    ^
+/home/alex/c++/DM/DMCore/Log.h:187:56: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __Warning(string(sWarning).c_str(), __FILE__, __LINE__)
+                                                        ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:897:3: note: in expansion of macro ‘Warning’
+   Warning(FormatString(
+   ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp: In member function ‘virtual float CGroundingManagerAgent::GetConfusabilityForConceptHyp(std::string, std::string)’:
+/home/alex/c++/DM/DMCore/Log.h:187:56: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __Warning(string(sWarning).c_str(), __FILE__, __LINE__)
+                                                        ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:920:4: note: in expansion of macro ‘Warning’
+    Warning(FormatString(
+    ^
+/home/alex/c++/DM/DMCore/Log.h:187:56: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __Warning(string(sWarning).c_str(), __FILE__, __LINE__)
+                                                        ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:930:3: note: in expansion of macro ‘Warning’
+   Warning(FormatString(
+   ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp: In member function ‘int CGroundingManagerAgent::GroundingActionNameToIndex(std::string)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:979:5: note: in expansion of macro ‘FatalError’
+     FatalError(FormatString("Grounding action %s is not registered with the "\
+     ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp: In member function ‘CGroundingAction* CGroundingManagerAgent::operator[](unsigned int)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:1002:9: note: in expansion of macro ‘FatalError’
+         FatalError(FormatString("Grounding action index %d out of bounds.",
+         ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp: In member function ‘void CGroundingManagerAgent::RequestConceptGrounding(CConcept*)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:1025:9: note: in expansion of macro ‘FatalError’
+         FatalError(FormatString(
+         ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp: In member function ‘std::string CGroundingManagerAgent::ScheduleConceptGrounding(CConcept*)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:1099:5: note: in expansion of macro ‘FatalError’
+     FatalError(FormatString(
+     ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp: In member function ‘void CGroundingManagerAgent::SetConceptGroundingRequestStatus(CConcept*, int)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:1139:9: note: in expansion of macro ‘FatalError’
+         FatalError(FormatString(
+         ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp: In member function ‘CGroundingModel* CGroundingManagerAgent::CreateGroundingModel(std::string, std::string)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:1371:9: note: in expansion of macro ‘FatalError’
+         FatalError(FormatString("Could not find grounding model type %s.", 
+         ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp: In member function ‘virtual void CGroundingManagerAgent::Run()’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:1486:13: note: in expansion of macro ‘FatalError’
+             FatalError(
+             ^
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/GroundingManagerAgent.cpp:1607:17: note: in expansion of macro ‘FatalError’
+                 FatalError(FormatString(
+                 ^
+[  8%] Building CXX object CMakeFiles/RAVENCLAW.dir/DMCore/Agents/CoreAgents/InteractionEventManagerAgent.cpp.o
+In file included from /home/alex/c++/DM/DMCore/Events/InteractionEvent.h:64:0,
+                 from /home/alex/c++/DM/DMCore/Agents/CoreAgents/InteractionEventManagerAgent.h:6,
+                 from /home/alex/c++/DM/DMCore/Agents/CoreAgents/InteractionEventManagerAgent.cpp:1:
+/home/alex/c++/DM/Utils/Utils.h:173:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimLeft(string sString, char * pToTrim = " \n\t");
+                                                         ^
+/home/alex/c++/DM/Utils/Utils.h:176:58: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimRight(string sString, char * pToTrim = " \n\t");
+                                                          ^
+/home/alex/c++/DM/Utils/Utils.h:179:53: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string Trim(string sString, char * pToTrim = " \n\t");
+                                                     ^
+[  9%] Building CXX object CMakeFiles/RAVENCLAW.dir/DMCore/Agents/CoreAgents/OutputManagerAgent.cpp.o
+In file included from /home/alex/c++/DM/DMCore/Agents/CoreAgents/OutputManagerAgent.h:98:0,
+                 from /home/alex/c++/DM/DMCore/Agents/CoreAgents/OutputManagerAgent.cpp:93:
+/home/alex/c++/DM/Utils/Utils.h:173:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimLeft(string sString, char * pToTrim = " \n\t");
+                                                         ^
+/home/alex/c++/DM/Utils/Utils.h:176:58: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimRight(string sString, char * pToTrim = " \n\t");
+                                                          ^
+/home/alex/c++/DM/Utils/Utils.h:179:53: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string Trim(string sString, char * pToTrim = " \n\t");
+                                                     ^
+In file included from /home/alex/c++/DM/DMCore/Core.h:96:0,
+                 from /home/alex/c++/DM/DMCore/Agents/CoreAgents/OutputManagerAgent.cpp:95:
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/OutputManagerAgent.cpp: In member function ‘std::string COutputHistory::GetUtteranceAt(unsigned int)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/OutputManagerAgent.cpp:174:9: note: in expansion of macro ‘FatalError’
+         FatalError(FormatString("Invalid index in output utterance history: "\
+         ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/OutputManagerAgent.cpp: In member function ‘COutput* COutputHistory::GetOutputAt(unsigned int)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/OutputManagerAgent.cpp:186:9: note: in expansion of macro ‘FatalError’
+         FatalError(FormatString("Invalid index in output utterance history: "\
+         ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/OutputManagerAgent.cpp: In member function ‘void COutputManagerAgent::SetDefaultOutputDevice(std::string)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/OutputManagerAgent.cpp:307:2: note: in expansion of macro ‘FatalError’
+  FatalError("Cannot set default output device to " + sName + ". Device "\
+  ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/OutputManagerAgent.cpp: In member function ‘std::vector<COutput*> COutputManagerAgent::Output(CDialogAgent*, std::string, TFloorStatus)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/OutputManagerAgent.cpp:357:9: note: in expansion of macro ‘FatalError’
+         FatalError(FormatString("No generator agent specified for output "\
+         ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/OutputManagerAgent.cpp:361:29: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     sPrompts = Trim(sPrompts);
+                             ^
+In file included from /home/alex/c++/DM/DMCore/Core.h:96:0,
+                 from /home/alex/c++/DM/DMCore/Agents/CoreAgents/OutputManagerAgent.cpp:95:
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/OutputManagerAgent.cpp: In member function ‘void COutputManagerAgent::Repeat()’:
+/home/alex/c++/DM/DMCore/Log.h:187:56: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __Warning(string(sWarning).c_str(), __FILE__, __LINE__)
+                                                        ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/OutputManagerAgent.cpp:467:9: note: in expansion of macro ‘Warning’
+         Warning("Output history is empty, there is nothing to be repeated.");
+         ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/OutputManagerAgent.cpp: In member function ‘void COutputManagerAgent::Notify(int, int, std::string, std::string)’:
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/OutputManagerAgent.cpp:538:70: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  vector<string> vsParsedConveyance = PartitionString(sConveyance, " ");
+                                                                      ^
+In file included from /home/alex/c++/DM/DMCore/Core.h:96:0,
+                 from /home/alex/c++/DM/DMCore/Agents/CoreAgents/OutputManagerAgent.cpp:95:
+/home/alex/c++/DM/DMCore/Log.h:187:56: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __Warning(string(sWarning).c_str(), __FILE__, __LINE__)
+                                                        ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/OutputManagerAgent.cpp:543:3: note: in expansion of macro ‘Warning’
+   Warning(FormatString("Received notification about output %d, which doesn't "\
+   ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/OutputManagerAgent.cpp:575:40: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     sTaggedUtt = Trim(sTaggedUtt, " \n");
+                                        ^
+In file included from /home/alex/c++/DM/DMCore/Core.h:96:0,
+                 from /home/alex/c++/DM/DMCore/Agents/CoreAgents/OutputManagerAgent.cpp:95:
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/OutputManagerAgent.cpp: In member function ‘void COutputManagerAgent::PreliminaryNotify(int, std::string)’:
+/home/alex/c++/DM/DMCore/Log.h:187:56: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __Warning(string(sWarning).c_str(), __FILE__, __LINE__)
+                                                        ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/OutputManagerAgent.cpp:598:3: note: in expansion of macro ‘Warning’
+   Warning(FormatString("Received notification about output %d, which doesn't "\
+   ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/OutputManagerAgent.cpp:605:61: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     vector<string> svWords = PartitionString(sTaggedUtt, " ");
+                                                             ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/OutputManagerAgent.cpp:608:39: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+         string sWord = Trim(svWords[i]);
+                                       ^
+[ 11%] Building CXX object CMakeFiles/RAVENCLAW.dir/DMCore/Agents/CoreAgents/StateManagerAgent.cpp.o
+In file included from /home/alex/c++/DM/DMCore/Agents/CoreAgents/StateManagerAgent.h:77:0,
+                 from /home/alex/c++/DM/DMCore/Agents/CoreAgents/StateManagerAgent.cpp:73:
+/home/alex/c++/DM/Utils/Utils.h:173:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimLeft(string sString, char * pToTrim = " \n\t");
+                                                         ^
+/home/alex/c++/DM/Utils/Utils.h:176:58: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimRight(string sString, char * pToTrim = " \n\t");
+                                                          ^
+/home/alex/c++/DM/Utils/Utils.h:179:53: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string Trim(string sString, char * pToTrim = " \n\t");
+                                                     ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/StateManagerAgent.cpp: In member function ‘std::string CStateManagerAgent::GetStateAsString(TDialogState)’:
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/StateManagerAgent.cpp:278:30: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     dsState.esExecutionStack)).c_str(), 
+                              ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/StateManagerAgent.cpp:280:22: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     dsState.eaAgenda)).c_str(),
+                      ^
+[ 12%] Building CXX object CMakeFiles/RAVENCLAW.dir/DMCore/Agents/CoreAgents/TrafficManagerAgent.cpp.o
+In file included from /home/alex/c++/DM/DMCore/Agents/CoreAgents/TrafficManagerAgent.h:77:0,
+                 from /home/alex/c++/DM/DMCore/Agents/CoreAgents/TrafficManagerAgent.cpp:74:
+/home/alex/c++/DM/Utils/Utils.h:173:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimLeft(string sString, char * pToTrim = " \n\t");
+                                                         ^
+/home/alex/c++/DM/Utils/Utils.h:176:58: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimRight(string sString, char * pToTrim = " \n\t");
+                                                          ^
+/home/alex/c++/DM/Utils/Utils.h:179:53: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string Trim(string sString, char * pToTrim = " \n\t");
+                                                     ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/TrafficManagerAgent.cpp: In member function ‘void CTrafficManagerAgent::Call(CDialogAgent*, std::string)’:
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/TrafficManagerAgent.cpp:284:27: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  string sRest = Trim(sCall); // used to hold the rest of the string 
+                           ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/TrafficManagerAgent.cpp:294:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  SplitOnFirst(sRest, " ", ecsCall.sModuleFunction, sRest);
+                                                         ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/TrafficManagerAgent.cpp:299:66: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     SplitOnFirst(ecsCall.sModuleFunction, ".", sModule, sFunction);
+                                                                  ^
+In file included from /home/alex/c++/DM/DMCore/Core.h:96:0,
+                 from /home/alex/c++/DM/DMCore/Agents/CoreAgents/TrafficManagerAgent.cpp:76:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/TrafficManagerAgent.cpp:301:9: note: in expansion of macro ‘FatalError’
+         FatalError(
+         ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/TrafficManagerAgent.cpp:310:45: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   SplitOnFirst(sRest, " ", sSlot, sRest, '"');
+                                             ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/TrafficManagerAgent.cpp:311:25: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   sRest = TrimLeft(sRest);
+                         ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/TrafficManagerAgent.cpp:322:52: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   if(SplitOnFirst(sSlot, "=", sLeftSide, sRightSide)) {
+                                                    ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/TrafficManagerAgent.cpp:326:38: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    scpPair.sSlotName = Trim(sLeftSide);
+                                      ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/TrafficManagerAgent.cpp:327:51: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    scpPair.sSlotValue = Trim(sRightSide, " \n\t\"");
+                                                   ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/TrafficManagerAgent.cpp:330:59: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   } else if(SplitOnFirst(sSlot, ">", sLeftSide, sRightSide)) {
+                                                           ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/TrafficManagerAgent.cpp:335:38: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    scpPair.sSlotName = Trim(sLeftSide);
+                                      ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/TrafficManagerAgent.cpp:336:56: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    scpPair.pConcept = &(pCallerAgent->C(Trim(sRightSide)));
+                                                        ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/TrafficManagerAgent.cpp:343:59: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   } else if(SplitOnFirst(sSlot, "<", sLeftSide, sRightSide)) {
+                                                           ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/TrafficManagerAgent.cpp:347:38: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    svpPair.sSlotName = Trim(sLeftSide);
+                                      ^
+/home/alex/c++/DM/DMCore/Agents/CoreAgents/TrafficManagerAgent.cpp:350:41: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+             sRightSide = Trim(sRightSide);
+                                         ^
+[ 14%] Building CXX object CMakeFiles/RAVENCLAW.dir/DMCore/Agents/DialogAgents/BasicAgents/DialogAgency.cpp.o
+In file included from /home/alex/c++/DM/DMCore/Agents/Agent.h:65:0,
+                 from /home/alex/c++/DM/DMCore/Agents/DialogAgents/BasicAgents/../DialogAgent.h:100,
+                 from /home/alex/c++/DM/DMCore/Agents/DialogAgents/BasicAgents/DialogAgency.h:79,
+                 from /home/alex/c++/DM/DMCore/Agents/DialogAgents/BasicAgents/DialogAgency.cpp:75:
+/home/alex/c++/DM/Utils/Utils.h:173:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimLeft(string sString, char * pToTrim = " \n\t");
+                                                         ^
+/home/alex/c++/DM/Utils/Utils.h:176:58: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimRight(string sString, char * pToTrim = " \n\t");
+                                                          ^
+/home/alex/c++/DM/Utils/Utils.h:179:53: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string Trim(string sString, char * pToTrim = " \n\t");
+                                                     ^
+In file included from /home/alex/c++/DM/DMCore/Core.h:96:0,
+                 from /home/alex/c++/DM/DMCore/Agents/DialogAgents/BasicAgents/DialogAgency.cpp:76:
+/home/alex/c++/DM/DMCore/Agents/DialogAgents/BasicAgents/DialogAgency.cpp: In member function ‘virtual TDialogExecuteReturnCode CDialogAgency::Execute()’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Agents/DialogAgents/BasicAgents/DialogAgency.cpp:149:3: note: in expansion of macro ‘FatalError’
+   FatalError("Agency " + GetName() + " failed to complete.");
+   ^
+/home/alex/c++/DM/DMCore/Agents/DialogAgents/BasicAgents/DialogAgency.cpp: In member function ‘virtual CDialogAgent* CDialogAgency::NextAgentToExecute()’:
+/home/alex/c++/DM/DMCore/Log.h:187:56: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __Warning(string(sWarning).c_str(), __FILE__, __LINE__)
+                                                        ^
+/home/alex/c++/DM/DMCore/Agents/DialogAgents/BasicAgents/DialogAgency.cpp:183:3: note: in expansion of macro ‘Warning’
+   Warning(sWarning);
+   ^
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Agents/DialogAgents/BasicAgents/DialogAgency.cpp:202:4: note: in expansion of macro ‘FatalError’
+    FatalError("All agents are completed in NextAgentToExecute for " + 
+    ^
+[ 15%] Building CXX object CMakeFiles/RAVENCLAW.dir/DMCore/Agents/DialogAgents/BasicAgents/MAExecute.cpp.o
+In file included from /home/alex/c++/DM/DMCore/Agents/Agent.h:65:0,
+                 from /home/alex/c++/DM/DMCore/Agents/DialogAgents/BasicAgents/../DialogAgent.h:100,
+                 from /home/alex/c++/DM/DMCore/Agents/DialogAgents/BasicAgents/MAExecute.h:71,
+                 from /home/alex/c++/DM/DMCore/Agents/DialogAgents/BasicAgents/MAExecute.cpp:67:
+/home/alex/c++/DM/Utils/Utils.h:173:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimLeft(string sString, char * pToTrim = " \n\t");
+                                                         ^
+/home/alex/c++/DM/Utils/Utils.h:176:58: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimRight(string sString, char * pToTrim = " \n\t");
+                                                          ^
+/home/alex/c++/DM/Utils/Utils.h:179:53: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string Trim(string sString, char * pToTrim = " \n\t");
+                                                     ^
+[ 16%] Building CXX object CMakeFiles/RAVENCLAW.dir/DMCore/Agents/DialogAgents/BasicAgents/MAExpect.cpp.o
+In file included from /home/alex/c++/DM/DMCore/Agents/Agent.h:65:0,
+                 from /home/alex/c++/DM/DMCore/Agents/DialogAgents/BasicAgents/../DialogAgent.h:100,
+                 from /home/alex/c++/DM/DMCore/Agents/DialogAgents/BasicAgents/MAExpect.h:66,
+                 from /home/alex/c++/DM/DMCore/Agents/DialogAgents/BasicAgents/MAExpect.cpp:62:
+/home/alex/c++/DM/Utils/Utils.h:173:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimLeft(string sString, char * pToTrim = " \n\t");
+                                                         ^
+/home/alex/c++/DM/Utils/Utils.h:176:58: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimRight(string sString, char * pToTrim = " \n\t");
+                                                          ^
+/home/alex/c++/DM/Utils/Utils.h:179:53: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string Trim(string sString, char * pToTrim = " \n\t");
+                                                     ^
+In file included from /home/alex/c++/DM/DMCore/Core.h:96:0,
+                 from /home/alex/c++/DM/DMCore/Agents/DialogAgents/BasicAgents/MAExpect.cpp:63:
+/home/alex/c++/DM/DMCore/Agents/DialogAgents/BasicAgents/MAExpect.cpp: In member function ‘virtual void CMAExpect::SetCompleted(TCompletionType)’:
+/home/alex/c++/DM/DMCore/Log.h:193:52: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __Error(string(sError).c_str(), __FILE__, __LINE__)
+                                                    ^
+/home/alex/c++/DM/DMCore/Agents/DialogAgents/BasicAgents/MAExpect.cpp:159:2: note: in expansion of macro ‘Error’
+  Error(FormatString("Expect agent %s cannot be forced to incompleted.", 
+  ^
+[ 18%] Building CXX object CMakeFiles/RAVENCLAW.dir/DMCore/Agents/DialogAgents/BasicAgents/MAInform.cpp.o
+In file included from /home/alex/c++/DM/DMCore/Agents/Agent.h:65:0,
+                 from /home/alex/c++/DM/DMCore/Agents/DialogAgents/BasicAgents/../DialogAgent.h:100,
+                 from /home/alex/c++/DM/DMCore/Agents/DialogAgents/BasicAgents/MAInform.h:73,
+                 from /home/alex/c++/DM/DMCore/Agents/DialogAgents/BasicAgents/MAInform.cpp:69:
+/home/alex/c++/DM/Utils/Utils.h:173:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimLeft(string sString, char * pToTrim = " \n\t");
+                                                         ^
+/home/alex/c++/DM/Utils/Utils.h:176:58: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimRight(string sString, char * pToTrim = " \n\t");
+                                                          ^
+/home/alex/c++/DM/Utils/Utils.h:179:53: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string Trim(string sString, char * pToTrim = " \n\t");
+                                                     ^
+[ 19%] Building CXX object CMakeFiles/RAVENCLAW.dir/DMCore/Agents/DialogAgents/BasicAgents/MARequest.cpp.o
+In file included from /home/alex/c++/DM/DMCore/Agents/Agent.h:65:0,
+                 from /home/alex/c++/DM/DMCore/Agents/DialogAgents/BasicAgents/../DialogAgent.h:100,
+                 from /home/alex/c++/DM/DMCore/Agents/DialogAgents/BasicAgents/MARequest.h:75,
+                 from /home/alex/c++/DM/DMCore/Agents/DialogAgents/BasicAgents/MARequest.cpp:71:
+/home/alex/c++/DM/Utils/Utils.h:173:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimLeft(string sString, char * pToTrim = " \n\t");
+                                                         ^
+/home/alex/c++/DM/Utils/Utils.h:176:58: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimRight(string sString, char * pToTrim = " \n\t");
+                                                          ^
+/home/alex/c++/DM/Utils/Utils.h:179:53: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string Trim(string sString, char * pToTrim = " \n\t");
+                                                     ^
+/home/alex/c++/DM/DMCore/Agents/DialogAgents/BasicAgents/MARequest.cpp: In member function ‘virtual CConcept* CMARequest::RequestedConcept()’:
+/home/alex/c++/DM/DMCore/Agents/DialogAgents/BasicAgents/MARequest.cpp:250:69: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+         SplitOnFirst(RequestedConceptName(), ";", sConceptName, sFoo);
+                                                                     ^
+[ 21%] Building CXX object CMakeFiles/RAVENCLAW.dir/DMCore/Agents/DialogAgents/DialogAgent.cpp.o
+In file included from /home/alex/c++/DM/DMCore/Agents/Agent.h:65:0,
+                 from /home/alex/c++/DM/DMCore/Agents/DialogAgents/DialogAgent.h:100,
+                 from /home/alex/c++/DM/DMCore/Agents/DialogAgents/DialogAgent.cpp:96:
+/home/alex/c++/DM/Utils/Utils.h:173:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimLeft(string sString, char * pToTrim = " \n\t");
+                                                         ^
+/home/alex/c++/DM/Utils/Utils.h:176:58: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimRight(string sString, char * pToTrim = " \n\t");
+                                                          ^
+/home/alex/c++/DM/Utils/Utils.h:179:53: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string Trim(string sString, char * pToTrim = " \n\t");
+                                                     ^
+In file included from /home/alex/c++/DM/DMCore/Core.h:96:0,
+                 from /home/alex/c++/DM/DMCore/Agents/DialogAgents/DialogAgent.cpp:97:
+/home/alex/c++/DM/DMCore/Agents/DialogAgents/DialogAgent.cpp: In static member function ‘static CAgent* CDialogAgent::AgentFactory(std::string, std::string)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Agents/DialogAgents/DialogAgent.cpp:163:2: note: in expansion of macro ‘FatalError’
+  FatalError("AgentFactory called on CDialogAgent (abstract) class.");
+  ^
+/home/alex/c++/DM/DMCore/Agents/DialogAgents/DialogAgent.cpp: In member function ‘void CDialogAgent::SetInputConfiguration(std::string)’:
+/home/alex/c++/DM/DMCore/Agents/DialogAgents/DialogAgent.cpp:233:63: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   SplitOnFirst(sConfiguration, ",", sItem, sConfiguration, '%');
+                                                               ^
+/home/alex/c++/DM/DMCore/Agents/DialogAgents/DialogAgent.cpp:234:21: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   sItem = Trim(sItem);
+                     ^
+/home/alex/c++/DM/DMCore/Agents/DialogAgents/DialogAgent.cpp:237:46: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   SplitOnFirst(sItem, "=", sSlot, sValue, '%');
+                                              ^
+/home/alex/c++/DM/DMCore/Agents/DialogAgents/DialogAgent.cpp:238:22: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   sSlot = Trim( sSlot);
+                      ^
+/home/alex/c++/DM/DMCore/Agents/DialogAgents/DialogAgent.cpp:239:24: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   sValue = Trim( sValue);
+                        ^
+/home/alex/c++/DM/DMCore/Agents/DialogAgents/DialogAgent.cpp: In member function ‘virtual void CDialogAgent::CreateGroundingModel(std::string)’:
+/home/alex/c++/DM/DMCore/Agents/DialogAgents/DialogAgent.cpp:401:70: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   if(!SplitOnFirst(sGroundingModelSpec, ".", sModelType, sModelPolicy)) {
+                                                                      ^
+/home/alex/c++/DM/DMCore/Agents/DialogAgents/DialogAgent.cpp: In member function ‘virtual std::string CDialogAgent::TimeoutPrompt()’:
+/home/alex/c++/DM/DMCore/Agents/DialogAgents/DialogAgent.cpp:638:35: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     string sPrompt = Trim(Prompt());
+                                   ^
+/home/alex/c++/DM/DMCore/Agents/DialogAgents/DialogAgent.cpp: In member function ‘virtual std::string CDialogAgent::ExplainMorePrompt()’:
+/home/alex/c++/DM/DMCore/Agents/DialogAgents/DialogAgent.cpp:673:35: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     string sPrompt = Trim(Prompt());
+                                   ^
+/home/alex/c++/DM/DMCore/Agents/DialogAgents/DialogAgent.cpp: In member function ‘virtual std::string CDialogAgent::CreateVersionedPrompt(std::string)’:
+/home/alex/c++/DM/DMCore/Agents/DialogAgents/DialogAgent.cpp:705:35: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     string sPrompt = Trim(Prompt());
+                                   ^
+/home/alex/c++/DM/DMCore/Agents/DialogAgents/DialogAgent.cpp: In member function ‘virtual std::string CDialogAgent::WhatCanISayPrompt()’:
+/home/alex/c++/DM/DMCore/Agents/DialogAgents/DialogAgent.cpp:751:35: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     string sPrompt = Trim(Prompt());
+                                   ^
+/home/alex/c++/DM/DMCore/Agents/DialogAgents/DialogAgent.cpp: In member function ‘virtual CConcept& CDialogAgent::C(std::string)’:
+/home/alex/c++/DM/DMCore/Agents/DialogAgents/DialogAgent.cpp:826:60: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  if(SplitOnLast(sConceptPath, "/", sAgentPath, sConceptName)) {
+                                                            ^
+In file included from /home/alex/c++/DM/DMCore/Core.h:96:0,
+                 from /home/alex/c++/DM/DMCore/Agents/DialogAgents/DialogAgent.cpp:97:
+/home/alex/c++/DM/DMCore/Agents/DialogAgents/DialogAgent.cpp: In member function ‘virtual CConcept& CDialogAgent::LocalC(std::string)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Agents/DialogAgents/DialogAgent.cpp:874:4: note: in expansion of macro ‘FatalError’
+    FatalError("Concept " + sConceptName + 
+    ^
+/home/alex/c++/DM/DMCore/Agents/DialogAgents/DialogAgent.cpp:883:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  SplitOnFirst(sConceptName, ".", sBaseConceptName, sRest);
+                                                         ^
+In file included from /home/alex/c++/DM/DMCore/Core.h:96:0,
+                 from /home/alex/c++/DM/DMCore/Agents/DialogAgents/DialogAgent.cpp:97:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Agents/DialogAgents/DialogAgent.cpp:909:3: note: in expansion of macro ‘FatalError’
+   FatalError("Concept " + sConceptName + " could not be identified "\
+   ^
+/home/alex/c++/DM/DMCore/Agents/DialogAgents/DialogAgent.cpp: In member function ‘CDialogAgent& CDialogAgent::A(std::string)’:
+/home/alex/c++/DM/DMCore/Agents/DialogAgents/DialogAgent.cpp:929:63: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  if(SplitOnFirst(sDialogAgentPath, "/", sFirstComponent, sRest)) {
+                                                               ^
+In file included from /home/alex/c++/DM/DMCore/Core.h:96:0,
+                 from /home/alex/c++/DM/DMCore/Agents/DialogAgents/DialogAgent.cpp:97:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Agents/DialogAgents/DialogAgent.cpp:944:5: note: in expansion of macro ‘FatalError’
+     FatalError("Agent " + sDialogAgentPath + " does not exist"\
+     ^
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Agents/DialogAgents/DialogAgent.cpp:954:5: note: in expansion of macro ‘FatalError’
+     FatalError("Agent " + sDialogAgentPath + " could not be "\
+     ^
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Agents/DialogAgents/DialogAgent.cpp:979:5: note: in expansion of macro ‘FatalError’
+     FatalError("Agent " + sDialogAgentPath + " could not be "\
+     ^
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Agents/DialogAgents/DialogAgent.cpp:998:5: note: in expansion of macro ‘FatalError’
+     FatalError("Agent .. could not be "\
+     ^
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Agents/DialogAgents/DialogAgent.cpp:1018:4: note: in expansion of macro ‘FatalError’
+    FatalError("Agent " + sDialogAgentPath + " could not be "\
+    ^
+/home/alex/c++/DM/DMCore/Agents/DialogAgents/DialogAgent.cpp: In member function ‘void CDialogAgent::parseGrammarMapping(std::string, std::string, TConceptExpectationList&)’:
+/home/alex/c++/DM/DMCore/Agents/DialogAgents/DialogAgent.cpp:1406:60: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   SplitOnFirst(sGrammarMapping, ",", sItem, sGrammarMapping);
+                                                            ^
+/home/alex/c++/DM/DMCore/Agents/DialogAgents/DialogAgent.cpp:1407:21: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   sItem = Trim(sItem);
+                     ^
+/home/alex/c++/DM/DMCore/Agents/DialogAgents/DialogAgent.cpp:1413:58: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+         if(SplitOnFirst(sItem, ">", sLeftSide, sRightSide)) {
+                                                          ^
+/home/alex/c++/DM/DMCore/Agents/DialogAgents/DialogAgent.cpp:1414:41: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+             sRightSide = Trim(sRightSide);
+                                         ^
+/home/alex/c++/DM/DMCore/Agents/DialogAgents/DialogAgent.cpp:1423:29: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   sLeftSide = Trim(sLeftSide);
+                             ^
+/home/alex/c++/DM/DMCore/Agents/DialogAgents/DialogAgent.cpp:1458:89: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                 SplitOnFirst( sLeftSide, ")", sAgents, ceExpectation.sGrammarExpectation);
+                                                                                         ^
+/home/alex/c++/DM/DMCore/Agents/DialogAgents/DialogAgent.cpp:1460:70: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                 TStringVector vsAgents = PartitionString(sAgents, ";");
+                                                                      ^
+In file included from /home/alex/c++/DM/DMCore/Core.h:96:0,
+                 from /home/alex/c++/DM/DMCore/Agents/DialogAgents/DialogAgent.cpp:97:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Agents/DialogAgents/DialogAgent.cpp:1465:21: note: in expansion of macro ‘FatalError’
+                     FatalError("Could not find a DTS agent in focus.");
+                     ^
+/home/alex/c++/DM/DMCore/Agents/DialogAgents/DialogAgent.cpp:1506:74: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   ceExpectation.vsOtherConceptNames = PartitionString(sConceptNames, ";,");
+                                                                          ^
+/home/alex/c++/DM/DMCore/Agents/DialogAgents/DialogAgent.cpp:1511:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+              C(Trim(ceExpectation.vsOtherConceptNames[i])).GetAgentQualifiedName();
+                                                         ^
+[ 22%] Building CXX object CMakeFiles/RAVENCLAW.dir/DMCore/Agents/DialogAgents/DiscourseAgents/AllDiscourseAgents.cpp.o
+In file included from /home/alex/c++/DM/DMCore/DMCore.h:67:0,
+                 from /home/alex/c++/DM/DMCore/Core.h:95,
+                 from /home/alex/c++/DM/DMCore/Agents/DialogAgents/DiscourseAgents/DARepeat.h:73,
+                 from /home/alex/c++/DM/DMCore/Agents/DialogAgents/DiscourseAgents/AllDiscourseAgents.h:63,
+                 from /home/alex/c++/DM/DMCore/Agents/DialogAgents/DiscourseAgents/AllDiscourseAgents.cpp:23:
+/home/alex/c++/DM/Utils/Utils.h:173:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimLeft(string sString, char * pToTrim = " \n\t");
+                                                         ^
+/home/alex/c++/DM/Utils/Utils.h:176:58: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimRight(string sString, char * pToTrim = " \n\t");
+                                                          ^
+/home/alex/c++/DM/Utils/Utils.h:179:53: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string Trim(string sString, char * pToTrim = " \n\t");
+                                                     ^
+[ 23%] Building CXX object CMakeFiles/RAVENCLAW.dir/DMCore/Agents/DialogAgents/DiscourseAgents/DAHelp.cpp.o
+In file included from /home/alex/c++/DM/DMCore/DMCore.h:67:0,
+                 from /home/alex/c++/DM/DMCore/Core.h:95,
+                 from /home/alex/c++/DM/DMCore/Agents/DialogAgents/DiscourseAgents/DAHelp.h:90,
+                 from /home/alex/c++/DM/DMCore/Agents/DialogAgents/DiscourseAgents/DAHelp.cpp:81:
+/home/alex/c++/DM/Utils/Utils.h:173:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimLeft(string sString, char * pToTrim = " \n\t");
+                                                         ^
+/home/alex/c++/DM/Utils/Utils.h:176:58: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimRight(string sString, char * pToTrim = " \n\t");
+                                                          ^
+/home/alex/c++/DM/Utils/Utils.h:179:53: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string Trim(string sString, char * pToTrim = " \n\t");
+                                                     ^
+[ 25%] Building CXX object CMakeFiles/RAVENCLAW.dir/DMCore/Agents/DialogAgents/DiscourseAgents/DANonUnderstanding.cpp.o
+In file included from /home/alex/c++/DM/DMCore/DMCore.h:67:0,
+                 from /home/alex/c++/DM/DMCore/Core.h:95,
+                 from /home/alex/c++/DM/DMCore/Agents/DialogAgents/DiscourseAgents/DANonUnderstanding.h:70,
+                 from /home/alex/c++/DM/DMCore/Agents/DialogAgents/DiscourseAgents/DANonUnderstanding.cpp:66:
+/home/alex/c++/DM/Utils/Utils.h:173:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimLeft(string sString, char * pToTrim = " \n\t");
+                                                         ^
+/home/alex/c++/DM/Utils/Utils.h:176:58: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimRight(string sString, char * pToTrim = " \n\t");
+                                                          ^
+/home/alex/c++/DM/Utils/Utils.h:179:53: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string Trim(string sString, char * pToTrim = " \n\t");
+                                                     ^
+[ 26%] Building CXX object CMakeFiles/RAVENCLAW.dir/DMCore/Agents/DialogAgents/DiscourseAgents/DAQuit.cpp.o
+In file included from /home/alex/c++/DM/DMCore/DMCore.h:67:0,
+                 from /home/alex/c++/DM/DMCore/Core.h:95,
+                 from /home/alex/c++/DM/DMCore/Agents/DialogAgents/DiscourseAgents/DAQuit.h:84,
+                 from /home/alex/c++/DM/DMCore/Agents/DialogAgents/DiscourseAgents/DAQuit.cpp:62:
+/home/alex/c++/DM/Utils/Utils.h:173:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimLeft(string sString, char * pToTrim = " \n\t");
+                                                         ^
+/home/alex/c++/DM/Utils/Utils.h:176:58: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimRight(string sString, char * pToTrim = " \n\t");
+                                                          ^
+/home/alex/c++/DM/Utils/Utils.h:179:53: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string Trim(string sString, char * pToTrim = " \n\t");
+                                                     ^
+[ 28%] Building CXX object CMakeFiles/RAVENCLAW.dir/DMCore/Agents/DialogAgents/DiscourseAgents/DARepeat.cpp.o
+In file included from /home/alex/c++/DM/DMCore/DMCore.h:67:0,
+                 from /home/alex/c++/DM/DMCore/Core.h:95,
+                 from /home/alex/c++/DM/DMCore/Agents/DialogAgents/DiscourseAgents/DARepeat.h:73,
+                 from /home/alex/c++/DM/DMCore/Agents/DialogAgents/DiscourseAgents/DARepeat.cpp:62:
+/home/alex/c++/DM/Utils/Utils.h:173:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimLeft(string sString, char * pToTrim = " \n\t");
+                                                         ^
+/home/alex/c++/DM/Utils/Utils.h:176:58: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimRight(string sString, char * pToTrim = " \n\t");
+                                                          ^
+/home/alex/c++/DM/Utils/Utils.h:179:53: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string Trim(string sString, char * pToTrim = " \n\t");
+                                                     ^
+[ 29%] Building CXX object CMakeFiles/RAVENCLAW.dir/DMCore/Agents/DialogAgents/DiscourseAgents/DAStartOver.cpp.o
+In file included from /home/alex/c++/DM/DMCore/DMCore.h:67:0,
+                 from /home/alex/c++/DM/DMCore/Core.h:95,
+                 from /home/alex/c++/DM/DMCore/Agents/DialogAgents/DiscourseAgents/DAStartOver.h:85,
+                 from /home/alex/c++/DM/DMCore/Agents/DialogAgents/DiscourseAgents/DAStartOver.cpp:64:
+/home/alex/c++/DM/Utils/Utils.h:173:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimLeft(string sString, char * pToTrim = " \n\t");
+                                                         ^
+/home/alex/c++/DM/Utils/Utils.h:176:58: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimRight(string sString, char * pToTrim = " \n\t");
+                                                          ^
+/home/alex/c++/DM/Utils/Utils.h:179:53: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string Trim(string sString, char * pToTrim = " \n\t");
+                                                     ^
+[ 30%] Building CXX object CMakeFiles/RAVENCLAW.dir/DMCore/Agents/DialogAgents/DiscourseAgents/DASuspend.cpp.o
+In file included from /home/alex/c++/DM/DMCore/DMCore.h:67:0,
+                 from /home/alex/c++/DM/DMCore/Core.h:95,
+                 from /home/alex/c++/DM/DMCore/Agents/DialogAgents/DiscourseAgents/DASuspend.h:83,
+                 from /home/alex/c++/DM/DMCore/Agents/DialogAgents/DiscourseAgents/DASuspend.cpp:73:
+/home/alex/c++/DM/Utils/Utils.h:173:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimLeft(string sString, char * pToTrim = " \n\t");
+                                                         ^
+/home/alex/c++/DM/Utils/Utils.h:176:58: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimRight(string sString, char * pToTrim = " \n\t");
+                                                          ^
+/home/alex/c++/DM/Utils/Utils.h:179:53: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string Trim(string sString, char * pToTrim = " \n\t");
+                                                     ^
+[ 32%] Building CXX object CMakeFiles/RAVENCLAW.dir/DMCore/Agents/DialogAgents/DiscourseAgents/DATerminate.cpp.o
+In file included from /home/alex/c++/DM/DMCore/DMCore.h:67:0,
+                 from /home/alex/c++/DM/DMCore/Core.h:95,
+                 from /home/alex/c++/DM/DMCore/Agents/DialogAgents/DiscourseAgents/DATerminate.h:63,
+                 from /home/alex/c++/DM/DMCore/Agents/DialogAgents/DiscourseAgents/DATerminate.cpp:59:
+/home/alex/c++/DM/Utils/Utils.h:173:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimLeft(string sString, char * pToTrim = " \n\t");
+                                                         ^
+/home/alex/c++/DM/Utils/Utils.h:176:58: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimRight(string sString, char * pToTrim = " \n\t");
+                                                          ^
+/home/alex/c++/DM/Utils/Utils.h:179:53: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string Trim(string sString, char * pToTrim = " \n\t");
+                                                     ^
+[ 33%] Building CXX object CMakeFiles/RAVENCLAW.dir/DMCore/Agents/DialogAgents/DiscourseAgents/DATimeout.cpp.o
+In file included from /home/alex/c++/DM/DMCore/DMCore.h:67:0,
+                 from /home/alex/c++/DM/DMCore/Core.h:95,
+                 from /home/alex/c++/DM/DMCore/Agents/DialogAgents/DiscourseAgents/DATimeout.h:81,
+                 from /home/alex/c++/DM/DMCore/Agents/DialogAgents/DiscourseAgents/DATimeout.cpp:77:
+/home/alex/c++/DM/Utils/Utils.h:173:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimLeft(string sString, char * pToTrim = " \n\t");
+                                                         ^
+/home/alex/c++/DM/Utils/Utils.h:176:58: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimRight(string sString, char * pToTrim = " \n\t");
+                                                          ^
+/home/alex/c++/DM/Utils/Utils.h:179:53: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string Trim(string sString, char * pToTrim = " \n\t");
+                                                     ^
+[ 35%] Building CXX object CMakeFiles/RAVENCLAW.dir/DMCore/Agents/Registry.cpp.o
+In file included from /home/alex/c++/DM/DMCore/Agents/Registry.h:65:0,
+                 from /home/alex/c++/DM/DMCore/Agents/Registry.cpp:61:
+/home/alex/c++/DM/Utils/Utils.h:173:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimLeft(string sString, char * pToTrim = " \n\t");
+                                                         ^
+/home/alex/c++/DM/Utils/Utils.h:176:58: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimRight(string sString, char * pToTrim = " \n\t");
+                                                          ^
+/home/alex/c++/DM/Utils/Utils.h:179:53: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string Trim(string sString, char * pToTrim = " \n\t");
+                                                     ^
+In file included from /home/alex/c++/DM/DMCore/Agents/Registry.cpp:62:0:
+/home/alex/c++/DM/DMCore/Agents/Registry.cpp: In member function ‘void CRegistry::RegisterAgent(std::string, CAgent*)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Agents/Registry.cpp:110:3: note: in expansion of macro ‘FatalError’
+   FatalError("An agent already registered under the same name (" + 
+   ^
+/home/alex/c++/DM/DMCore/Agents/Registry.cpp: In member function ‘void CRegistry::UnRegisterAgent(std::string)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Agents/Registry.cpp:124:3: note: in expansion of macro ‘FatalError’
+   FatalError("Could not find agent " + sAgentName + " to unregister.");
+   ^
+/home/alex/c++/DM/DMCore/Agents/Registry.cpp: In member function ‘void CRegistry::RegisterAgentType(std::string, FCreateAgent)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Agents/Registry.cpp:162:3: note: in expansion of macro ‘FatalError’
+   FatalError("An agent type already registered under the same name (" + 
+   ^
+/home/alex/c++/DM/DMCore/Agents/Registry.cpp: In member function ‘void CRegistry::UnRegisterAgentType(std::string)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Agents/Registry.cpp:178:3: note: in expansion of macro ‘FatalError’
+   FatalError("Could not find agent type" + sAgentTypeName + 
+   ^
+/home/alex/c++/DM/DMCore/Agents/Registry.cpp: In member function ‘CAgent* CRegistry::CreateAgent(std::string, std::string, std::string)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Agents/Registry.cpp:194:3: note: in expansion of macro ‘FatalError’
+   FatalError("Could not create agent of type " + sAgentTypeName + 
+   ^
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Agents/Registry.cpp:210:4: note: in expansion of macro ‘FatalError’
+    FatalError("Error creating agent of type " + sAgentTypeName + 
+    ^
+[ 36%] Building CXX object CMakeFiles/RAVENCLAW.dir/DMCore/Concepts/ArrayConcept.cpp.o
+In file included from /home/alex/c++/DM/DMCore/Concepts/Concept.h:112:0,
+                 from /home/alex/c++/DM/DMCore/Concepts/ArrayConcept.h:111,
+                 from /home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:108:
+/home/alex/c++/DM/Utils/Utils.h:173:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimLeft(string sString, char * pToTrim = " \n\t");
+                                                         ^
+/home/alex/c++/DM/Utils/Utils.h:176:58: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimRight(string sString, char * pToTrim = " \n\t");
+                                                          ^
+/home/alex/c++/DM/Utils/Utils.h:179:53: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string Trim(string sString, char * pToTrim = " \n\t");
+                                                     ^
+In file included from /home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:109:0:
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp: In member function ‘virtual bool CArrayConcept::operator<(CConcept&)’:
+/home/alex/c++/DM/DMCore/Log.h:193:52: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __Error(string(sError).c_str(), __FILE__, __LINE__)
+                                                    ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:187:5: note: in expansion of macro ‘Error’
+     Error("Comparison operator < called on array concept.");
+     ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp: In member function ‘virtual bool CArrayConcept::operator>(CConcept&)’:
+/home/alex/c++/DM/DMCore/Log.h:193:52: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __Error(string(sError).c_str(), __FILE__, __LINE__)
+                                                    ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:193:5: note: in expansion of macro ‘Error’
+     Error("Comparison operator > called on array concept.");
+     ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp: In member function ‘virtual bool CArrayConcept::operator<=(CConcept&)’:
+/home/alex/c++/DM/DMCore/Log.h:193:52: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __Error(string(sError).c_str(), __FILE__, __LINE__)
+                                                    ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:199:5: note: in expansion of macro ‘Error’
+     Error("Comparison operator <= called on array concept.");
+     ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp: In member function ‘virtual bool CArrayConcept::operator>=(CConcept&)’:
+/home/alex/c++/DM/DMCore/Log.h:193:52: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __Error(string(sError).c_str(), __FILE__, __LINE__)
+                                                    ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:205:5: note: in expansion of macro ‘Error’
+     Error("Comparison operator >= called on array concept.");
+     ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp: In member function ‘virtual CConcept& CArrayConcept::operator[](int)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:224:10: note: in expansion of macro ‘FatalError’
+          FatalError(FormatString("Indexing operator [%d] on %s "\
+          ^
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:242:9: note: in expansion of macro ‘FatalError’
+         FatalError(FormatString("Cannot perform array extension on "\
+         ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp: In member function ‘virtual CConcept& CArrayConcept::operator[](std::string)’:
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:268:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   SplitOnFirst(sIndex, ".", sBaseConcept, sRest);
+                                                ^
+In file included from /home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:109:0:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:274:4: note: in expansion of macro ‘FatalError’
+    FatalError(FormatString(
+    ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp: In member function ‘virtual void CArrayConcept::Update_NPU_AssignFromString(void*)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:335:9: note: in expansion of macro ‘FatalError’
+         FatalError(FormatString("Cannot perform (AssignFromString) update on concept "\
+         ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:340:45: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     string sWorkingString = TrimLeft(sString);
+                                             ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:347:62: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  if(!SplitOnFirst(sWorkingString, "{", sStart, sWorkingString)) {
+                                                              ^
+In file included from /home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:109:0:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:349:3: note: in expansion of macro ‘FatalError’
+   FatalError(FormatString(
+   ^
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:359:3: note: in expansion of macro ‘FatalError’
+   FatalError(FormatString(
+   ^
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:386:4: note: in expansion of macro ‘FatalError’
+    FatalError(FormatString(
+    ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:396:42: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  sWorkingString = TrimLeft(sWorkingString);
+                                          ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:403:65: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    if(!SplitOnFirst(sWorkingString, "\n", sStart, sWorkingString)) {
+                                                                 ^
+In file included from /home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:109:0:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:404:5: note: in expansion of macro ‘FatalError’
+     FatalError(FormatString(
+     ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:411:32: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    sElementValue = Trim( sStart);
+                                ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:414:44: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    sWorkingString = TrimLeft(sWorkingString);
+                                            ^
+In file included from /home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:109:0:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:424:5: note: in expansion of macro ‘FatalError’
+     FatalError(FormatString(
+     ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:435:54: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+                 sWorkingString.length() - iCount - 1));
+                                                      ^
+In file included from /home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:109:0:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:476:3: note: in expansion of macro ‘FatalError’
+   FatalError(FormatString(
+   ^
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:485:3: note: in expansion of macro ‘FatalError’
+   FatalError(FormatString(
+   ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp: In member function ‘virtual void CArrayConcept::Update_NPU_UpdateWithConcept(void*)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:499:2: note: in expansion of macro ‘FatalError’
+  FatalError(FormatString(
+  ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp: In member function ‘virtual void CArrayConcept::Update_Calista_UpdateWithConcept(void*)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:518:2: note: in expansion of macro ‘FatalError’
+  FatalError(FormatString(
+  ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp: In member function ‘virtual void CArrayConcept::CreateGroundingModel(std::string)’:
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:634:68: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  TStringVector vsGMSpecs = PartitionString(sGroundingModelSpec, ",");
+                                                                    ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:638:39: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   vsGMSpecs[i] = TrimLeft(vsGMSpecs[i]);
+                                       ^
+In file included from /home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:109:0:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:650:9: note: in expansion of macro ‘FatalError’
+         FatalError(FormatString(
+         ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:665:49: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   SplitOnFirst(vsGMSpecs[i], " =.", sHead, sRest);
+                                                 ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:667:26: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    sRest = TrimLeft(sRest);
+                          ^
+In file included from /home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:109:0:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:690:5: note: in expansion of macro ‘FatalError’
+     FatalError(FormatString(
+     ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:699:73: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  sElementGroundingModelSpec = TrimRight(sElementGroundingModelSpec, ", ");
+                                                                         ^
+In file included from /home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:109:0:
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp: In member function ‘virtual CHyp* CArrayConcept::HypFactory()’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:754:2: note: in expansion of macro ‘FatalError’
+  FatalError(FormatString(
+  ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp: In member function ‘virtual int CArrayConcept::AddHyp(CHyp*)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:762:2: note: in expansion of macro ‘FatalError’
+  FatalError(FormatString(
+  ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp: In member function ‘virtual int CArrayConcept::AddNewHyp()’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:770:2: note: in expansion of macro ‘FatalError’
+  FatalError(FormatString(
+  ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp: In member function ‘virtual int CArrayConcept::AddNullHyp()’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:778:2: note: in expansion of macro ‘FatalError’
+  FatalError(FormatString(
+  ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp: In member function ‘virtual void CArrayConcept::SetHyp(int, CHyp*)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:786:2: note: in expansion of macro ‘FatalError’
+  FatalError(FormatString(
+  ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp: In member function ‘virtual void CArrayConcept::SetNullHyp(int)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:793:2: note: in expansion of macro ‘FatalError’
+  FatalError(FormatString(
+  ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp: In member function ‘virtual void CArrayConcept::DeleteHyp(int)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:800:2: note: in expansion of macro ‘FatalError’
+  FatalError(FormatString(
+  ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp: In member function ‘virtual CHyp* CArrayConcept::GetHyp(int)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:807:2: note: in expansion of macro ‘FatalError’
+  FatalError(FormatString(
+  ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp: In member function ‘virtual int CArrayConcept::GetHypIndex(CHyp*)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:815:2: note: in expansion of macro ‘FatalError’
+  FatalError(FormatString(
+  ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:818:12: warning: converting to non-pointer type ‘int’ from NULL [-Wconversion-null]
+     return NULL;
+            ^
+In file included from /home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:109:0:
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp: In member function ‘virtual float CArrayConcept::GetHypConfidence(int)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:823:2: note: in expansion of macro ‘FatalError’
+  FatalError(FormatString(
+  ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp: In member function ‘virtual CHyp* CArrayConcept::GetTopHyp()’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:831:2: note: in expansion of macro ‘FatalError’
+  FatalError(FormatString(
+  ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp: In member function ‘virtual int CArrayConcept::GetTopHypIndex()’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:839:2: note: in expansion of macro ‘FatalError’
+  FatalError(FormatString(
+  ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp: In member function ‘virtual float CArrayConcept::GetTopHypConfidence()’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:847:2: note: in expansion of macro ‘FatalError’
+  FatalError(FormatString(
+  ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp: In member function ‘virtual bool CArrayConcept::IsValidHyp(int)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:856:2: note: in expansion of macro ‘FatalError’
+  FatalError(FormatString(
+  ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp: In member function ‘virtual int CArrayConcept::GetNumHyps()’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:865:2: note: in expansion of macro ‘FatalError’
+  FatalError(FormatString(
+  ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp: In member function ‘virtual int CArrayConcept::GetNumValidHyps()’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:873:2: note: in expansion of macro ‘FatalError’
+  FatalError(FormatString(
+  ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp: In member function ‘virtual void CArrayConcept::CopyCurrentHypSetFrom(CConcept&)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:906:9: note: in expansion of macro ‘FatalError’
+         FatalError(FormatString(
+         ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp: In member function ‘virtual void CArrayConcept::DeleteAt(unsigned int)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:986:9: note: in expansion of macro ‘FatalError’
+         FatalError(FormatString("Cannot perform DeleteAt on concept (%s) history.",
+         ^
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:992:3: note: in expansion of macro ‘FatalError’
+   FatalError(FormatString("Index (%d) out of bounds in DeleteAt on concept %s.", 
+   ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp: In member function ‘virtual void CArrayConcept::InsertAt(unsigned int, CConcept&)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:1016:9: note: in expansion of macro ‘FatalError’
+         FatalError(FormatString("Cannot perform InsertAt on concept (%s) history.",
+         ^
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/ArrayConcept.cpp:1022:3: note: in expansion of macro ‘FatalError’
+   FatalError(FormatString("Index (%d) out of bounds in InsertAt on concept %s.", 
+   ^
+[ 38%] Building CXX object CMakeFiles/RAVENCLAW.dir/DMCore/Concepts/BoolConcept.cpp.o
+In file included from /home/alex/c++/DM/DMCore/Concepts/Concept.h:112:0,
+                 from /home/alex/c++/DM/DMCore/Concepts/BoolConcept.h:87,
+                 from /home/alex/c++/DM/DMCore/Concepts/BoolConcept.cpp:83:
+/home/alex/c++/DM/Utils/Utils.h:173:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimLeft(string sString, char * pToTrim = " \n\t");
+                                                         ^
+/home/alex/c++/DM/Utils/Utils.h:176:58: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimRight(string sString, char * pToTrim = " \n\t");
+                                                          ^
+/home/alex/c++/DM/Utils/Utils.h:179:53: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string Trim(string sString, char * pToTrim = " \n\t");
+                                                     ^
+In file included from /home/alex/c++/DM/DMCore/Concepts/BoolConcept.cpp:84:0:
+/home/alex/c++/DM/DMCore/Concepts/BoolConcept.cpp: In member function ‘virtual CHyp& CBoolHyp::operator=(CHyp&)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/BoolConcept.cpp:138:7: note: in expansion of macro ‘FatalError’
+       FatalError("Assignment operator from a different hyp type called on "\
+       ^
+/home/alex/c++/DM/DMCore/Concepts/BoolConcept.cpp: In member function ‘virtual bool CBoolHyp::operator==(CHyp&)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/BoolConcept.cpp:156:3: note: in expansion of macro ‘FatalError’
+   FatalError("Equality operator with a different hyp type called on "\
+   ^
+/home/alex/c++/DM/DMCore/Concepts/BoolConcept.cpp: In member function ‘virtual bool CBoolHyp::operator<(CHyp&)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/BoolConcept.cpp:167:2: note: in expansion of macro ‘FatalError’
+  FatalError("Comparison operator < called on CBoolHyp.");
+  ^
+/home/alex/c++/DM/DMCore/Concepts/BoolConcept.cpp: In member function ‘virtual bool CBoolHyp::operator>(CHyp&)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/BoolConcept.cpp:174:2: note: in expansion of macro ‘FatalError’
+  FatalError("Comparison operator > called on CBoolHyp.");
+  ^
+/home/alex/c++/DM/DMCore/Concepts/BoolConcept.cpp: In member function ‘virtual bool CBoolHyp::operator<=(CHyp&)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/BoolConcept.cpp:181:2: note: in expansion of macro ‘FatalError’
+  FatalError("Comparison operator <= called on CBoolHyp.");
+  ^
+/home/alex/c++/DM/DMCore/Concepts/BoolConcept.cpp: In member function ‘virtual bool CBoolHyp::operator>=(CHyp&)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/BoolConcept.cpp:188:2: note: in expansion of macro ‘FatalError’
+  FatalError("Comparison operator >= called on CBoolHyp.");
+  ^
+/home/alex/c++/DM/DMCore/Concepts/BoolConcept.cpp: In member function ‘virtual CHyp* CBoolHyp::operator[](std::string)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/BoolConcept.cpp:194:2: note: in expansion of macro ‘FatalError’
+  FatalError("Indexing operator [] called on CBoolHyp.");
+  ^
+/home/alex/c++/DM/DMCore/Concepts/BoolConcept.cpp: In member function ‘virtual void CBoolHyp::FromString(std::string)’:
+/home/alex/c++/DM/DMCore/Concepts/BoolConcept.cpp:215:68: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  SplitOnFirst(sString, VAL_CONF_SEPARATOR, sUpperValue, sConfidence);
+                                                                    ^
+/home/alex/c++/DM/DMCore/Concepts/BoolConcept.cpp:216:44: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  sUpperValue = ToUpperCase(Trim(sUpperValue));
+                                            ^
+/home/alex/c++/DM/DMCore/Concepts/BoolConcept.cpp:217:32: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  sConfidence = Trim(sConfidence);
+                                ^
+In file included from /home/alex/c++/DM/DMCore/Concepts/BoolConcept.cpp:84:0:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/BoolConcept.cpp:225:3: note: in expansion of macro ‘FatalError’
+   FatalError(FormatString(
+   ^
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/BoolConcept.cpp:236:7: note: in expansion of macro ‘FatalError’
+       FatalError(FormatString(
+       ^
+/home/alex/c++/DM/DMCore/Concepts/BoolConcept.cpp: In member function ‘virtual CConcept& CBoolConcept::operator=(bool)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/BoolConcept.cpp:287:9: note: in expansion of macro ‘FatalError’
+         FatalError(FormatString("Cannot assign to concept (%s) history.",
+         ^
+/home/alex/c++/DM/DMCore/Concepts/BoolConcept.cpp: In member function ‘virtual CConcept& CBoolConcept::operator=(int)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/BoolConcept.cpp:303:9: note: in expansion of macro ‘FatalError’
+         FatalError(FormatString("Cannot assign to concept (%s) history.",
+         ^
+[ 39%] Building CXX object CMakeFiles/RAVENCLAW.dir/DMCore/Concepts/Concept.cpp.o
+In file included from /home/alex/c++/DM/DMCore/Concepts/Concept.h:112:0,
+                 from /home/alex/c++/DM/DMCore/Concepts/Concept.cpp:104:
+/home/alex/c++/DM/Utils/Utils.h:173:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimLeft(string sString, char * pToTrim = " \n\t");
+                                                         ^
+/home/alex/c++/DM/Utils/Utils.h:176:58: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string TrimRight(string sString, char * pToTrim = " \n\t");
+                                                          ^
+/home/alex/c++/DM/Utils/Utils.h:179:53: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ string Trim(string sString, char * pToTrim = " \n\t");
+                                                     ^
+In file included from /home/alex/c++/DM/DMCore/Concepts/Concept.cpp:105:0:
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp: In member function ‘virtual bool CHyp::operator==(CHyp&)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:172:2: note: in expansion of macro ‘FatalError’
+  FatalError("Equality operator called on abstract CHyp.");
+  ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp: In member function ‘virtual bool CHyp::operator<(CHyp&)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:178:2: note: in expansion of macro ‘FatalError’
+  FatalError("Comparison operator < called on abstract CHyp.");
+  ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp: In member function ‘virtual bool CHyp::operator>(CHyp&)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:184:2: note: in expansion of macro ‘FatalError’
+  FatalError("Comparison operator > called on abstract CHyp.");
+  ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp: In member function ‘virtual bool CHyp::operator<=(CHyp&)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:190:2: note: in expansion of macro ‘FatalError’
+  FatalError("Comparison operator <= called on abstract CHyp.");
+  ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp: In member function ‘virtual bool CHyp::operator>=(CHyp&)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:196:2: note: in expansion of macro ‘FatalError’
+  FatalError("Comparison operator >= called on abstract CHyp.");
+  ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp: In member function ‘virtual CHyp* CHyp::operator[](std::string)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:202:2: note: in expansion of macro ‘FatalError’
+  FatalError("Indexing operator [] called on abstract CHyp.");
+  ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp: In member function ‘virtual std::string CHyp::ValueToString()’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:208:2: note: in expansion of macro ‘FatalError’
+  FatalError("ValueToString called on abstract CHyp.");
+  ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp: In member function ‘virtual std::string CHyp::ToString()’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:214:2: note: in expansion of macro ‘FatalError’
+  FatalError("ToString called on abstract CHyp.");
+  ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp: In member function ‘virtual void CHyp::FromString(std::string)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:220:2: note: in expansion of macro ‘FatalError’
+  FatalError("FromString called on abstract CHyp. Call failed.");
+  ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp: In member function ‘virtual CConcept& CConcept::operator=(int)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:298:2: note: in expansion of macro ‘FatalError’
+  FatalError(FormatString("Assignment operator from integer to %s (%s type) "\
+  ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp: In member function ‘virtual CConcept& CConcept::operator=(bool)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:306:2: note: in expansion of macro ‘FatalError’
+  FatalError(FormatString("Assignment operator from bool to %s (%s type) concept "\
+  ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp: In member function ‘virtual CConcept& CConcept::operator=(float)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:314:2: note: in expansion of macro ‘FatalError’
+  FatalError(FormatString("Assignment operator from float to %s (%s type) concept "\
+  ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp: In member function ‘virtual CConcept& CConcept::operator=(double)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:322:2: note: in expansion of macro ‘FatalError’
+  FatalError(FormatString("Assignment operator from float to %s (%s type) concept "\
+  ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp: At global scope:
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:341:6: error: prototype for ‘bool CConcept::operator==(const CConcept&)’ does not match any in class ‘CConcept’
+ bool CConcept::operator == (const CConcept& rAConcept) {
+      ^
+In file included from /home/alex/c++/DM/DMCore/Concepts/Concept.cpp:104:0:
+/home/alex/c++/DM/DMCore/Concepts/Concept.h:357:18: error: candidate is: virtual bool CConcept::operator==(CConcept&)
+     virtual bool operator == (CConcept& rAConcept);
+                  ^
+In file included from /home/alex/c++/DM/DMCore/Concepts/Concept.cpp:105:0:
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp: In member function ‘virtual CConcept& CConcept::operator[](int)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:422:6: note: in expansion of macro ‘FatalError’
+      FatalError(FormatString("Indexing operator [%d] on %s (atomic %s) failed.", 
+      ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp: In member function ‘virtual CConcept& CConcept::operator[](std::string)’:
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:436:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+         SplitOnFirst(sIndex, ".", sFirstIndex, sFollowUp);
+                                                         ^
+In file included from /home/alex/c++/DM/DMCore/Concepts/Concept.cpp:105:0:
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:441:73: error: cannot pass objects of non-trivially-copyable type ‘std::string {aka class std::basic_string<char>}’ through ‘...’
+        sIndex, sName.c_str(), ConceptTypeAsString[ctConceptType].c_str()));
+                                                                         ^
+/home/alex/c++/DM/DMCore/Log.h:199:22: note: in definition of macro ‘FatalError’
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                      ^
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:440:7: note: in expansion of macro ‘FatalError’
+       FatalError(FormatString("Indexing operator [%s] on %s (atomic %s) failed.", 
+       ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp: In member function ‘virtual CConcept::operator int()’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:461:2: note: in expansion of macro ‘FatalError’
+  FatalError(FormatString("Integer cast operator on %s (%s type) concept failed.",
+  ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp: In member function ‘virtual CConcept::operator float()’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:469:2: note: in expansion of macro ‘FatalError’
+  FatalError(FormatString("Float cast operator on %s (%s type) concept failed.",
+  ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp: In member function ‘virtual CConcept::operator bool()’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:477:2: note: in expansion of macro ‘FatalError’
+  FatalError(FormatString("Bool cast operator on %s (%s type) concept failed.",
+  ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp: In member function ‘virtual CConcept::operator std::string()’:
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:485:35: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  return Trim(GroundedHypToString());
+                                   ^
+In file included from /home/alex/c++/DM/DMCore/Concepts/Concept.cpp:105:0:
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp: In member function ‘virtual void CConcept::Clear()’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:492:9: note: in expansion of macro ‘FatalError’
+         FatalError(FormatString("Cannot perform Clear on concept (%s) history.",
+         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:499:51: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+         sInitialValue = TrimRight(HypSetToString());
+                                                   ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:517:39: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+             TrimRight(HypSetToString()).c_str()));
+                                       ^
+In file included from /home/alex/c++/DM/DMCore/Concepts/Concept.cpp:105:0:
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp: In member function ‘virtual void CConcept::ClearCurrentValue()’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:529:9: note: in expansion of macro ‘FatalError’
+         FatalError(FormatString(
+         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:537:51: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+         sInitialValue = TrimRight(HypSetToString());
+                                                   ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:549:39: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+             TrimRight(HypSetToString()).c_str()));
+                                       ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp: In member function ‘virtual void CConcept::Update(std::string, void*)’:
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:618:51: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+         sInitialValue = TrimRight(HypSetToString());
+                                                   ^
+In file included from /home/alex/c++/DM/DMCore/Concepts/Concept.cpp:105:0:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:635:8: note: in expansion of macro ‘FatalError’
+   else FatalError(FormatString(
+        ^
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:653:8: note: in expansion of macro ‘FatalError’
+   else FatalError(FormatString(
+        ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:665:39: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+             TrimRight(HypSetToString()).c_str()));
+                                       ^
+In file included from /home/alex/c++/DM/DMCore/Concepts/Concept.cpp:105:0:
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp: In member function ‘virtual void CConcept::Update_NPU_AssignFromString(void*)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:676:9: note: in expansion of macro ‘FatalError’
+         FatalError(FormatString("Cannot perform (AssignFromString) update on "
+         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:689:54: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   SplitOnFirst(sRest, HYPS_SEPARATOR, sValConf, sRest);
+                                                      ^
+In file included from /home/alex/c++/DM/DMCore/Concepts/Concept.cpp:105:0:
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp: In member function ‘virtual void CConcept::Update_NPU_AssignFromConcept(void*)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:703:9: note: in expansion of macro ‘FatalError’
+         FatalError(FormatString("Cannot perform AssignFromConcept update "
+         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp: In member function ‘virtual void CConcept::Update_NPU_UpdateWithConcept(void*)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:714:9: note: in expansion of macro ‘FatalError’
+         FatalError(FormatString("Cannot perform (UpdateWithConcept) update "
+         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp: In member function ‘virtual void CConcept::Update_NPU_CollapseToMode(void*)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:968:9: note: in expansion of macro ‘FatalError’
+         FatalError(FormatString("Cannot perform (CollapseToMode) update "
+         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp: In member function ‘virtual void CConcept::Update_PartialFromString(void*)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:996:9: note: in expansion of macro ‘FatalError’
+         FatalError(FormatString("Cannot perform (PartialFromString) update on "
+         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:1012:54: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   SplitOnFirst(sRest, HYPS_SEPARATOR, sValConf, sRest);
+                                                      ^
+In file included from /home/alex/c++/DM/DMCore/Concepts/Concept.cpp:105:0:
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp: In member function ‘virtual void CConcept::Update_Calista_UpdateWithConcept(void*)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:1051:9: note: in expansion of macro ‘FatalError’
+         FatalError(FormatString("Cannot perform (UpdateWithConcept) update "
+         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp: In member function ‘virtual void CConcept::Update_Calista_CollapseToMode(void*)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:1331:9: note: in expansion of macro ‘FatalError’
+         FatalError(FormatString("Cannot perform (CollapseToMode) update "
+         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp: In member function ‘virtual void CConcept::SetName(std::string)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:1519:9: note: in expansion of macro ‘FatalError’
+         FatalError(FormatString("Cannot SetName on concept (%s) history.", 
+         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp: In member function ‘std::string CConcept::GetSmallName()’:
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:1532:42: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  SplitOnLast(sName, ".", sFoo, sSmallName);
+                                          ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp: In member function ‘virtual void CConcept::CreateGroundingModel(std::string)’:
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:1588:68: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  TStringVector vsGMSpecs = PartitionString(sGroundingModelSpec, ",");
+                                                                    ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:1591:39: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   vsGMSpecs[i] = TrimLeft(vsGMSpecs[i]);
+                                       ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:1598:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    SplitOnFirst(vsGMSpecs[i], "=", sHead, sTail);
+                                                ^
+In file included from /home/alex/c++/DM/DMCore/Concepts/Concept.cpp:105:0:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:1604:8: note: in expansion of macro ‘FatalError’
+        FatalError(FormatString(
+        ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp: In member function ‘CGMConcept* CConcept::GetGroundingModel()’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:1633:9: note: in expansion of macro ‘FatalError’
+         FatalError(FormatString("Trying to access grounding model on history "\
+         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp: In member function ‘virtual void CConcept::SetGroundedFlag(bool)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:1646:13: note: in expansion of macro ‘FatalError’
+             FatalError(FormatString("Concept %s was restored for grounding, "
+             ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp: In member function ‘virtual void CConcept::DeclareGroundingModels(TGroundingModelPointersVector&, TGroundingModelPointersSet&)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:1681:9: note: in expansion of macro ‘FatalError’
+         FatalError(FormatString("Trying to access grounding models on history "\
+         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp: In member function ‘virtual CHyp* CConcept::HypFactory()’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:1813:2: note: in expansion of macro ‘FatalError’
+  FatalError(FormatString(
+  ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp: In member function ‘virtual CHyp* CConcept::GetHyp(int)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:1889:9: note: in expansion of macro ‘FatalError’
+         FatalError(FormatString(
+         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp: In member function ‘virtual void CConcept::SetHypConfidence(int, float)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:1922:3: note: in expansion of macro ‘FatalError’
+   FatalError(FormatString(
+   ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp: In member function ‘virtual CHyp* CConcept::GetPartialHyp(int)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:2161:9: note: in expansion of macro ‘FatalError’
+         FatalError(FormatString(
+         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp: In member function ‘virtual void CConcept::ReOpen()’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:2304:9: note: in expansion of macro ‘FatalError’
+         FatalError(FormatString("Cannot perform ReOpen on concept (%s) history.",
+         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:2311:51: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+         sInitialValue = TrimRight(HypSetToString());
+                                                   ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:2338:39: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+             TrimRight(HypSetToString()).c_str()));
+                                       ^
+In file included from /home/alex/c++/DM/DMCore/Concepts/Concept.cpp:105:0:
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp: In member function ‘virtual void CConcept::Restore(int)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:2347:9: note: in expansion of macro ‘FatalError’
+         FatalError(FormatString("Cannot perform Restore on concept (%s) history.",
+         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:2354:51: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+         sInitialValue = TrimRight(HypSetToString());
+                                                   ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:2378:39: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+             TrimRight(HypSetToString()).c_str()));
+                                       ^
+In file included from /home/alex/c++/DM/DMCore/Concepts/Concept.cpp:105:0:
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp: In member function ‘virtual void CConcept::ClearHistory()’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:2385:9: note: in expansion of macro ‘FatalError’
+         FatalError(FormatString("Cannot perform ClearHistory on concept (%s) history.",
+         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp: In member function ‘virtual void CConcept::MergeHistory()’:
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:2430:51: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+         sInitialValue = TrimRight(HypSetToString());
+                                                   ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:2466:39: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+             TrimRight(HypSetToString()).c_str()));
+                                       ^
+In file included from /home/alex/c++/DM/DMCore/Concepts/Concept.cpp:105:0:
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp: In member function ‘virtual int CConcept::GetSize()’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:2500:2: note: in expansion of macro ‘FatalError’
+  FatalError(FormatString("GetSize cannot be called on concept %s (%s type).",
+  ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp: In member function ‘virtual void CConcept::DeleteAt(unsigned int)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:2508:2: note: in expansion of macro ‘FatalError’
+  FatalError(FormatString("DeleteAt cannot be called on concept %s (%s type).",
+  ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp: In member function ‘virtual void CConcept::InsertAt(unsigned int, CConcept&)’:
+/home/alex/c++/DM/DMCore/Log.h:199:57: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  __FatalError(string(sError).c_str(), __FILE__, __LINE__)
+                                                         ^
+/home/alex/c++/DM/DMCore/Concepts/Concept.cpp:2515:2: note: in expansion of macro ‘FatalError’
+  FatalError(FormatString("InsertAt cannot be called on concept %s (%s type).",
+  ^
+make[2]: *** [CMakeFiles/RAVENCLAW.dir/DMCore/Concepts/Concept.cpp.o] 错误 1
+make[1]: *** [CMakeFiles/RAVENCLAW.dir/all] 错误 2
+make: *** [all] 错误 2

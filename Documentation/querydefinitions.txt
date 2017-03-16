@@ -1,0 +1,12 @@
+Queries in the LetsGoPublic/Let's Go!! System
+------------------------------------------------------------
+
+
+
+Type			Required Input		Optional Input		Example
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+how_to_go		DepartureLocation				I am at ... and I want to go to .... Which bus should I take?
+			ArrivalLocation					
+when_next_bus		DepartureLocation				When will the next 64A arrive at ...?
+			LineNumber
+			Direction

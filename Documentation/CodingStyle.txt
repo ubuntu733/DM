@@ -1,0 +1,127 @@
+-------------------------------------------------------------------------------
+                                  CODING STYLE
+-------------------------------------------------------------------------------
+
+IT IS EXTREMELY IMPORTANT THAT YOU READ THIS FILE BEFORE YOU INTERVENE IN THIS
+CODE IN ANY MANNER. ADHEREING TO THE RULES BELOW WILL ENSURE STYLE CONSISTENCY
+THROUGHOUT THE CODE, AND WILL SAVE A LOT OF PAIN LATER. 
+
+-------------------------------------------------------------------------------
+
+
+Here's a list of people that have worked on this code so far. If you 
+intervene in the code, please add your name to the table below
+
+Name				Email					UserId			UserLetter
+-------------------------------------------------------------------------------
+Dan Bohus			dbohus@cs.cmu.edu		dbohus			D
+Andrew Hoskins		agh@andrew.cmu.edu		agh				A
+Jahanzeb Sherwani	jsherwan@andrew.cmu.edu	jsherwan		J
+-------------------------------------------------------------------------------
+
+
+The coding style should be pretty obvious if you just look through the files. 
+Here are a couple of indications. PLEASE ADHERE TO THEM, IT WILL SAVE A LOT OF
+TIME AND PAIN LATER. If you have any questions, please contact Dan Bohus.
+
+1. LOOK AT THE SOURCE CODE
+Start by looking at how the sourcecode looks so far. It should give you an
+idea about the minimal coding style required. 
+
+2. SPACE YOUR CODE
+Use spacing judiciously so as to increase the readability of the code. DO NOT
+HAVE LINES OF CODE EXCEEDING 80 characters ! 
+
+3. COMMENTS:
+
+Please comment everything extensively. The criterion should be: "will someone 
+reading the code will with no effort understand what's in here ?", otherwise
+known as "The Principle of Least Astonishment". Here are some rules: 
+
+- For each file, please update the history at the begining of the file, if you
+  do changes to that file (i.e. even bug repairs). 
+  
+- Use the same commenting style you see in the other files. 
+  
+- Each function, structure definition, etc should be commented in the beginning. 
+  Also each member of a structure should be commented.
+  Provide at least a small explanation of what that function is doing. Use
+  your UserLetter: to begin the comments, so that if someone has some problems
+  with parts of the code, it will know where to go to ask. 
+  
+- In long CPP files implementing classes, group the functions (as in the 
+  interfaces), and break the groups with comments (hierarhically)
+  
+  //-----------------------------------------------------------
+  //
+  // UserLetter: Bla bla bla... (this is a level 1 comment)
+  //
+  //-----------------------------------------------------------
+  
+  ... 
+  ...
+  
+  //-----------------------------------------------------------
+  // UserLetter: Bla Bla Bla... (this is a level 2 comment)
+  //-----------------------------------------------------------
+  
+  // UserLetter: Bla Bla Bla  (this is a function comment)
+  void CMyClass::AlwaysComment() {
+	  // bla bla (inside the function you don't need to use your
+	  // user letter)
+	  ...
+  }
+  
+  
+4. HUNGARIAN NOTATION:
+
+Use the following Hungarian notation: 
+
+int iCount;				// an integer
+string sName;			// a string
+float fConfidence;		// a float
+CDialogAgent* pMyAgent;	// a pointer
+char* lpszName;			// a char *	(lpsz: long pointer to string terminated in 
+						//           zero... don't ask why!)
+
+TExecutionResult erFailure;		// a developer defined type (use initials in 
+								// lowercase)
+vector < string, allocator<string> > vNames;	// vectors
+int& riNrOfConcepts;	// a reference to an integer
+
+
+etc...
+
+
+5. OTHER NAMING CONVENTIONS:
+
+- All structures, functions, methods, classes, etc should have intuitive names.
+  Think of it in these terms: someone looking at it should know just by the
+  name kinda what it's doing. If that can't be the case (the name gets too
+  long), then comment aggresively. 
+  Take the time to think about what the name shoud be, what that function does. 
+
+- Each word in a names should be capitalized. (i.e. ErrorTestingFunction)
+
+- Private functions are to be named starting with a lowercase letter 
+	(i.e.)
+	private:
+		errorTestingFunction()
+
+
+6. MAKING NOTES FOR LATER ***
+
+If you feel like something is not implemented completely, or completely 
+correctly and you need to move on with the intent to later get back at that 
+issue, please comment it and prefix the comment with ***. This will make
+it easy to identify all the "unfinished/unoptimal" issues by doing a 
+FindInFiles on ***. 
+
+
+7. CLASS DECLARATIONS/DEFINITIONS
+
+Define the interfaces for classes very clearly, and comment them. Try to group
+the members by functionality. Comment aggresively on the members that implement
+the main functionality of that class (look at CDialogAgent, CMAInform, 
+CMARequest, CMAExecute for examples)
+
