@@ -71,8 +71,10 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/alex/c++/DM/DMCore/Log.cpp" "/home/alex/c++/DM/CMakeFiles/RAVENCLAW.dir/DMCore/Log.cpp.o"
   "/home/alex/c++/DM/DMCore/Outputs/FrameOutput.cpp" "/home/alex/c++/DM/CMakeFiles/RAVENCLAW.dir/DMCore/Outputs/FrameOutput.cpp.o"
   "/home/alex/c++/DM/DMCore/Outputs/Output.cpp" "/home/alex/c++/DM/CMakeFiles/RAVENCLAW.dir/DMCore/Outputs/Output.cpp.o"
+  "/home/alex/c++/DM/DMCore/message/message.cpp" "/home/alex/c++/DM/CMakeFiles/RAVENCLAW.dir/DMCore/message/message.cpp.o"
   "/home/alex/c++/DM/DialogTask/DialogTask.cpp" "/home/alex/c++/DM/CMakeFiles/RAVENCLAW.dir/DialogTask/DialogTask.cpp.o"
   "/home/alex/c++/DM/Utils/Utils.cpp" "/home/alex/c++/DM/CMakeFiles/RAVENCLAW.dir/Utils/Utils.cpp.o"
+  "/home/alex/c++/DM/main.cpp" "/home/alex/c++/DM/CMakeFiles/RAVENCLAW.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

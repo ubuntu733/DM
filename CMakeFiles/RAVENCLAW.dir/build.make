@@ -1636,6 +1636,52 @@ CMakeFiles/RAVENCLAW.dir/Utils/Utils.cpp.o.provides: CMakeFiles/RAVENCLAW.dir/Ut
 
 CMakeFiles/RAVENCLAW.dir/Utils/Utils.cpp.o.provides.build: CMakeFiles/RAVENCLAW.dir/Utils/Utils.cpp.o
 
+CMakeFiles/RAVENCLAW.dir/main.cpp.o: CMakeFiles/RAVENCLAW.dir/flags.make
+CMakeFiles/RAVENCLAW.dir/main.cpp.o: main.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/alex/c++/DM/CMakeFiles $(CMAKE_PROGRESS_70)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/RAVENCLAW.dir/main.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/RAVENCLAW.dir/main.cpp.o -c /home/alex/c++/DM/main.cpp
+
+CMakeFiles/RAVENCLAW.dir/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RAVENCLAW.dir/main.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/alex/c++/DM/main.cpp > CMakeFiles/RAVENCLAW.dir/main.cpp.i
+
+CMakeFiles/RAVENCLAW.dir/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RAVENCLAW.dir/main.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/alex/c++/DM/main.cpp -o CMakeFiles/RAVENCLAW.dir/main.cpp.s
+
+CMakeFiles/RAVENCLAW.dir/main.cpp.o.requires:
+.PHONY : CMakeFiles/RAVENCLAW.dir/main.cpp.o.requires
+
+CMakeFiles/RAVENCLAW.dir/main.cpp.o.provides: CMakeFiles/RAVENCLAW.dir/main.cpp.o.requires
+	$(MAKE) -f CMakeFiles/RAVENCLAW.dir/build.make CMakeFiles/RAVENCLAW.dir/main.cpp.o.provides.build
+.PHONY : CMakeFiles/RAVENCLAW.dir/main.cpp.o.provides
+
+CMakeFiles/RAVENCLAW.dir/main.cpp.o.provides.build: CMakeFiles/RAVENCLAW.dir/main.cpp.o
+
+CMakeFiles/RAVENCLAW.dir/DMCore/message/message.cpp.o: CMakeFiles/RAVENCLAW.dir/flags.make
+CMakeFiles/RAVENCLAW.dir/DMCore/message/message.cpp.o: DMCore/message/message.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/alex/c++/DM/CMakeFiles $(CMAKE_PROGRESS_71)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/RAVENCLAW.dir/DMCore/message/message.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/RAVENCLAW.dir/DMCore/message/message.cpp.o -c /home/alex/c++/DM/DMCore/message/message.cpp
+
+CMakeFiles/RAVENCLAW.dir/DMCore/message/message.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RAVENCLAW.dir/DMCore/message/message.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/alex/c++/DM/DMCore/message/message.cpp > CMakeFiles/RAVENCLAW.dir/DMCore/message/message.cpp.i
+
+CMakeFiles/RAVENCLAW.dir/DMCore/message/message.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RAVENCLAW.dir/DMCore/message/message.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/alex/c++/DM/DMCore/message/message.cpp -o CMakeFiles/RAVENCLAW.dir/DMCore/message/message.cpp.s
+
+CMakeFiles/RAVENCLAW.dir/DMCore/message/message.cpp.o.requires:
+.PHONY : CMakeFiles/RAVENCLAW.dir/DMCore/message/message.cpp.o.requires
+
+CMakeFiles/RAVENCLAW.dir/DMCore/message/message.cpp.o.provides: CMakeFiles/RAVENCLAW.dir/DMCore/message/message.cpp.o.requires
+	$(MAKE) -f CMakeFiles/RAVENCLAW.dir/build.make CMakeFiles/RAVENCLAW.dir/DMCore/message/message.cpp.o.provides.build
+.PHONY : CMakeFiles/RAVENCLAW.dir/DMCore/message/message.cpp.o.provides
+
+CMakeFiles/RAVENCLAW.dir/DMCore/message/message.cpp.o.provides.build: CMakeFiles/RAVENCLAW.dir/DMCore/message/message.cpp.o
+
 # Object files for target RAVENCLAW
 RAVENCLAW_OBJECTS = \
 "CMakeFiles/RAVENCLAW.dir/DialogTask/DialogTask.cpp.o" \
@@ -1706,7 +1752,9 @@ RAVENCLAW_OBJECTS = \
 "CMakeFiles/RAVENCLAW.dir/DMCore/Log.cpp.o" \
 "CMakeFiles/RAVENCLAW.dir/DMCore/Outputs/FrameOutput.cpp.o" \
 "CMakeFiles/RAVENCLAW.dir/DMCore/Outputs/Output.cpp.o" \
-"CMakeFiles/RAVENCLAW.dir/Utils/Utils.cpp.o"
+"CMakeFiles/RAVENCLAW.dir/Utils/Utils.cpp.o" \
+"CMakeFiles/RAVENCLAW.dir/main.cpp.o" \
+"CMakeFiles/RAVENCLAW.dir/DMCore/message/message.cpp.o"
 
 # External object files for target RAVENCLAW
 RAVENCLAW_EXTERNAL_OBJECTS =
@@ -1780,6 +1828,8 @@ RAVENCLAW: CMakeFiles/RAVENCLAW.dir/DMCore/Log.cpp.o
 RAVENCLAW: CMakeFiles/RAVENCLAW.dir/DMCore/Outputs/FrameOutput.cpp.o
 RAVENCLAW: CMakeFiles/RAVENCLAW.dir/DMCore/Outputs/Output.cpp.o
 RAVENCLAW: CMakeFiles/RAVENCLAW.dir/Utils/Utils.cpp.o
+RAVENCLAW: CMakeFiles/RAVENCLAW.dir/main.cpp.o
+RAVENCLAW: CMakeFiles/RAVENCLAW.dir/DMCore/message/message.cpp.o
 RAVENCLAW: CMakeFiles/RAVENCLAW.dir/build.make
 RAVENCLAW: CMakeFiles/RAVENCLAW.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable RAVENCLAW"
@@ -1858,6 +1908,8 @@ CMakeFiles/RAVENCLAW.dir/requires: CMakeFiles/RAVENCLAW.dir/DMCore/Log.cpp.o.req
 CMakeFiles/RAVENCLAW.dir/requires: CMakeFiles/RAVENCLAW.dir/DMCore/Outputs/FrameOutput.cpp.o.requires
 CMakeFiles/RAVENCLAW.dir/requires: CMakeFiles/RAVENCLAW.dir/DMCore/Outputs/Output.cpp.o.requires
 CMakeFiles/RAVENCLAW.dir/requires: CMakeFiles/RAVENCLAW.dir/Utils/Utils.cpp.o.requires
+CMakeFiles/RAVENCLAW.dir/requires: CMakeFiles/RAVENCLAW.dir/main.cpp.o.requires
+CMakeFiles/RAVENCLAW.dir/requires: CMakeFiles/RAVENCLAW.dir/DMCore/message/message.cpp.o.requires
 .PHONY : CMakeFiles/RAVENCLAW.dir/requires
 
 CMakeFiles/RAVENCLAW.dir/clean:

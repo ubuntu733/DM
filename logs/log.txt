@@ -1,0 +1,3152 @@
+[2017-03-28 14:54:01.728] [basic_logger] [info] REG|Clearing up the registry ...
+
+[2017-03-28 14:54:01.728] [basic_logger] [info] REG|Deallocating remaining registered agents ...
+
+[2017-03-28 14:54:01.728] [basic_logger] [info] REG|Deallocating remaining registered agents completed.
+
+[2017-03-28 14:54:01.728] [basic_logger] [info] REG|Agent type CDMCoreAgent registered successfully.
+
+[2017-03-28 14:54:01.728] [basic_logger] [info] REG|Agent DMCoreAgent created successfully.
+
+[2017-03-28 14:54:01.728] [basic_logger] [info] REG|Agent DMCoreAgent registered successfully.
+
+[2017-03-28 14:54:01.728] [basic_logger] [info] CTH|Creating auxiliary core dialog core agents ...
+
+[2017-03-28 14:54:01.728] [basic_logger] [info] REG|Agent type CInteractionEventManagerAgent registered successfully.
+
+[2017-03-28 14:54:01.728] [basic_logger] [info] REG|Agent InteractionEventManagerAgent created successfully.
+
+[2017-03-28 14:54:01.728] [basic_logger] [info] REG|Agent InteractionEventManagerAgent registered successfully.
+
+[2017-03-28 14:54:01.728] [basic_logger] [info] REG|Agent type COutputManagerAgent registered successfully.
+
+[2017-03-28 14:54:01.728] [basic_logger] [info] REG|Agent OutputManagerAgent created successfully.
+
+[2017-03-28 14:54:01.728] [basic_logger] [info] REG|Agent OutputManagerAgent registered successfully.
+
+[2017-03-28 14:54:01.728] [basic_logger] [info] REG|Agent type CTrafficManagerAgent registered successfully.
+
+[2017-03-28 14:54:01.728] [basic_logger] [info] REG|Agent TrafficManagerAgent created successfully.
+
+[2017-03-28 14:54:01.728] [basic_logger] [info] REG|Agent TrafficManagerAgent registered successfully.
+
+[2017-03-28 14:54:01.728] [basic_logger] [info] REG|Agent type CStateManagerAgent registered successfully.
+
+[2017-03-28 14:54:01.728] [basic_logger] [info] REG|Agent StateManagerAgent created successfully.
+
+[2017-03-28 14:54:01.728] [basic_logger] [info] REG|Agent StateManagerAgent registered successfully.
+
+[2017-03-28 14:54:01.728] [basic_logger] [info] REG|Agent type CDTTManagerAgent registered successfully.
+
+[2017-03-28 14:54:01.728] [basic_logger] [info] REG|Agent DTTManagerAgent created successfully.
+
+[2017-03-28 14:54:01.728] [basic_logger] [info] REG|Agent DTTManagerAgent registered successfully.
+
+[2017-03-28 14:54:01.728] [basic_logger] [info] REG|Agent type CGroundingManagerAgent registered successfully.
+
+[2017-03-28 14:54:01.728] [basic_logger] [info] REG|Agent GroundingManagerAgent created successfully.
+
+[2017-03-28 14:54:01.728] [basic_logger] [info] REG|Agent GroundingManagerAgent registered successfully.
+
+[2017-03-28 14:54:01.728] [basic_logger] [info] CTH|Auxiliary core dialog management agents created successfully.
+
+[2017-03-28 14:54:01.728] [basic_logger] [info] CTH|Core initialization completed successfully.
+
+[2017-03-28 14:54:01.728] [basic_logger] [info] GMS|Registering grounding action: NO_ACTION [NO_ACTION].
+
+[2017-03-28 14:54:01.728] [basic_logger] [info] GMS|Registering grounding action: ACCEPT [ACCEPT].
+
+[2017-03-28 14:54:01.729] [basic_logger] [info] GMS|Registering grounding action: EXPL_CONF [EXPL_CONF].
+
+[2017-03-28 14:54:01.729] [basic_logger] [info] REG|Agent type _CExplicitConfirm registered successfully.
+
+[2017-03-28 14:54:01.729] [basic_logger] [info] REG|Agent type _CRequestConfirm registered successfully.
+
+[2017-03-28 14:54:01.729] [basic_logger] [info] REG|Agent type _CAcknowledgeConfirm registered successfully.
+
+[2017-03-28 14:54:01.729] [basic_logger] [info] GMS|Registering grounding action: IMPL_CONF [IMPL_CONF].
+
+[2017-03-28 14:54:01.729] [basic_logger] [info] REG|Agent type _CImplicitConfirmInform registered successfully.
+
+[2017-03-28 14:54:01.729] [basic_logger] [info] REG|Agent type _CImplicitConfirmExpect registered successfully.
+
+[2017-03-28 14:54:01.729] [basic_logger] [info] GMS|Registering grounding action: ASK_REPEAT [ASK_REPEAT].
+
+[2017-03-28 14:54:01.729] [basic_logger] [info] REG|Agent type _CAskRepeat registered successfully.
+
+[2017-03-28 14:54:01.729] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_AND_ASK_REPEAT [ASK_REPEAT].
+
+[2017-03-28 14:54:01.729] [basic_logger] [info] GMS|Registering grounding action: ASK_REPHRASE [ASK_REPHRASE].
+
+[2017-03-28 14:54:01.729] [basic_logger] [info] REG|Agent type _CAskRephrase registered successfully.
+
+[2017-03-28 14:54:01.729] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_AND_ASK_REPHRASE [ASK_REPHRASE].
+
+[2017-03-28 14:54:01.729] [basic_logger] [info] GMS|Registering grounding action: REPEAT_PROMPT [REPEAT_PROMPT].
+
+[2017-03-28 14:54:01.729] [basic_logger] [info] REG|Agent type _CRepeatPrompt registered successfully.
+
+[2017-03-28 14:54:01.729] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_AND_REPEAT_PROMPT [REPEAT_PROMPT].
+
+[2017-03-28 14:54:01.729] [basic_logger] [info] GMS|Registering grounding action: EXPLAIN_MORE [EXPLAIN_MORE].
+
+[2017-03-28 14:54:01.729] [basic_logger] [info] REG|Agent type _CExplainMore registered successfully.
+
+[2017-03-28 14:54:01.729] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_AND_EXPLAIN_MORE [EXPLAIN_MORE].
+
+[2017-03-28 14:54:01.729] [basic_logger] [info] GMS|Registering grounding action: FULL_HELP [FULL_HELP].
+
+[2017-03-28 14:54:01.729] [basic_logger] [info] REG|Agent type _CFullHelp registered successfully.
+
+[2017-03-28 14:54:01.729] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_AND_FULL_HELP [FULL_HELP].
+
+[2017-03-28 14:54:01.729] [basic_logger] [info] GMS|Registering grounding action: WHAT_CAN_I_SAY [WHAT_CAN_I_SAY].
+
+[2017-03-28 14:54:01.729] [basic_logger] [info] REG|Agent type _CWhatCanISay registered successfully.
+
+[2017-03-28 14:54:01.729] [basic_logger] [info] GMS|Registering grounding action: TERSE_WHAT_CAN_I_SAY [WHAT_CAN_I_SAY].
+
+[2017-03-28 14:54:01.729] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_AND_WHAT_CAN_I_SAY [WHAT_CAN_I_SAY].
+
+[2017-03-28 14:54:01.729] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_AND_TERSE_WHAT_CAN_I_SAY [WHAT_CAN_I_SAY].
+
+[2017-03-28 14:54:01.729] [basic_logger] [info] GMS|Registering grounding action: TIPS_AND_WHAT_CAN_I_SAY [WHAT_CAN_I_SAY].
+
+[2017-03-28 14:54:01.729] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_NONUNDERSTANDING [NOTIFY_NONUNDERSTANDING].
+
+[2017-03-28 14:54:01.729] [basic_logger] [info] REG|Agent type _CNotifyNonunderstanding registered successfully.
+
+[2017-03-28 14:54:01.729] [basic_logger] [info] GMS|Registering grounding action: YIELD_TURN [YIELD_TURN].
+
+[2017-03-28 14:54:01.729] [basic_logger] [info] REG|Agent type _CYieldTurn registered successfully.
+
+[2017-03-28 14:54:01.729] [basic_logger] [info] GMS|Registering grounding action: FAIL_REQUEST [FAIL_REQUEST].
+
+[2017-03-28 14:54:01.729] [basic_logger] [info] REG|Agent type _CFailRequest registered successfully.
+
+[2017-03-28 14:54:01.729] [basic_logger] [info] GMS|Registering grounding action: ASK_STARTOVER [ASK_STARTOVER].
+
+[2017-03-28 14:54:01.729] [basic_logger] [info] REG|Agent type _CAskStartOver registered successfully.
+
+[2017-03-28 14:54:01.729] [basic_logger] [info] REG|Agent type _CAskStartOverAsk registered successfully.
+
+[2017-03-28 14:54:01.729] [basic_logger] [info] REG|Agent type _CAskStartOverInform registered successfully.
+
+[2017-03-28 14:54:01.729] [basic_logger] [info] REG|Agent type _CAskStartOverExecute registered successfully.
+
+[2017-03-28 14:54:01.729] [basic_logger] [info] GMS|Registering grounding action: SPEAK_LESS_LOUD_AND_REPROMPT [SPEAKLESSLOUD_AND_REPROMPT].
+
+[2017-03-28 14:54:01.729] [basic_logger] [info] REG|Agent type _CSpeakLessLoudAndReprompt registered successfully.
+
+[2017-03-28 14:54:01.729] [basic_logger] [info] GMS|Registering grounding action: ASK_SHORT_ANSWER_AND_REPROMPT [ASK_SHORT_ANSWER_AND_REPROMPT].
+
+[2017-03-28 14:54:01.729] [basic_logger] [info] REG|Agent type _CAskShortAnswerAndReprompt registered successfully.
+
+[2017-03-28 14:54:01.729] [basic_logger] [info] GMS|Registering grounding action: ASK_SHORT_ANSWER_AND_WHAT_CAN_I_SAY [ASK_SHORT_ANSWER_AND_WHAT_CAN_I_SAY].
+
+[2017-03-28 14:54:01.729] [basic_logger] [info] REG|Agent type _CAskShortAnswerAndWhatCanISay registered successfully.
+
+[2017-03-28 14:54:01.729] [basic_logger] [info] GMS|Registering grounding action: INTERACTION_TIPS [INTERACTION_TIPS].
+
+[2017-03-28 14:54:01.729] [basic_logger] [info] REG|Agent type _CInteractionTips registered successfully.
+
+[2017-03-28 14:54:01.729] [basic_logger] [info] GMS|Registering grounding action: GIVE_UP [GIVE_UP].
+
+[2017-03-28 14:54:01.730] [basic_logger] [info] REG|Agent type _CGiveUp registered successfully.
+
+[2017-03-28 14:54:01.730] [basic_logger] [info] GMS|Registering grounding action: MOVE_ON [MOVE_ON].
+
+[2017-03-28 14:54:01.730] [basic_logger] [info] REG|Agent type _CMoveOn registered successfully.
+
+[2017-03-28 14:54:01.730] [basic_logger] [info] DTT|Starting Dialog Tree Creation Phase ...
+
+[2017-03-28 14:54:01.730] [basic_logger] [info] DTT|Registering  dialog task agent types ...
+
+[2017-03-28 14:54:01.730] [basic_logger] [info] REG|Agent type CFlightRoot registered successfully.
+
+[2017-03-28 14:54:01.730] [basic_logger] [info] REG|Agent type CWelcome registered successfully.
+
+[2017-03-28 14:54:01.730] [basic_logger] [info] REG|Agent type CTask registered successfully.
+
+[2017-03-28 14:54:01.730] [basic_logger] [info] REG|Agent type CRequestDate registered successfully.
+
+[2017-03-28 14:54:01.730] [basic_logger] [info] REG|Agent type CRequestStartLoc registered successfully.
+
+[2017-03-28 14:54:01.730] [basic_logger] [info] REG|Agent type CRequestEndLoc registered successfully.
+
+[2017-03-28 14:54:01.730] [basic_logger] [info] REG|Agent type CInformResults registered successfully.
+
+[2017-03-28 14:54:01.730] [basic_logger] [info] REG|Agent type CExecuteFlight registered successfully.
+
+[2017-03-28 14:54:01.730] [basic_logger] [info] REG|Agent type CLogout registered successfully.
+
+[2017-03-28 14:54:01.730] [basic_logger] [info] REG|Agent type CInformLogout registered successfully.
+
+[2017-03-28 14:54:01.730] [basic_logger] [info] DTT|Creating Dialog Task Tree ...
+
+[2017-03-28 14:54:01.730] [basic_logger] [info] REG|Agent Welcome created successfully.
+
+[2017-03-28 14:54:01.730] [basic_logger] [info] REG|Agent RequestDate created successfully.
+
+[2017-03-28 14:54:01.730] [basic_logger] [info] REG|Agent RequestStartLoc created successfully.
+
+[2017-03-28 14:54:01.730] [basic_logger] [info] REG|Agent RequestEndLoc created successfully.
+
+[2017-03-28 14:54:01.730] [basic_logger] [info] REG|Agent InformResults created successfully.
+
+[2017-03-28 14:54:01.730] [basic_logger] [info] REG|Agent ExecuteFlight created successfully.
+
+[2017-03-28 14:54:01.730] [basic_logger] [info] REG|Agent Task created successfully.
+
+[2017-03-28 14:54:01.730] [basic_logger] [info] REG|Agent InformLogout created successfully.
+
+[2017-03-28 14:54:01.730] [basic_logger] [info] REG|Agent Logout created successfully.
+
+[2017-03-28 14:54:01.730] [basic_logger] [info] REG|Agent FlightRoot created successfully.
+
+[2017-03-28 14:54:01.730] [basic_logger] [info] REG|Agent /FlightRoot registered successfully.
+
+[2017-03-28 14:54:01.730] [basic_logger] [info] REG|Agent /FlightRoot/Welcome registered successfully.
+
+[2017-03-28 14:54:01.730] [basic_logger] [info] REG|Agent /FlightRoot/Task registered successfully.
+
+[2017-03-28 14:54:01.730] [basic_logger] [info] REG|Agent /FlightRoot/Task/RequestDate registered successfully.
+
+[2017-03-28 14:54:01.730] [basic_logger] [info] REG|Agent /FlightRoot/Task/RequestStartLoc registered successfully.
+
+[2017-03-28 14:54:01.730] [basic_logger] [info] REG|Agent /FlightRoot/Task/RequestEndLoc registered successfully.
+
+[2017-03-28 14:54:01.730] [basic_logger] [info] REG|Agent /FlightRoot/Task/InformResults registered successfully.
+
+[2017-03-28 14:54:01.730] [basic_logger] [info] REG|Agent /FlightRoot/Task/ExecuteFlight registered successfully.
+
+[2017-03-28 14:54:01.730] [basic_logger] [info] REG|Agent /FlightRoot/Logout registered successfully.
+
+[2017-03-28 14:54:01.730] [basic_logger] [info] REG|Agent /FlightRoot/Logout/InformLogout registered successfully.
+
+[2017-03-28 14:54:01.730] [basic_logger] [info] DTT|Dialog Tree Creation Phase completed successfully.
+
+[2017-03-28 14:54:01.730] [basic_logger] [info] COR|Set floor status to free
+
+[2017-03-28 14:54:01.730] [basic_logger] [info] COR|Starting Dialog Task execution.
+
+[2017-03-28 14:54:01.730] [basic_logger] [info] COR|Agent /FlightRoot added on the execution stack by DMCoreAgent.
+
+[2017-03-28 14:54:01.730] [basic_logger] [info] STA|Updating dialog state ...
+
+[2017-03-28 14:54:01.730] [basic_logger] [info] COR|Expectation Agenda Assembly Phase initiated.
+
+[2017-03-28 14:54:01.730] [basic_logger] [info] COR|Compiling Expectation Agenda ...
+
+[2017-03-28 14:54:01.730] [basic_logger] [info] COR|Compiling Expectation Agenda completed.
+
+[2017-03-28 14:54:01.730] [basic_logger] [info] COR|Enforcing binding policies ...
+
+[2017-03-28 14:54:01.730] [basic_logger] [info] COR|Enforcing binding policies completed.
+
+[2017-03-28 14:54:01.730] [basic_logger] [info] AGN|Concept expectation agenda dumped below:
+ Level 0: generated by /FlightRoot
+  O [endloc] -> (/FlightRoot/Task/RequestEndLoc)/FlightRoot/Task/endLoc
+  O [startdate] -> (/FlightRoot/Task/RequestDate)/FlightRoot/Task/startDate
+  O [startloc] -> (/FlightRoot/Task/RequestStartLoc)/FlightRoot/Task/startLoc
+
+[2017-03-28 14:54:01.730] [basic_logger] [info] COR|Expectation Agenda Assembly Phase completed (1 levels).
+
+[2017-03-28 14:54:01.731] [basic_logger] [info] STA|Dialog state update completed: /FlightRoot at 0 (iEHIndex=0):
+turn_number = 0
+notify_prompts = 
+dialog_state = /FlightRoot
+nonu_threshold = 0.0000
+stack = {
+/FlightRoot
+}
+agenda = {
+0:
+O[endloc]V,
+O[startdate]V,
+O[startloc]V
+}
+input_line_config = {
+
+}
+
+[2017-03-28 14:54:01.731] [basic_logger] [info] COR|Starting DMCore processing [User:???]
+
+[2017-03-28 14:54:01.731] [basic_logger] [info] COR|Eliminated completed agents from stack [User:???]
+
+[2017-03-28 14:54:01.731] [basic_logger] [info] COR|Performed grounding [User:???]
+
+[2017-03-28 14:54:01.731] [basic_logger] [info] COR|Completed grounding on [User:???]
+
+[2017-03-28 14:54:01.731] [basic_logger] [info] COR|Executing dialog agent /FlightRoot [User:???]
+
+[2017-03-28 14:54:01.731] [basic_logger] [info] COR|Agent /FlightRoot/Welcome added on the execution stack by /FlightRoot.
+
+[2017-03-28 14:54:01.731] [basic_logger] [info] COR|Starting DMCore processing [User:???]
+
+[2017-03-28 14:54:01.731] [basic_logger] [info] COR|Eliminated completed agents from stack [User:???]
+
+[2017-03-28 14:54:01.731] [basic_logger] [info] COR|Performed grounding [User:???]
+
+[2017-03-28 14:54:01.731] [basic_logger] [info] COR|Completed grounding on [User:???]
+
+[2017-03-28 14:54:01.731] [basic_logger] [info] COR|Executing dialog agent /FlightRoot/Welcome [User:???]
+
+[2017-03-28 14:54:01.731] [basic_logger] [info] OTP|Processing output prompt 0 from /FlightRoot/Welcome. (dump below)
+{inform|您好，欢迎使用航班查询系统}
+
+[2017-03-28 14:54:01.731] [basic_logger] [info] COR|Starting DMCore processing [User:???]
+
+[2017-03-28 14:54:01.731] [basic_logger] [info] COR|Eliminated 1 completed agent(s) (dumped below) from the execution stack.
+/FlightRoot/Welcome
+
+[2017-03-28 14:54:01.731] [basic_logger] [info] COR|Eliminated completed agents from stack [User:???]
+
+[2017-03-28 14:54:01.731] [basic_logger] [info] COR|Performed grounding [User:???]
+
+[2017-03-28 14:54:01.731] [basic_logger] [info] COR|Completed grounding on [User:???]
+
+[2017-03-28 14:54:01.731] [basic_logger] [info] COR|Executing dialog agent /FlightRoot [User:???]
+
+[2017-03-28 14:54:01.731] [basic_logger] [info] COR|Agent /FlightRoot/Task added on the execution stack by /FlightRoot.
+
+[2017-03-28 14:54:01.731] [basic_logger] [info] COR|Starting DMCore processing [User:???]
+
+[2017-03-28 14:54:01.731] [basic_logger] [info] COR|Eliminated completed agents from stack [User:???]
+
+[2017-03-28 14:54:01.731] [basic_logger] [info] COR|Performed grounding [User:???]
+
+[2017-03-28 14:54:01.731] [basic_logger] [info] COR|Completed grounding on [User:???]
+
+[2017-03-28 14:54:01.731] [basic_logger] [info] COR|Executing dialog agent /FlightRoot/Task [User:???]
+
+[2017-03-28 14:54:01.731] [basic_logger] [info] COR|Agent /FlightRoot/Task/RequestDate added on the execution stack by /FlightRoot/Task.
+
+[2017-03-28 14:54:01.731] [basic_lo[2017-03-28 14:55:15.655] [basic_logger] [info] REG|Clearing up the registry ...
+
+[2017-03-28 14:55:15.656] [basic_logger] [info] REG|Deallocating remaining registered agents ...
+
+[2017-03-28 14:55:15.656] [basic_logger] [info] REG|Deallocating remaining registered agents completed.
+
+[2017-03-28 14:55:15.656] [basic_logger] [info] REG|Agent type CDMCoreAgent registered successfully.
+
+[2017-03-28 14:55:15.656] [basic_logger] [info] REG|Agent DMCoreAgent created successfully.
+
+[2017-03-28 14:55:15.656] [basic_logger] [info] REG|Agent DMCoreAgent registered successfully.
+
+[2017-03-28 14:55:15.656] [basic_logger] [info] CTH|Creating auxiliary core dialog core agents ...
+
+[2017-03-28 14:55:15.656] [basic_logger] [info] REG|Agent type CInteractionEventManagerAgent registered successfully.
+
+[2017-03-28 14:55:15.656] [basic_logger] [info] REG|Agent InteractionEventManagerAgent created successfully.
+
+[2017-03-28 14:55:15.656] [basic_logger] [info] REG|Agent InteractionEventManagerAgent registered successfully.
+
+[2017-03-28 14:55:15.656] [basic_logger] [info] REG|Agent type COutputManagerAgent registered successfully.
+
+[2017-03-28 14:55:15.656] [basic_logger] [info] REG|Agent OutputManagerAgent created successfully.
+
+[2017-03-28 14:55:15.656] [basic_logger] [info] REG|Agent OutputManagerAgent registered successfully.
+
+[2017-03-28 14:55:15.656] [basic_logger] [info] REG|Agent type CTrafficManagerAgent registered successfully.
+
+[2017-03-28 14:55:15.656] [basic_logger] [info] REG|Agent TrafficManagerAgent created successfully.
+
+[2017-03-28 14:55:15.656] [basic_logger] [info] REG|Agent TrafficManagerAgent registered successfully.
+
+[2017-03-28 14:55:15.656] [basic_logger] [info] REG|Agent type CStateManagerAgent registered successfully.
+
+[2017-03-28 14:55:15.656] [basic_logger] [info] REG|Agent StateManagerAgent created successfully.
+
+[2017-03-28 14:55:15.656] [basic_logger] [info] REG|Agent StateManagerAgent registered successfully.
+
+[2017-03-28 14:55:15.656] [basic_logger] [info] REG|Agent type CDTTManagerAgent registered successfully.
+
+[2017-03-28 14:55:15.656] [basic_logger] [info] REG|Agent DTTManagerAgent created successfully.
+
+[2017-03-28 14:55:15.656] [basic_logger] [info] REG|Agent DTTManagerAgent registered successfully.
+
+[2017-03-28 14:55:15.656] [basic_logger] [info] REG|Agent type CGroundingManagerAgent registered successfully.
+
+[2017-03-28 14:55:15.656] [basic_logger] [info] REG|Agent GroundingManagerAgent created successfully.
+
+[2017-03-28 14:55:15.656] [basic_logger] [info] REG|Agent GroundingManagerAgent registered successfully.
+
+[2017-03-28 14:55:15.656] [basic_logger] [info] CTH|Auxiliary core dialog management agents created successfully.
+
+[2017-03-28 14:55:15.656] [basic_logger] [info] CTH|Core initialization completed successfully.
+
+[2017-03-28 14:55:15.656] [basic_logger] [info] GMS|Registering grounding action: NO_ACTION [NO_ACTION].
+
+[2017-03-28 14:55:15.656] [basic_logger] [info] GMS|Registering grounding action: ACCEPT [ACCEPT].
+
+[2017-03-28 14:55:15.656] [basic_logger] [info] GMS|Registering grounding action: EXPL_CONF [EXPL_CONF].
+
+[2017-03-28 14:55:15.656] [basic_logger] [info] REG|Agent type _CExplicitConfirm registered successfully.
+
+[2017-03-28 14:55:15.656] [basic_logger] [info] REG|Agent type _CRequestConfirm registered successfully.
+
+[2017-03-28 14:55:15.656] [basic_logger] [info] REG|Agent type _CAcknowledgeConfirm registered successfully.
+
+[2017-03-28 14:55:15.656] [basic_logger] [info] GMS|Registering grounding action: IMPL_CONF [IMPL_CONF].
+
+[2017-03-28 14:55:15.656] [basic_logger] [info] REG|Agent type _CImplicitConfirmInform registered successfully.
+
+[2017-03-28 14:55:15.656] [basic_logger] [info] REG|Agent type _CImplicitConfirmExpect registered successfully.
+
+[2017-03-28 14:55:15.656] [basic_logger] [info] GMS|Registering grounding action: ASK_REPEAT [ASK_REPEAT].
+
+[2017-03-28 14:55:15.656] [basic_logger] [info] REG|Agent type _CAskRepeat registered successfully.
+
+[2017-03-28 14:55:15.656] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_AND_ASK_REPEAT [ASK_REPEAT].
+
+[2017-03-28 14:55:15.656] [basic_logger] [info] GMS|Registering grounding action: ASK_REPHRASE [ASK_REPHRASE].
+
+[2017-03-28 14:55:15.656] [basic_logger] [info] REG|Agent type _CAskRephrase registered successfully.
+
+[2017-03-28 14:55:15.656] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_AND_ASK_REPHRASE [ASK_REPHRASE].
+
+[2017-03-28 14:55:15.656] [basic_logger] [info] GMS|Registering grounding action: REPEAT_PROMPT [REPEAT_PROMPT].
+
+[2017-03-28 14:55:15.656] [basic_logger] [info] REG|Agent type _CRepeatPrompt registered successfully.
+
+[2017-03-28 14:55:15.656] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_AND_REPEAT_PROMPT [REPEAT_PROMPT].
+
+[2017-03-28 14:55:15.656] [basic_logger] [info] GMS|Registering grounding action: EXPLAIN_MORE [EXPLAIN_MORE].
+
+[2017-03-28 14:55:15.656] [basic_logger] [info] REG|Agent type _CExplainMore registered successfully.
+
+[2017-03-28 14:55:15.657] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_AND_EXPLAIN_MORE [EXPLAIN_MORE].
+
+[2017-03-28 14:55:15.657] [basic_logger] [info] GMS|Registering grounding action: FULL_HELP [FULL_HELP].
+
+[2017-03-28 14:55:15.657] [basic_logger] [info] REG|Agent type _CFullHelp registered successfully.
+
+[2017-03-28 14:55:15.657] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_AND_FULL_HELP [FULL_HELP].
+
+[2017-03-28 14:55:15.657] [basic_logger] [info] GMS|Registering grounding action: WHAT_CAN_I_SAY [WHAT_CAN_I_SAY].
+
+[2017-03-28 14:55:15.657] [basic_logger] [info] REG|Agent type _CWhatCanISay registered successfully.
+
+[2017-03-28 14:55:15.657] [basic_logger] [info] GMS|Registering grounding action: TERSE_WHAT_CAN_I_SAY [WHAT_CAN_I_SAY].
+
+[2017-03-28 14:55:15.657] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_AND_WHAT_CAN_I_SAY [WHAT_CAN_I_SAY].
+
+[2017-03-28 14:55:15.657] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_AND_TERSE_WHAT_CAN_I_SAY [WHAT_CAN_I_SAY].
+
+[2017-03-28 14:55:15.657] [basic_logger] [info] GMS|Registering grounding action: TIPS_AND_WHAT_CAN_I_SAY [WHAT_CAN_I_SAY].
+
+[2017-03-28 14:55:15.657] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_NONUNDERSTANDING [NOTIFY_NONUNDERSTANDING].
+
+[2017-03-28 14:55:15.657] [basic_logger] [info] REG|Agent type _CNotifyNonunderstanding registered successfully.
+
+[2017-03-28 14:55:15.657] [basic_logger] [info] GMS|Registering grounding action: YIELD_TURN [YIELD_TURN].
+
+[2017-03-28 14:55:15.657] [basic_logger] [info] REG|Agent type _CYieldTurn registered successfully.
+
+[2017-03-28 14:55:15.657] [basic_logger] [info] GMS|Registering grounding action: FAIL_REQUEST [FAIL_REQUEST].
+
+[2017-03-28 14:55:15.657] [basic_logger] [info] REG|Agent type _CFailRequest registered successfully.
+
+[2017-03-28 14:55:15.657] [basic_logger] [info] GMS|Registering grounding action: ASK_STARTOVER [ASK_STARTOVER].
+
+[2017-03-28 14:55:15.657] [basic_logger] [info] REG|Agent type _CAskStartOver registered successfully.
+
+[2017-03-28 14:55:15.657] [basic_logger] [info] REG|Agent type _CAskStartOverAsk registered successfully.
+
+[2017-03-28 14:55:15.657] [basic_logger] [info] REG|Agent type _CAskStartOverInform registered successfully.
+
+[2017-03-28 14:55:15.657] [basic_logger] [info] REG|Agent type _CAskStartOverExecute registered successfully.
+
+[2017-03-28 14:55:15.657] [basic_logger] [info] GMS|Registering grounding action: SPEAK_LESS_LOUD_AND_REPROMPT [SPEAKLESSLOUD_AND_REPROMPT].
+
+[2017-03-28 14:55:15.657] [basic_logger] [info] REG|Agent type _CSpeakLessLoudAndReprompt registered successfully.
+
+[2017-03-28 14:55:15.657] [basic_logger] [info] GMS|Registering grounding action: ASK_SHORT_ANSWER_AND_REPROMPT [ASK_SHORT_ANSWER_AND_REPROMPT].
+
+[2017-03-28 14:55:15.657] [basic_logger] [info] REG|Agent type _CAskShortAnswerAndReprompt registered successfully.
+
+[2017-03-28 14:55:15.657] [basic_logger] [info] GMS|Registering grounding action: ASK_SHORT_ANSWER_AND_WHAT_CAN_I_SAY [ASK_SHORT_ANSWER_AND_WHAT_CAN_I_SAY].
+
+[2017-03-28 14:55:15.657] [basic_logger] [info] REG|Agent type _CAskShortAnswerAndWhatCanISay registered successfully.
+
+[2017-03-28 14:55:15.657] [basic_logger] [info] GMS|Registering grounding action: INTERACTION_TIPS [INTERACTION_TIPS].
+
+[2017-03-28 14:55:15.657] [basic_logger] [info] REG|Agent type _CInteractionTips registered successfully.
+
+[2017-03-28 14:55:15.657] [basic_logger] [info] GMS|Registering grounding action: GIVE_UP [GIVE_UP].
+
+[2017-03-28 14:55:15.657] [basic_logger] [info] REG|Agent type _CGiveUp registered successfully.
+
+[2017-03-28 14:55:15.657] [basic_logger] [info] GMS|Registering grounding action: MOVE_ON [MOVE_ON].
+
+[2017-03-28 14:55:15.657] [basic_logger] [info] REG|Agent type _CMoveOn registered successfully.
+
+[2017-03-28 14:55:15.657] [basic_logger] [info] DTT|Starting Dialog Tree Creation Phase ...
+
+[2017-03-28 14:55:15.657] [basic_logger] [info] DTT|Registering  dialog task agent types ...
+
+[2017-03-28 14:55:15.657] [basic_logger] [info] REG|Agent type CFlightRoot registered successfully.
+
+[2017-03-28 14:55:15.657] [basic_logger] [info] REG|Agent type CWelcome registered successfully.
+
+[2017-03-28 14:55:15.657] [basic_logger] [info] REG|Agent type CTask registered successfully.
+
+[2017-03-28 14:55:15.657] [basic_logger] [info] REG|Agent type CRequestDate registered successfully.
+
+[2017-03-28 14:55:15.657] [basic_logger] [info] REG|Agent type CRequestStartLoc registered successfully.
+
+[2017-03-28 14:55:15.657] [basic_logger] [info] REG|Agent type CRequestEndLoc registered successfully.
+
+[2017-03-28 14:55:15.657] [basic_logger] [info] REG|Agent type CInformResults registered successfully.
+
+[2017-03-28 14:55:15.657] [basic_logger] [info] REG|Agent type CExecuteFlight registered successfully.
+
+[2017-03-28 14:55:15.657] [basic_logger] [info] REG|Agent type CLogout registered successfully.
+
+[2017-03-28 14:55:15.657] [basic_logger] [info] REG|Agent type CInformLogout registered successfully.
+
+[2017-03-28 14:55:15.657] [basic_logger] [info] DTT|Creating Dialog Task Tree ...
+
+[2017-03-28 14:55:15.657] [basic_logger] [info] REG|Agent Welcome created successfully.
+
+[2017-03-28 14:55:15.657] [basic_logger] [info] REG|Agent RequestDate created successfully.
+
+[2017-03-28 14:55:15.657] [basic_logger] [info] REG|Agent RequestStartLoc created successfully.
+
+[2017-03-28 14:55:15.657] [basic_logger] [info] REG|Agent RequestEndLoc created successfully.
+
+[2017-03-28 14:55:15.657] [basic_logger] [info] REG|Agent InformResults created successfully.
+
+[2017-03-28 14:55:15.658] [basic_logger] [info] REG|Agent ExecuteFlight created successfully.
+
+[2017-03-28 14:55:15.658] [basic_logger] [info] REG|Agent Task created successfully.
+
+[2017-03-28 14:55:15.658] [basic_logger] [info] REG|Agent InformLogout created successfully.
+
+[2017-03-28 14:55:15.658] [basic_logger] [info] REG|Agent Logout created successfully.
+
+[2017-03-28 14:55:15.658] [basic_logger] [info] REG|Agent FlightRoot created successfully.
+
+[2017-03-28 14:55:15.658] [basic_logger] [info] REG|Agent /FlightRoot registered successfully.
+
+[2017-03-28 14:55:15.658] [basic_logger] [info] REG|Agent /FlightRoot/Welcome registered successfully.
+
+[2017-03-28 14:55:15.658] [basic_logger] [info] REG|Agent /FlightRoot/Task registered successfully.
+
+[2017-03-28 14:55:15.658] [basic_logger] [info] REG|Agent /FlightRoot/Task/RequestDate registered successfully.
+
+[2017-03-28 14:55:15.658] [basic_logger] [info] REG|Agent /FlightRoot/Task/RequestStartLoc registered successfully.
+
+[2017-03-28 14:55:15.658] [basic_logger] [info] REG|Agent /FlightRoot/Task/RequestEndLoc registered successfully.
+
+[2017-03-28 14:55:15.658] [basic_logger] [info] REG|Agent /FlightRoot/Task/InformResults registered successfully.
+
+[2017-03-28 14:55:15.658] [basic_logger] [info] REG|Agent /FlightRoot/Task/ExecuteFlight registered successfully.
+
+[2017-03-28 14:55:15.658] [basic_logger] [info] REG|Agent /FlightRoot/Logout registered successfully.
+
+[2017-03-28 14:55:15.658] [basic_logger] [info] REG|Agent /FlightRoot/Logout/InformLogout registered successfully.
+
+[2017-03-28 14:55:15.658] [basic_logger] [info] DTT|Dialog Tree Creation Phase completed successfully.
+
+[2017-03-28 14:55:15.658] [basic_logger] [info] COR|Set floor status to free
+
+[2017-03-28 14:55:15.658] [basic_logger] [info] COR|Starting Dialog Task execution.
+
+[2017-03-28 14:55:15.658] [basic_logger] [info] COR|Agent /FlightRoot added on the execution stack by DMCoreAgent.
+
+[2017-03-28 14:55:15.658] [basic_logger] [info] STA|Updating dialog state ...
+
+[2017-03-28 14:55:15.658] [basic_logger] [info] COR|Expectation Agenda Assembly Phase initiated.
+
+[2017-03-28 14:55:15.658] [basic_logger] [info] COR|Compiling Expectation Agenda ...
+
+[2017-03-28 14:55:15.658] [basic_logger] [info] COR|Compiling Expectation Agenda completed.
+
+[2017-03-28 14:55:15.658] [basic_logger] [info] COR|Enforcing binding policies ...
+
+[2017-03-28 14:55:15.658] [basic_logger] [info] COR|Enforcing binding policies completed.
+
+[2017-03-28 14:55:15.658] [basic_logger] [info] AGN|Concept expectation agenda dumped below:
+ Level 0: generated by /FlightRoot
+  O [endloc] -> (/FlightRoot/Task/RequestEndLoc)/FlightRoot/Task/endLoc
+  O [startdate] -> (/FlightRoot/Task/RequestDate)/FlightRoot/Task/startDate
+  O [startloc] -> (/FlightRoot/Task/RequestStartLoc)/FlightRoot/Task/startLoc
+
+[2017-03-28 14:55:15.658] [basic_logger] [info] COR|Expectation Agenda Assembly Phase completed (1 levels).
+
+[2017-03-28 14:55:15.658] [basic_logger] [info] STA|Dialog state update completed: /FlightRoot at 0 (iEHIndex=0):
+turn_number = 0
+notify_prompts = 
+dialog_state = /FlightRoot
+nonu_threshold = 0.0000
+stack = {
+/FlightRoot
+}
+agenda = {
+0:
+O[endloc]V,
+O[startdate]V,
+O[startloc]V
+}
+input_line_config = {
+
+}
+
+[2017-03-28 14:55:15.658] [basic_logger] [info] COR|Starting DMCore processing [User:???]
+
+[2017-03-28 14:55:15.658] [basic_logger] [info] COR|Eliminated completed agents from stack [User:???]
+
+[2017-03-28 14:55:15.658] [basic_logger] [info] COR|Performed grounding [User:???]
+
+[2017-03-28 14:55:15.658] [basic_logger] [info] COR|Completed grounding on [User:???]
+
+[2017-03-28 14:55:15.658] [basic_logger] [info] COR|Executing dialog agent /FlightRoot [User:???]
+
+[2017-03-28 14:55:15.658] [basic_logger] [info] COR|Agent /FlightRoot/Welcome added on the execution stack by /FlightRoot.
+
+[2017-03-28 14:55:15.658] [basic_logger] [info] COR|Starting DMCore processing [User:???]
+
+[2017-03-28 14:55:15.658] [basic_logger] [info] COR|Eliminated completed agents from stack [User:???]
+
+[2017-03-28 14:55:15.658] [basic_logger] [info] COR|Performed grounding [User:???]
+
+[2017-03-28 14:55:15.658] [basic_logger] [info] COR|Completed grounding on [User:???]
+
+[2017-03-28 14:55:15.658] [basic_logger] [info] COR|Executing dialog agent /FlightRoot/Welcome [User:???]
+
+[2017-03-28 14:55:15.658] [basic_logger] [info] OTP|Processing output prompt 0 from /FlightRoot/Welcome. (dump below)
+{inform|您好，欢迎使用航班查询系统}
+
+[2017-03-28 14:55:15.658] [basic_logger] [info] COR|Starting DMCore processing [User:???]
+
+[2017-03-28 14:55:15.659] [basic_logger] [info] COR|Eliminated 1 completed agent(s) (dumped below) from the execution stack.
+/FlightRoot/Welcome
+
+[2017-03-28 14:55:15.659] [basic_logger] [info] COR|Eliminated completed agents from stack [User:???]
+
+[2017-03-28 14:55:15.659] [basic_logger] [info] COR|Performed grounding [User:???]
+
+[2017-03-28 14:55:15.659] [basic_logger] [info] COR|Completed grounding on [User:???]
+
+[2017-03-28 14:55:15.659] [basic_logger] [info] COR|Executing dialog agent /FlightRoot [User:???]
+
+[2017-03-28 14:55:15.659] [basic_logger] [info] COR|Agent /FlightRoot/Task added on the execution stack by /FlightRoot.
+
+[2017-03-28 14:55:15.659] [basic_logger] [info] COR|Starting DMCore processing [User:???]
+
+[2017-03-28 14:55:15.659] [basic_logger] [info] COR|Eliminated completed agents from stack [User:???]
+
+[2017-03-28 14:55:15.659] [basic_logger] [info] COR|Performed grounding [User:???]
+
+[2017-03-28 14:55:15.659] [basic_logger] [info] COR|Completed grounding on [User:???]
+
+[2017-03-28 14:55:15.659] [basic_logger] [info] COR|Executing dialog agent /FlightRoot/Task [User:???]
+
+[2017-03-28 14:55:15.659] [basic_logger] [info] COR|Agent /FlightRoot/Task/RequestDate added on the execution stack by /FlightRoot/Task.
+
+[2017-03-28 14:55:15.659] [basic_lo
+[2017-03-28 15:52:46.310] [basic_logger] [info] REG|Clearing up the registry ...
+
+[2017-03-28 15:52:46.310] [basic_logger] [info] REG|Deallocating remaining registered agents ...
+
+[2017-03-28 15:52:46.310] [basic_logger] [info] REG|Deallocating remaining registered agents completed.
+
+[2017-03-28 15:52:46.310] [basic_logger] [info] REG|Agent type CDMCoreAgent registered successfully.
+
+[2017-03-28 15:52:46.310] [basic_logger] [info] REG|Agent DMCoreAgent created successfully.
+
+[2017-03-28 15:52:46.310] [basic_logger] [info] REG|Agent DMCoreAgent registered successfully.
+
+[2017-03-28 15:52:46.310] [basic_logger] [info] CTH|Creating auxiliary core dialog core agents ...
+
+[2017-03-28 15:52:46.310] [basic_logger] [info] REG|Agent type CInteractionEventManagerAgent registered successfully.
+
+[2017-03-28 15:52:46.310] [basic_logger] [info] REG|Agent InteractionEventManagerAgent created successfully.
+
+[2017-03-28 15:52:46.310] [basic_logger] [info] REG|Agent InteractionEventManagerAgent registered successfully.
+
+[2017-03-28 15:52:46.310] [basic_logger] [info] REG|Agent type COutputManagerAgent registered successfully.
+
+[2017-03-28 15:52:46.310] [basic_logger] [info] REG|Agent OutputManagerAgent created successfully.
+
+[2017-03-28 15:52:46.310] [basic_logger] [info] REG|Agent OutputManagerAgent registered successfully.
+
+[2017-03-28 15:52:46.310] [basic_logger] [info] REG|Agent type CTrafficManagerAgent registered successfully.
+
+[2017-03-28 15:52:46.310] [basic_logger] [info] REG|Agent TrafficManagerAgent created successfully.
+
+[2017-03-28 15:52:46.310] [basic_logger] [info] REG|Agent TrafficManagerAgent registered successfully.
+
+[2017-03-28 15:52:46.310] [basic_logger] [info] REG|Agent type CStateManagerAgent registered successfully.
+
+[2017-03-28 15:52:46.310] [basic_logger] [info] REG|Agent StateManagerAgent created successfully.
+
+[2017-03-28 15:52:46.310] [basic_logger] [info] REG|Agent StateManagerAgent registered successfully.
+
+[2017-03-28 15:52:46.310] [basic_logger] [info] REG|Agent type CDTTManagerAgent registered successfully.
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] REG|Agent DTTManagerAgent created successfully.
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] REG|Agent DTTManagerAgent registered successfully.
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] REG|Agent type CGroundingManagerAgent registered successfully.
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] REG|Agent GroundingManagerAgent created successfully.
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] REG|Agent GroundingManagerAgent registered successfully.
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] CTH|Auxiliary core dialog management agents created successfully.
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] CTH|Core initialization completed successfully.
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] GMS|Registering grounding action: NO_ACTION [NO_ACTION].
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] GMS|Registering grounding action: ACCEPT [ACCEPT].
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] GMS|Registering grounding action: EXPL_CONF [EXPL_CONF].
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] REG|Agent type _CExplicitConfirm registered successfully.
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] REG|Agent type _CRequestConfirm registered successfully.
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] REG|Agent type _CAcknowledgeConfirm registered successfully.
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] GMS|Registering grounding action: IMPL_CONF [IMPL_CONF].
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] REG|Agent type _CImplicitConfirmInform registered successfully.
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] REG|Agent type _CImplicitConfirmExpect registered successfully.
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] GMS|Registering grounding action: ASK_REPEAT [ASK_REPEAT].
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] REG|Agent type _CAskRepeat registered successfully.
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_AND_ASK_REPEAT [ASK_REPEAT].
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] GMS|Registering grounding action: ASK_REPHRASE [ASK_REPHRASE].
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] REG|Agent type _CAskRephrase registered successfully.
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_AND_ASK_REPHRASE [ASK_REPHRASE].
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] GMS|Registering grounding action: REPEAT_PROMPT [REPEAT_PROMPT].
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] REG|Agent type _CRepeatPrompt registered successfully.
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_AND_REPEAT_PROMPT [REPEAT_PROMPT].
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] GMS|Registering grounding action: EXPLAIN_MORE [EXPLAIN_MORE].
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] REG|Agent type _CExplainMore registered successfully.
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_AND_EXPLAIN_MORE [EXPLAIN_MORE].
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] GMS|Registering grounding action: FULL_HELP [FULL_HELP].
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] REG|Agent type _CFullHelp registered successfully.
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_AND_FULL_HELP [FULL_HELP].
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] GMS|Registering grounding action: WHAT_CAN_I_SAY [WHAT_CAN_I_SAY].
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] REG|Agent type _CWhatCanISay registered successfully.
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] GMS|Registering grounding action: TERSE_WHAT_CAN_I_SAY [WHAT_CAN_I_SAY].
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_AND_WHAT_CAN_I_SAY [WHAT_CAN_I_SAY].
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_AND_TERSE_WHAT_CAN_I_SAY [WHAT_CAN_I_SAY].
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] GMS|Registering grounding action: TIPS_AND_WHAT_CAN_I_SAY [WHAT_CAN_I_SAY].
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_NONUNDERSTANDING [NOTIFY_NONUNDERSTANDING].
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] REG|Agent type _CNotifyNonunderstanding registered successfully.
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] GMS|Registering grounding action: YIELD_TURN [YIELD_TURN].
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] REG|Agent type _CYieldTurn registered successfully.
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] GMS|Registering grounding action: FAIL_REQUEST [FAIL_REQUEST].
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] REG|Agent type _CFailRequest registered successfully.
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] GMS|Registering grounding action: ASK_STARTOVER [ASK_STARTOVER].
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] REG|Agent type _CAskStartOver registered successfully.
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] REG|Agent type _CAskStartOverAsk registered successfully.
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] REG|Agent type _CAskStartOverInform registered successfully.
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] REG|Agent type _CAskStartOverExecute registered successfully.
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] GMS|Registering grounding action: SPEAK_LESS_LOUD_AND_REPROMPT [SPEAKLESSLOUD_AND_REPROMPT].
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] REG|Agent type _CSpeakLessLoudAndReprompt registered successfully.
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] GMS|Registering grounding action: ASK_SHORT_ANSWER_AND_REPROMPT [ASK_SHORT_ANSWER_AND_REPROMPT].
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] REG|Agent type _CAskShortAnswerAndReprompt registered successfully.
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] GMS|Registering grounding action: ASK_SHORT_ANSWER_AND_WHAT_CAN_I_SAY [ASK_SHORT_ANSWER_AND_WHAT_CAN_I_SAY].
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] REG|Agent type _CAskShortAnswerAndWhatCanISay registered successfully.
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] GMS|Registering grounding action: INTERACTION_TIPS [INTERACTION_TIPS].
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] REG|Agent type _CInteractionTips registered successfully.
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] GMS|Registering grounding action: GIVE_UP [GIVE_UP].
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] REG|Agent type _CGiveUp registered successfully.
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] GMS|Registering grounding action: MOVE_ON [MOVE_ON].
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] REG|Agent type _CMoveOn registered successfully.
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] DTT|Starting Dialog Tree Creation Phase ...
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] DTT|Registering  dialog task agent types ...
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] REG|Agent type CFlightRoot registered successfully.
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] REG|Agent type CWelcome registered successfully.
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] REG|Agent type CTask registered successfully.
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] REG|Agent type CRequestDate registered successfully.
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] REG|Agent type CRequestStartLoc registered successfully.
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] REG|Agent type CRequestEndLoc registered successfully.
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] REG|Agent type CInformResults registered successfully.
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] REG|Agent type CExecuteFlight registered successfully.
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] REG|Agent type CLogout registered successfully.
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] REG|Agent type CInformLogout registered successfully.
+
+[2017-03-28 15:52:46.311] [basic_logger] [info] DTT|Creating Dialog Task Tree ...
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] REG|Agent Welcome created successfully.
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] REG|Agent RequestDate created successfully.
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] REG|Agent RequestStartLoc created successfully.
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] REG|Agent RequestEndLoc created successfully.
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] REG|Agent InformResults created successfully.
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] REG|Agent ExecuteFlight created successfully.
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] REG|Agent Task created successfully.
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] REG|Agent InformLogout created successfully.
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] REG|Agent Logout created successfully.
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] REG|Agent FlightRoot created successfully.
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] REG|Agent /FlightRoot registered successfully.
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] REG|Agent /FlightRoot/Welcome registered successfully.
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] REG|Agent /FlightRoot/Task registered successfully.
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] REG|Agent /FlightRoot/Task/RequestDate registered successfully.
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] REG|Agent /FlightRoot/Task/RequestStartLoc registered successfully.
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] REG|Agent /FlightRoot/Task/RequestEndLoc registered successfully.
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] REG|Agent /FlightRoot/Task/InformResults registered successfully.
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] REG|Agent /FlightRoot/Task/ExecuteFlight registered successfully.
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] REG|Agent /FlightRoot/Logout registered successfully.
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] REG|Agent /FlightRoot/Logout/InformLogout registered successfully.
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] DTT|Dialog Tree Creation Phase completed successfully.
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] COR|Set floor status to free
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] COR|Starting Dialog Task execution.
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] COR|Agent /FlightRoot added on the execution stack by DMCoreAgent.
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] STA|Updating dialog state ...
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] COR|Expectation Agenda Assembly Phase initiated.
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] COR|Compiling Expectation Agenda ...
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] COR|Compiling Expectation Agenda completed.
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] COR|Enforcing binding policies ...
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] COR|Enforcing binding policies completed.
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] AGN|Concept expectation agenda dumped below:
+ Level 0: generated by /FlightRoot
+  O [endloc] -> (/FlightRoot/Task/RequestEndLoc)/FlightRoot/Task/endLoc
+  O [startdate] -> (/FlightRoot/Task/RequestDate)/FlightRoot/Task/startDate
+  O [startloc] -> (/FlightRoot/Task/RequestStartLoc)/FlightRoot/Task/startLoc
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] COR|Expectation Agenda Assembly Phase completed (1 levels).
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] STA|Dialog state update completed: /FlightRoot at 0 (iEHIndex=0):
+turn_number = 0
+notify_prompts = 
+dialog_state = /FlightRoot
+nonu_threshold = 0.0000
+stack = {
+/FlightRoot
+}
+agenda = {
+0:
+O[endloc]V,
+O[startdate]V,
+O[startloc]V
+}
+input_line_config = {
+
+}
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] COR|Starting DMCore processing [User:???]
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] COR|Eliminated completed agents from stack [User:???]
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] COR|Performed grounding [User:???]
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] COR|Completed grounding on [User:???]
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] COR|Executing dialog agent /FlightRoot [User:???]
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] COR|Agent /FlightRoot/Welcome added on the execution stack by /FlightRoot.
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] COR|Starting DMCore processing [User:???]
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] COR|Eliminated completed agents from stack [User:???]
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] COR|Performed grounding [User:???]
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] COR|Completed grounding on [User:???]
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] COR|Executing dialog agent /FlightRoot/Welcome [User:???]
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] OTP|Processing output prompt 0 from /FlightRoot/Welcome. (dump below)
+{inform|您好，欢迎使用航班查询系统}
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] COR|Starting DMCore processing [User:???]
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] COR|Eliminated 1 completed agent(s) (dumped below) from the execution stack.
+/FlightRoot/Welcome
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] COR|Eliminated completed agents from stack [User:???]
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] COR|Performed grounding [User:???]
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] COR|Completed grounding on [User:???]
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] COR|Executing dialog agent /FlightRoot [User:???]
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] COR|Agent /FlightRoot/Task added on the execution stack by /FlightRoot.
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] COR|Starting DMCore processing [User:???]
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] COR|Eliminated completed agents from stack [User:???]
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] COR|Performed grounding [User:???]
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] COR|Completed grounding on [User:???]
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] COR|Executing dialog agent /FlightRoot/Task [User:???]
+
+[2017-03-28 15:52:46.312] [basic_logger] [info] COR|Agent /FlightRoot/Task/RequestDate added on the execution stack by /FlightRoot/Task.
+
+[2017-03-28 15:52:46.312] [basic_lo[2017-03-28 15:55:46.583] [basic_logger] [info] REG|Clearing up the registry ...
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] REG|Deallocating remaining registered agents ...
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] REG|Deallocating remaining registered agents completed.
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] REG|Agent type CDMCoreAgent registered successfully.
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] REG|Agent DMCoreAgent created successfully.
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] REG|Agent DMCoreAgent registered successfully.
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] CTH|Creating auxiliary core dialog core agents ...
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] REG|Agent type CInteractionEventManagerAgent registered successfully.
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] REG|Agent InteractionEventManagerAgent created successfully.
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] REG|Agent InteractionEventManagerAgent registered successfully.
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] REG|Agent type COutputManagerAgent registered successfully.
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] REG|Agent OutputManagerAgent created successfully.
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] REG|Agent OutputManagerAgent registered successfully.
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] REG|Agent type CTrafficManagerAgent registered successfully.
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] REG|Agent TrafficManagerAgent created successfully.
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] REG|Agent TrafficManagerAgent registered successfully.
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] REG|Agent type CStateManagerAgent registered successfully.
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] REG|Agent StateManagerAgent created successfully.
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] REG|Agent StateManagerAgent registered successfully.
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] REG|Agent type CDTTManagerAgent registered successfully.
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] REG|Agent DTTManagerAgent created successfully.
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] REG|Agent DTTManagerAgent registered successfully.
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] REG|Agent type CGroundingManagerAgent registered successfully.
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] REG|Agent GroundingManagerAgent created successfully.
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] REG|Agent GroundingManagerAgent registered successfully.
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] CTH|Auxiliary core dialog management agents created successfully.
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] CTH|Core initialization completed successfully.
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] GMS|Registering grounding action: NO_ACTION [NO_ACTION].
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] GMS|Registering grounding action: ACCEPT [ACCEPT].
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] GMS|Registering grounding action: EXPL_CONF [EXPL_CONF].
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] REG|Agent type _CExplicitConfirm registered successfully.
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] REG|Agent type _CRequestConfirm registered successfully.
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] REG|Agent type _CAcknowledgeConfirm registered successfully.
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] GMS|Registering grounding action: IMPL_CONF [IMPL_CONF].
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] REG|Agent type _CImplicitConfirmInform registered successfully.
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] REG|Agent type _CImplicitConfirmExpect registered successfully.
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] GMS|Registering grounding action: ASK_REPEAT [ASK_REPEAT].
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] REG|Agent type _CAskRepeat registered successfully.
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_AND_ASK_REPEAT [ASK_REPEAT].
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] GMS|Registering grounding action: ASK_REPHRASE [ASK_REPHRASE].
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] REG|Agent type _CAskRephrase registered successfully.
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_AND_ASK_REPHRASE [ASK_REPHRASE].
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] GMS|Registering grounding action: REPEAT_PROMPT [REPEAT_PROMPT].
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] REG|Agent type _CRepeatPrompt registered successfully.
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_AND_REPEAT_PROMPT [REPEAT_PROMPT].
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] GMS|Registering grounding action: EXPLAIN_MORE [EXPLAIN_MORE].
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] REG|Agent type _CExplainMore registered successfully.
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_AND_EXPLAIN_MORE [EXPLAIN_MORE].
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] GMS|Registering grounding action: FULL_HELP [FULL_HELP].
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] REG|Agent type _CFullHelp registered successfully.
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_AND_FULL_HELP [FULL_HELP].
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] GMS|Registering grounding action: WHAT_CAN_I_SAY [WHAT_CAN_I_SAY].
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] REG|Agent type _CWhatCanISay registered successfully.
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] GMS|Registering grounding action: TERSE_WHAT_CAN_I_SAY [WHAT_CAN_I_SAY].
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_AND_WHAT_CAN_I_SAY [WHAT_CAN_I_SAY].
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_AND_TERSE_WHAT_CAN_I_SAY [WHAT_CAN_I_SAY].
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] GMS|Registering grounding action: TIPS_AND_WHAT_CAN_I_SAY [WHAT_CAN_I_SAY].
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_NONUNDERSTANDING [NOTIFY_NONUNDERSTANDING].
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] REG|Agent type _CNotifyNonunderstanding registered successfully.
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] GMS|Registering grounding action: YIELD_TURN [YIELD_TURN].
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] REG|Agent type _CYieldTurn registered successfully.
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] GMS|Registering grounding action: FAIL_REQUEST [FAIL_REQUEST].
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] REG|Agent type _CFailRequest registered successfully.
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] GMS|Registering grounding action: ASK_STARTOVER [ASK_STARTOVER].
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] REG|Agent type _CAskStartOver registered successfully.
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] REG|Agent type _CAskStartOverAsk registered successfully.
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] REG|Agent type _CAskStartOverInform registered successfully.
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] REG|Agent type _CAskStartOverExecute registered successfully.
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] GMS|Registering grounding action: SPEAK_LESS_LOUD_AND_REPROMPT [SPEAKLESSLOUD_AND_REPROMPT].
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] REG|Agent type _CSpeakLessLoudAndReprompt registered successfully.
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] GMS|Registering grounding action: ASK_SHORT_ANSWER_AND_REPROMPT [ASK_SHORT_ANSWER_AND_REPROMPT].
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] REG|Agent type _CAskShortAnswerAndReprompt registered successfully.
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] GMS|Registering grounding action: ASK_SHORT_ANSWER_AND_WHAT_CAN_I_SAY [ASK_SHORT_ANSWER_AND_WHAT_CAN_I_SAY].
+
+[2017-03-28 15:55:46.583] [basic_logger] [info] REG|Agent type _CAskShortAnswerAndWhatCanISay registered successfully.
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] GMS|Registering grounding action: INTERACTION_TIPS [INTERACTION_TIPS].
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] REG|Agent type _CInteractionTips registered successfully.
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] GMS|Registering grounding action: GIVE_UP [GIVE_UP].
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] REG|Agent type _CGiveUp registered successfully.
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] GMS|Registering grounding action: MOVE_ON [MOVE_ON].
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] REG|Agent type _CMoveOn registered successfully.
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] DTT|Starting Dialog Tree Creation Phase ...
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] DTT|Registering  dialog task agent types ...
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] REG|Agent type CFlightRoot registered successfully.
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] REG|Agent type CWelcome registered successfully.
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] REG|Agent type CTask registered successfully.
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] REG|Agent type CRequestDate registered successfully.
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] REG|Agent type CRequestStartLoc registered successfully.
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] REG|Agent type CRequestEndLoc registered successfully.
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] REG|Agent type CInformResults registered successfully.
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] REG|Agent type CExecuteFlight registered successfully.
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] REG|Agent type CLogout registered successfully.
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] REG|Agent type CInformLogout registered successfully.
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] DTT|Creating Dialog Task Tree ...
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] REG|Agent Welcome created successfully.
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] REG|Agent RequestDate created successfully.
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] REG|Agent RequestStartLoc created successfully.
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] REG|Agent RequestEndLoc created successfully.
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] REG|Agent InformResults created successfully.
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] REG|Agent ExecuteFlight created successfully.
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] REG|Agent Task created successfully.
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] REG|Agent InformLogout created successfully.
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] REG|Agent Logout created successfully.
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] REG|Agent FlightRoot created successfully.
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] REG|Agent /FlightRoot registered successfully.
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] REG|Agent /FlightRoot/Welcome registered successfully.
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] REG|Agent /FlightRoot/Task registered successfully.
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] REG|Agent /FlightRoot/Task/RequestDate registered successfully.
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] REG|Agent /FlightRoot/Task/RequestStartLoc registered successfully.
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] REG|Agent /FlightRoot/Task/RequestEndLoc registered successfully.
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] REG|Agent /FlightRoot/Task/InformResults registered successfully.
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] REG|Agent /FlightRoot/Task/ExecuteFlight registered successfully.
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] REG|Agent /FlightRoot/Logout registered successfully.
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] REG|Agent /FlightRoot/Logout/InformLogout registered successfully.
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] DTT|Dialog Tree Creation Phase completed successfully.
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] COR|Set floor status to free
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] COR|Starting Dialog Task execution.
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] COR|Agent /FlightRoot added on the execution stack by DMCoreAgent.
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] STA|Updating dialog state ...
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] COR|Expectation Agenda Assembly Phase initiated.
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] COR|Compiling Expectation Agenda ...
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] COR|Compiling Expectation Agenda completed.
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] COR|Enforcing binding policies ...
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] COR|Enforcing binding policies completed.
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] AGN|Concept expectation agenda dumped below:
+ Level 0: generated by /FlightRoot
+  O [endloc] -> (/FlightRoot/Task/RequestEndLoc)/FlightRoot/Task/endLoc
+  O [startdate] -> (/FlightRoot/Task/RequestDate)/FlightRoot/Task/startDate
+  O [startloc] -> (/FlightRoot/Task/RequestStartLoc)/FlightRoot/Task/startLoc
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] COR|Expectation Agenda Assembly Phase completed (1 levels).
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] STA|Dialog state update completed: /FlightRoot at 0 (iEHIndex=0):
+turn_number = 0
+notify_prompts = 
+dialog_state = /FlightRoot
+nonu_threshold = 0.0000
+stack = {
+/FlightRoot
+}
+agenda = {
+0:
+O[endloc]V,
+O[startdate]V,
+O[startloc]V
+}
+input_line_config = {
+
+}
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] COR|Starting DMCore processing [User:???]
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] COR|Eliminated completed agents from stack [User:???]
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] COR|Performed grounding [User:???]
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] COR|Completed grounding on [User:???]
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] COR|Executing dialog agent /FlightRoot [User:???]
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] COR|Agent /FlightRoot/Welcome added on the execution stack by /FlightRoot.
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] COR|Starting DMCore processing [User:???]
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] COR|Eliminated completed agents from stack [User:???]
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] COR|Performed grounding [User:???]
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] COR|Completed grounding on [User:???]
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] COR|Executing dialog agent /FlightRoot/Welcome [User:???]
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] OTP|Processing output prompt 0 from /FlightRoot/Welcome. (dump below)
+{inform|您好，欢迎使用航班查询系统}
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] COR|Starting DMCore processing [User:???]
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] COR|Eliminated 1 completed agent(s) (dumped below) from the execution stack.
+/FlightRoot/Welcome
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] COR|Eliminated completed agents from stack [User:???]
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] COR|Performed grounding [User:???]
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] COR|Completed grounding on [User:???]
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] COR|Executing dialog agent /FlightRoot [User:???]
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] COR|Agent /FlightRoot/Task added on the execution stack by /FlightRoot.
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] COR|Starting DMCore processing [User:???]
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] COR|Eliminated completed agents from stack [User:???]
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] COR|Performed grounding [User:???]
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] COR|Completed grounding on [User:???]
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] COR|Executing dialog agent /FlightRoot/Task [User:???]
+
+[2017-03-28 15:55:46.584] [basic_logger] [info] COR|Agent /FlightRoot/Task/RequestDate added on the execution stack by /FlightRoot/Task.
+
+[2017-03-28 15:55:46.584] [basic_lo[2017-03-28 15:58:30.064] [basic_logger] [info] REG|Clearing up the registry ...
+
+[2017-03-28 15:58:30.064] [basic_logger] [info] REG|Deallocating remaining registered agents ...
+
+[2017-03-28 15:58:30.064] [basic_logger] [info] REG|Deallocating remaining registered agents completed.
+
+[2017-03-28 15:58:30.064] [basic_logger] [info] REG|Agent type CDMCoreAgent registered successfully.
+
+[2017-03-28 15:58:30.064] [basic_logger] [info] REG|Agent DMCoreAgent created successfully.
+
+[2017-03-28 15:58:30.064] [basic_logger] [info] REG|Agent DMCoreAgent registered successfully.
+
+[2017-03-28 15:58:30.064] [basic_logger] [info] CTH|Creating auxiliary core dialog core agents ...
+
+[2017-03-28 15:58:30.064] [basic_logger] [info] REG|Agent type CInteractionEventManagerAgent registered successfully.
+
+[2017-03-28 15:58:30.064] [basic_logger] [info] REG|Agent InteractionEventManagerAgent created successfully.
+
+[2017-03-28 15:58:30.064] [basic_logger] [info] REG|Agent InteractionEventManagerAgent registered successfully.
+
+[2017-03-28 15:58:30.064] [basic_logger] [info] REG|Agent type COutputManagerAgent registered successfully.
+
+[2017-03-28 15:58:30.064] [basic_logger] [info] REG|Agent OutputManagerAgent created successfully.
+
+[2017-03-28 15:58:30.064] [basic_logger] [info] REG|Agent OutputManagerAgent registered successfully.
+
+[2017-03-28 15:58:30.064] [basic_logger] [info] REG|Agent type CTrafficManagerAgent registered successfully.
+
+[2017-03-28 15:58:30.064] [basic_logger] [info] REG|Agent TrafficManagerAgent created successfully.
+
+[2017-03-28 15:58:30.064] [basic_logger] [info] REG|Agent TrafficManagerAgent registered successfully.
+
+[2017-03-28 15:58:30.064] [basic_logger] [info] REG|Agent type CStateManagerAgent registered successfully.
+
+[2017-03-28 15:58:30.064] [basic_logger] [info] REG|Agent StateManagerAgent created successfully.
+
+[2017-03-28 15:58:30.064] [basic_logger] [info] REG|Agent StateManagerAgent registered successfully.
+
+[2017-03-28 15:58:30.064] [basic_logger] [info] REG|Agent type CDTTManagerAgent registered successfully.
+
+[2017-03-28 15:58:30.064] [basic_logger] [info] REG|Agent DTTManagerAgent created successfully.
+
+[2017-03-28 15:58:30.064] [basic_logger] [info] REG|Agent DTTManagerAgent registered successfully.
+
+[2017-03-28 15:58:30.064] [basic_logger] [info] REG|Agent type CGroundingManagerAgent registered successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent GroundingManagerAgent created successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent GroundingManagerAgent registered successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] CTH|Auxiliary core dialog management agents created successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] CTH|Core initialization completed successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] GMS|Registering grounding action: NO_ACTION [NO_ACTION].
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] GMS|Registering grounding action: ACCEPT [ACCEPT].
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] GMS|Registering grounding action: EXPL_CONF [EXPL_CONF].
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent type _CExplicitConfirm registered successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent type _CRequestConfirm registered successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent type _CAcknowledgeConfirm registered successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] GMS|Registering grounding action: IMPL_CONF [IMPL_CONF].
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent type _CImplicitConfirmInform registered successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent type _CImplicitConfirmExpect registered successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] GMS|Registering grounding action: ASK_REPEAT [ASK_REPEAT].
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent type _CAskRepeat registered successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_AND_ASK_REPEAT [ASK_REPEAT].
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] GMS|Registering grounding action: ASK_REPHRASE [ASK_REPHRASE].
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent type _CAskRephrase registered successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_AND_ASK_REPHRASE [ASK_REPHRASE].
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] GMS|Registering grounding action: REPEAT_PROMPT [REPEAT_PROMPT].
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent type _CRepeatPrompt registered successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_AND_REPEAT_PROMPT [REPEAT_PROMPT].
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] GMS|Registering grounding action: EXPLAIN_MORE [EXPLAIN_MORE].
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent type _CExplainMore registered successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_AND_EXPLAIN_MORE [EXPLAIN_MORE].
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] GMS|Registering grounding action: FULL_HELP [FULL_HELP].
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent type _CFullHelp registered successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_AND_FULL_HELP [FULL_HELP].
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] GMS|Registering grounding action: WHAT_CAN_I_SAY [WHAT_CAN_I_SAY].
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent type _CWhatCanISay registered successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] GMS|Registering grounding action: TERSE_WHAT_CAN_I_SAY [WHAT_CAN_I_SAY].
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_AND_WHAT_CAN_I_SAY [WHAT_CAN_I_SAY].
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_AND_TERSE_WHAT_CAN_I_SAY [WHAT_CAN_I_SAY].
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] GMS|Registering grounding action: TIPS_AND_WHAT_CAN_I_SAY [WHAT_CAN_I_SAY].
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_NONUNDERSTANDING [NOTIFY_NONUNDERSTANDING].
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent type _CNotifyNonunderstanding registered successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] GMS|Registering grounding action: YIELD_TURN [YIELD_TURN].
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent type _CYieldTurn registered successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] GMS|Registering grounding action: FAIL_REQUEST [FAIL_REQUEST].
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent type _CFailRequest registered successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] GMS|Registering grounding action: ASK_STARTOVER [ASK_STARTOVER].
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent type _CAskStartOver registered successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent type _CAskStartOverAsk registered successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent type _CAskStartOverInform registered successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent type _CAskStartOverExecute registered successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] GMS|Registering grounding action: SPEAK_LESS_LOUD_AND_REPROMPT [SPEAKLESSLOUD_AND_REPROMPT].
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent type _CSpeakLessLoudAndReprompt registered successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] GMS|Registering grounding action: ASK_SHORT_ANSWER_AND_REPROMPT [ASK_SHORT_ANSWER_AND_REPROMPT].
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent type _CAskShortAnswerAndReprompt registered successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] GMS|Registering grounding action: ASK_SHORT_ANSWER_AND_WHAT_CAN_I_SAY [ASK_SHORT_ANSWER_AND_WHAT_CAN_I_SAY].
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent type _CAskShortAnswerAndWhatCanISay registered successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] GMS|Registering grounding action: INTERACTION_TIPS [INTERACTION_TIPS].
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent type _CInteractionTips registered successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] GMS|Registering grounding action: GIVE_UP [GIVE_UP].
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent type _CGiveUp registered successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] GMS|Registering grounding action: MOVE_ON [MOVE_ON].
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent type _CMoveOn registered successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] DTT|Starting Dialog Tree Creation Phase ...
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] DTT|Registering  dialog task agent types ...
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent type CFlightRoot registered successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent type CWelcome registered successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent type CTask registered successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent type CRequestDate registered successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent type CRequestStartLoc registered successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent type CRequestEndLoc registered successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent type CInformResults registered successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent type CExecuteFlight registered successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent type CLogout registered successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent type CInformLogout registered successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] DTT|Creating Dialog Task Tree ...
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent Welcome created successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent RequestDate created successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent RequestStartLoc created successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent RequestEndLoc created successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent InformResults created successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent ExecuteFlight created successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent Task created successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent InformLogout created successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent Logout created successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent FlightRoot created successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent /FlightRoot registered successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent /FlightRoot/Welcome registered successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent /FlightRoot/Task registered successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent /FlightRoot/Task/RequestDate registered successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent /FlightRoot/Task/RequestStartLoc registered successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent /FlightRoot/Task/RequestEndLoc registered successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent /FlightRoot/Task/InformResults registered successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent /FlightRoot/Task/ExecuteFlight registered successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent /FlightRoot/Logout registered successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] REG|Agent /FlightRoot/Logout/InformLogout registered successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] DTT|Dialog Tree Creation Phase completed successfully.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] COR|Set floor status to free
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] COR|Starting Dialog Task execution.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] COR|Agent /FlightRoot added on the execution stack by DMCoreAgent.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] STA|Updating dialog state ...
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] COR|Expectation Agenda Assembly Phase initiated.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] COR|Compiling Expectation Agenda ...
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] COR|Compiling Expectation Agenda completed.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] COR|Enforcing binding policies ...
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] COR|Enforcing binding policies completed.
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] AGN|Concept expectation agenda dumped below:
+ Level 0: generated by /FlightRoot
+  O [endloc] -> (/FlightRoot/Task/RequestEndLoc)/FlightRoot/Task/endLoc
+  O [startdate] -> (/FlightRoot/Task/RequestDate)/FlightRoot/Task/startDate
+  O [startloc] -> (/FlightRoot/Task/RequestStartLoc)/FlightRoot/Task/startLoc
+
+[2017-03-28 15:58:30.065] [basic_logger] [info] COR|Expectation Agenda Assembly Phase completed (1 levels).
+
+[2017-03-28 15:58:30.066] [basic_logger] [info] STA|Dialog state update completed: /FlightRoot at 0 (iEHIndex=0):
+turn_number = 0
+notify_prompts = 
+dialog_state = /FlightRoot
+nonu_threshold = 0.0000
+stack = {
+/FlightRoot
+}
+agenda = {
+0:
+O[endloc]V,
+O[startdate]V,
+O[startloc]V
+}
+input_line_config = {
+
+}
+
+[2017-03-28 15:58:30.066] [basic_logger] [info] COR|Starting DMCore processing [User:???]
+
+[2017-03-28 15:58:30.066] [basic_logger] [info] COR|Eliminated completed agents from stack [User:???]
+
+[2017-03-28 15:58:30.066] [basic_logger] [info] COR|Performed grounding [User:???]
+
+[2017-03-28 15:58:30.066] [basic_logger] [info] COR|Completed grounding on [User:???]
+
+[2017-03-28 15:58:30.066] [basic_logger] [info] COR|Executing dialog agent /FlightRoot [User:???]
+
+[2017-03-28 15:58:30.066] [basic_logger] [info] COR|Agent /FlightRoot/Welcome added on the execution stack by /FlightRoot.
+
+[2017-03-28 15:58:30.066] [basic_logger] [info] COR|Starting DMCore processing [User:???]
+
+[2017-03-28 15:58:30.066] [basic_logger] [info] COR|Eliminated completed agents from stack [User:???]
+
+[2017-03-28 15:58:30.066] [basic_logger] [info] COR|Performed grounding [User:???]
+
+[2017-03-28 15:58:30.066] [basic_logger] [info] COR|Completed grounding on [User:???]
+
+[2017-03-28 15:58:30.066] [basic_logger] [info] COR|Executing dialog agent /FlightRoot/Welcome [User:???]
+
+[2017-03-28 15:58:30.066] [basic_logger] [info] OTP|Processing output prompt 0 from /FlightRoot/Welcome. (dump below)
+{inform|您好，欢迎使用航班查询系统}
+
+[2017-03-28 15:58:30.066] [basic_logger] [info] COR|Starting DMCore processing [User:???]
+
+[2017-03-28 15:58:30.066] [basic_logger] [info] COR|Eliminated 1 completed agent(s) (dumped below) from the execution stack.
+/FlightRoot/Welcome
+
+[2017-03-28 15:58:30.066] [basic_logger] [info] COR|Eliminated completed agents from stack [User:???]
+
+[2017-03-28 15:58:30.066] [basic_logger] [info] COR|Performed grounding [User:???]
+
+[2017-03-28 15:58:30.066] [basic_logger] [info] COR|Completed grounding on [User:???]
+
+[2017-03-28 15:58:30.066] [basic_logger] [info] COR|Executing dialog agent /FlightRoot [User:???]
+
+[2017-03-28 15:58:30.066] [basic_logger] [info] COR|Agent /FlightRoot/Task added on the execution stack by /FlightRoot.
+
+[2017-03-28 15:58:30.066] [basic_logger] [info] COR|Starting DMCore processing [User:???]
+
+[2017-03-28 15:58:30.066] [basic_logger] [info] COR|Eliminated completed agents from stack [User:???]
+
+[2017-03-28 15:58:30.066] [basic_logger] [info] COR|Performed grounding [User:???]
+
+[2017-03-28 15:58:30.066] [basic_logger] [info] COR|Completed grounding on [User:???]
+
+[2017-03-28 15:58:30.066] [basic_logger] [info] COR|Executing dialog agent /FlightRoot/Task [User:???]
+
+[2017-03-28 15:58:30.066] [basic_logger] [info] COR|Agent /FlightRoot/Task/RequestDate added on the execution stack by /FlightRoot/Task.
+
+[2017-03-28 15:58:30.066] [basic_logger] [info] COR|Starting DMCore processing [User:???]
+
+[2017-03-28 15:58:30.066] [basic_logger] [info] COR|Eliminated completed agents from stack [User:???]
+
+[2017-03-28 15:58:30.066] [basic_logger] [info] COR|Performed grounding [User:???]
+
+[2017-03-28 15:58:30.066] [basic_logger] [info] COR|Completed grounding on [User:???]
+
+[2017-03-28 15:58:30.066] [basic_logger] [info] COR|Executing dialog agent /FlightRoot/Task/RequestDate [User:???]
+
+[2017-03-28 15:58:30.066] [basic_logger] [info] OTP|Processing output prompt 0 from /FlightRoot/Task/RequestDate. (dump below)
+{request|请问您要查询什么时间的航班？}
+
+[2017-03-28 15:58:30.066] [basic_logger] [info] COR|Set floor status to system
+
+[2017-03-28 15:58:37.106] [basic_logger] [info] INP|wait message form input_queue success
+
+[2017-03-28 15:58:37.106] [basic_logger] [info] INP|[statedate] jintian
+
+[2017-03-28 15:58:37.106] [basic_logger] [info] COR|Concepts Binding Phase initiated.
+
+[2017-03-28 15:58:37.106] [basic_logger] [info] COR|Performing forced concept updates ...
+
+[2017-03-28 15:58:37.106] [basic_logger] [info] COR|Forced concept updates completed.
+
+[2017-03-28 15:58:37.106] [basic_logger] [info] COR|Attempted bindings dumped below:
+
+
+[2017-03-28 15:58:37.106] [basic_logger] [info] COR|Concepts Binding Phase completed (0 concept(s) bound, 0 concept(s) blocked out).
+
+[2017-03-28 15:58:37.106] [basic_logger] [info] COR|Acquired new user_utterance_end event.
+
+[2017-03-28 15:58:37.106] [basic_logger] [info] STA|Updating dialog state ...
+
+[2017-03-28 15:58:37.106] [basic_logger] [info] COR|Expectation Agenda Assembly Phase initiated.
+
+[2017-03-28 15:58:37.106] [basic_logger] [info] COR|Compiling Expectation Agenda ...
+
+[2017-03-28 15:58:37.106] [basic_logger] [info] COR|Compiling Expectation Agenda completed.
+
+[2017-03-28 15:58:37.106] [basic_logger] [info] COR|Enforcing binding policies ...
+
+[2017-03-28 15:58:37.106] [basic_logger] [info] COR|Enforcing binding policies completed.
+
+[2017-03-28 15:58:37.106] [basic_logger] [info] AGN|Concept expectation agenda dumped below:
+ Level 0: generated by /FlightRoot/Task/RequestDate
+  O [startdate] -> (/FlightRoot/Task/RequestDate)/FlightRoot/Task/startDate
+ Level 1: generated by /FlightRoot/Task
+  O [endloc] -> (/FlightRoot/Task/RequestEndLoc)/FlightRoot/Task/endLoc
+  O [startloc] -> (/FlightRoot/Task/RequestStartLoc)/FlightRoot/Task/startLoc
+ Level 2: generated by /FlightRoot
+
+[2017-03-28 15:58:37.106] [basic_logger] [info] COR|Expectation Agenda Assembly Phase completed (3 levels).
+
+[2017-03-28 15:58:37.106] [basic_logger] [info] STA|Dialog state update completed: /FlightRoot/Task/RequestDate at 1 (iEHIndex=3):
+turn_number = 1
+notify_prompts = 
+dialog_state = /FlightRoot/Task/RequestDate
+nonu_threshold = 0.0000
+stack = {
+/FlightRoot/Task/RequestDate
+  /FlightRoot/Task
+  /FlightRoot
+}
+agenda = {
+0:
+O[startdate]V
+1:
+O[endloc]V,
+O[startloc]V
+2:
+}
+input_line_config = {
+
+}
+
+[2017-03-28 15:58:37.106] [basic_logger] [warning] Property [uttid] not found in event. Returned empty string.
+
+[2017-03-28 15:58:37.106] [basic_logger] [info] COR|Processed new input [User:]
+
+[2017-03-28 15:58:37.106] [basic_logger] [warning] Property [uttid] not found in event. Returned empty string.
+
+[2017-03-28 15:58:37.106] [basic_logger] [info] COR|Starting DMCore processing [User:]
+
+[2017-03-28 15:58:37.106] [basic_logger] [info] COR|Eliminated completed agents from stack [User:]
+
+[2017-03-28 15:58:37.106] [basic_logger] [info] COR|Focus Claims Assembly Phase initiated.
+
+[2017-03-28 15:58:37.106] [basic_logger] [info] COR|0 agent(s) claiming focus.
+
+[2017-03-28 15:58:37.106] [basic_logger] [info] COR|Pruning Focus Claims list.
+
+[2017-03-28 15:58:37.106] [basic_logger] [info] COR|0 agents(s) eliminated from the focus claims list.
+
+[2017-03-28 15:58:37.106] [basic_logger] [info] COR|Focus Claims Assembly Phase completed (0 claim(s)).
+
+[2017-03-28 15:58:37.106] [basic_logger] [info] COR|Executing dialog agent /FlightRoot/Task/RequestDate [User:]
+
+[2017-03-28 15:58:37.106] [basic_logger] [info] OTP|Processing output prompt 0 from /FlightRoot/Task/RequestDate. (dump below)
+{request|请问您要查询什么时间的航班？}
+
+[2017-03-28 15:58:37.106] [basic_logger] [info] COR|Set floor status to system
+
+[2017-03-28 15:58:47.489] [basic_logger] [info] INP|wait message form input_queue success
+
+[2017-03-28 15:58:47.489] [basic_logger] [info] INP|[startdate] jitnian
+
+[2017-03-28 15:58:47.489] [basic_logger] [info] COR|Concepts Binding Phase initiated.
+
+[2017-03-28 15:58:47.489] [basic_logger] [info] COR|Event matches [startdate].
+
+[2017-03-28 15:58:47.490] [basic_logger] [info] COR|Slot [startdate](startDate|1.000000) bound to concept (/FlightRoot/Task/RequestDate)/FlightRoot/Task/startDate.
+
+[2017-03-28 15:58:47.490] [basic_logger] [info] COR|Performing forced concept updates ...
+
+[2017-03-28 15:58:47.490] [basic_logger] [info] COR|Forced concept updates completed.
+
+[2017-03-28 15:58:47.490] [basic_logger] [info] COR|Attempted bindings dumped below:
+Success: Level.0	[startdate](jitnian|1.000000)->(/FlightRoot/Task/RequestDate)/FlightRoot/Task/startDate
+
+
+[2017-03-28 15:58:47.490] [basic_logger] [info] COR|Concepts Binding Phase completed (1 concept(s) bound, 0 concept(s) blocked out).
+
+[2017-03-28 15:58:47.490] [basic_logger] [info] COR|Acquired new user_utterance_end event.
+
+[2017-03-28 15:58:47.490] [basic_logger] [info] STA|Updating dialog state ...
+
+[2017-03-28 15:58:47.490] [basic_logger] [info] COR|Expectation Agenda Assembly Phase initiated.
+
+[2017-03-28 15:58:47.490] [basic_logger] [info] COR|Compiling Expectation Agenda ...
+
+[2017-03-28 15:58:47.490] [basic_logger] [info] COR|Compiling Expectation Agenda completed.
+
+[2017-03-28 15:58:47.490] [basic_logger] [info] COR|Enforcing binding policies ...
+
+[2017-03-28 15:58:47.490] [basic_logger] [info] COR|Enforcing binding policies completed.
+
+[2017-03-28 15:58:47.490] [basic_logger] [info] AGN|Concept expectation agenda dumped below:
+ Level 0: generated by /FlightRoot/Task/RequestDate
+  O [startdate] -> (/FlightRoot/Task/RequestDate)/FlightRoot/Task/startDate
+ Level 1: generated by /FlightRoot/Task
+  O [endloc] -> (/FlightRoot/Task/RequestEndLoc)/FlightRoot/Task/endLoc
+  O [startloc] -> (/FlightRoot/Task/RequestStartLoc)/FlightRoot/Task/startLoc
+ Level 2: generated by /FlightRoot
+
+[2017-03-28 15:58:47.490] [basic_logger] [info] COR|Expectation Agenda Assembly Phase completed (3 levels).
+
+[2017-03-28 15:58:47.490] [basic_logger] [info] STA|Dialog state update completed: /FlightRoot/Task/RequestDate at 2 (iEHIndex=3):
+turn_number = 2
+notify_prompts = 
+dialog_state = /FlightRoot/Task/RequestDate
+nonu_threshold = 0.0000
+stack = {
+/FlightRoot/Task/RequestDate
+  /FlightRoot/Task
+  /FlightRoot
+}
+agenda = {
+0:
+O[startdate]V
+1:
+O[endloc]V,
+O[startloc]V
+2:
+}
+input_line_config = {
+
+}
+
+[2017-03-28 15:58:47.490] [basic_logger] [warning] Property [uttid] not found in event. Returned empty string.
+
+[2017-03-28 15:58:47.490] [basic_logger] [info] COR|Processed new input [User:]
+
+[2017-03-28 15:58:47.490] [basic_logger] [warning] Property [uttid] not found in event. Returned empty string.
+
+[2017-03-28 15:58:47.490] [basic_logger] [info] COR|Starting DMCore processing [User:]
+
+[2017-03-28 15:58:47.490] [basic_logger] [info] COR|Eliminated 1 completed agent(s) (dumped below) from the execution stack.
+/FlightRoot/Task/RequestDate
+
+[2017-03-28 15:58:47.490] [basic_logger] [info] COR|Eliminated completed agents from stack [User:]
+
+[2017-03-28 15:58:47.490] [basic_logger] [info] COR|Focus Claims Assembly Phase initiated.
+
+[2017-03-28 15:58:47.490] [basic_logger] [info] COR|0 agent(s) claiming focus.
+
+[2017-03-28 15:58:47.490] [basic_logger] [info] COR|Pruning Focus Claims list.
+
+[2017-03-28 15:58:47.490] [basic_logger] [info] COR|0 agents(s) eliminated from the focus claims list.
+
+[2017-03-28 15:58:47.490] [basic_logger] [info] COR|Focus Claims Assembly Phase completed (0 claim(s)).
+
+[2017-03-28 15:58:47.490] [basic_logger] [info] COR|Executing dialog agent /FlightRoot/Task [User:]
+
+[2017-03-28 15:58:47.490] [basic_logger] [info] COR|Agent /FlightRoot/Task/RequestStartLoc added on the execution stack by /FlightRoot/Task.
+
+[2017-03-28 15:58:47.490] [basic_logger] [warning] Property [uttid] not found in event. Returned empty string.
+
+[2017-03-28 15:58:47.490] [basic_logger] [info] COR|Starting DMCore processing [User:]
+
+[2017-03-28 15:58:47.490] [basic_logger] [info] COR|Eliminated completed agents from stack [User:]
+
+[2017-03-28 15:58:47.490] [basic_logger] [info] COR|Executing dialog agent /FlightRoot/Task/RequestStartLoc [User:]
+
+[2017-03-28 15:58:47.490] [basic_logger] [info] OTP|Processing output prompt 0 from /FlightRoot/Task/RequestStartLoc. (dump below)
+{request|请说起始地点。}
+
+[2017-03-28 15:58:47.491] [basic_logger] [info] COR|Set floor status to system
+
+[2017-03-28 15:58:56.897] [basic_logger] [info] INP|wait message form input_queue success
+
+[2017-03-28 15:58:56.897] [basic_logger] [info] INP|[startloc] beijing
+
+[2017-03-28 15:58:56.897] [basic_logger] [info] COR|Concepts Binding Phase initiated.
+
+[2017-03-28 15:58:56.897] [basic_logger] [info] COR|Event matches [startloc].
+
+[2017-03-28 15:58:56.898] [basic_logger] [info] COR|Slot [startloc](startLoc|1.000000) bound to concept (/FlightRoot/Task/RequestStartLoc)/FlightRoot/Task/startLoc.
+
+[2017-03-28 15:58:56.898] [basic_logger] [info] COR|Performing forced concept updates ...
+
+[2017-03-28 15:58:56.898] [basic_logger] [info] COR|Forced concept updates completed.
+
+[2017-03-28 15:58:56.898] [basic_logger] [info] COR|Attempted bindings dumped below:
+Success: Level.1	[startloc](beijing|1.000000)->(/FlightRoot/Task/RequestStartLoc)/FlightRoot/Task/startLoc
+
+
+[2017-03-28 15:58:56.898] [basic_logger] [info] COR|Concepts Binding Phase completed (1 concept(s) bound, 0 concept(s) blocked out).
+
+[2017-03-28 15:58:56.898] [basic_logger] [info] COR|Acquired new user_utterance_end event.
+
+[2017-03-28 15:58:56.898] [basic_logger] [info] STA|Updating dialog state ...
+
+[2017-03-28 15:58:56.898] [basic_logger] [info] COR|Expectation Agenda Assembly Phase initiated.
+
+[2017-03-28 15:58:56.898] [basic_logger] [info] COR|Compiling Expectation Agenda ...
+
+[2017-03-28 15:58:56.898] [basic_logger] [info] COR|Compiling Expectation Agenda completed.
+
+[2017-03-28 15:58:56.898] [basic_logger] [info] COR|Enforcing binding policies ...
+
+[2017-03-28 15:58:56.898] [basic_logger] [info] COR|Enforcing binding policies completed.
+
+[2017-03-28 15:58:56.898] [basic_logger] [info] AGN|Concept expectation agenda dumped below:
+ Level 0: generated by /FlightRoot/Task/RequestStartLoc
+  O [startloc] -> (/FlightRoot/Task/RequestStartLoc)/FlightRoot/Task/startLoc
+ Level 1: generated by /FlightRoot/Task
+  O [endloc] -> (/FlightRoot/Task/RequestEndLoc)/FlightRoot/Task/endLoc
+  O [startdate] -> (/FlightRoot/Task/RequestDate)/FlightRoot/Task/startDate
+ Level 2: generated by /FlightRoot
+
+[2017-03-28 15:58:56.898] [basic_logger] [info] COR|Expectation Agenda Assembly Phase completed (3 levels).
+
+[2017-03-28 15:58:56.898] [basic_logger] [info] STA|Dialog state update completed: /FlightRoot/Task/RequestStartLoc at 3 (iEHIndex=4):
+turn_number = 3
+notify_prompts = 
+dialog_state = /FlightRoot/Task/RequestStartLoc
+nonu_threshold = 0.0000
+stack = {
+/FlightRoot/Task/RequestStartLoc
+  /FlightRoot/Task
+  /FlightRoot
+}
+agenda = {
+0:
+O[startloc]V
+1:
+O[endloc]V,
+O[startdate]V
+2:
+}
+input_line_config = {
+
+}
+
+[2017-03-28 15:58:56.898] [basic_logger] [warning] Property [uttid] not found in event. Returned empty string.
+
+[2017-03-28 15:58:56.898] [basic_logger] [info] COR|Processed new input [User:]
+
+[2017-03-28 15:58:56.898] [basic_logger] [warning] Property [uttid] not found in event. Returned empty string.
+
+[2017-03-28 15:58:56.898] [basic_logger] [info] COR|Starting DMCore processing [User:]
+
+[2017-03-28 15:58:56.898] [basic_logger] [info] COR|Eliminated 1 completed agent(s) (dumped below) from the execution stack.
+/FlightRoot/Task/RequestStartLoc
+
+[2017-03-28 15:58:56.898] [basic_logger] [info] COR|Eliminated completed agents from stack [User:]
+
+[2017-03-28 15:58:56.898] [basic_logger] [info] COR|Focus Claims Assembly Phase initiated.
+
+[2017-03-28 15:58:56.898] [basic_logger] [info] COR|0 agent(s) claiming focus.
+
+[2017-03-28 15:58:56.898] [basic_logger] [info] COR|Pruning Focus Claims list.
+
+[2017-03-28 15:58:56.898] [basic_logger] [info] COR|0 agents(s) eliminated from the focus claims list.
+
+[2017-03-28 15:58:56.898] [basic_logger] [info] COR|Focus Claims Assembly Phase completed (0 claim(s)).
+
+[2017-03-28 15:58:56.898] [basic_logger] [info] COR|Executing dialog agent /FlightRoot/Task [User:]
+
+[2017-03-28 15:58:56.898] [basic_logger] [info] COR|Agent /FlightRoot/Task/RequestEndLoc added on the execution stack by /FlightRoot/Task.
+
+[2017-03-28 15:58:56.898] [basic_logger] [warning] Property [uttid] not found in event. Returned empty string.
+
+[2017-03-28 15:58:56.898] [basic_logger] [info] COR|Starting DMCore processing [User:]
+
+[2017-03-28 15:58:56.898] [basic_logger] [info] COR|Eliminated completed agents from stack [User:]
+
+[2017-03-28 15:58:56.898] [basic_logger] [info] COR|Executing dialog agent /FlightRoot/Task/RequestEndLoc [User:]
+
+[2017-03-28 15:58:56.898] [basic_logger] [info] OTP|Processing output prompt 0 from /FlightRoot/Task/RequestEndLoc. (dump below)
+{request|请说目的地。}
+
+[2017-03-28 15:58:56.898] [basic_logger] [info] COR|Set floor status to system
+
+[2017-03-28 15:59:09.297] [basic_logger] [info] INP|wait message form input_queue success
+
+[2017-03-28 15:59:09.297] [basic_logger] [info] INP|[endloc] shanghai
+
+[2017-03-28 15:59:09.297] [basic_logger] [info] COR|Concepts Binding Phase initiated.
+
+[2017-03-28 15:59:09.297] [basic_logger] [info] COR|Event matches [endloc].
+
+[2017-03-28 15:59:09.297] [basic_logger] [info] COR|Slot [endloc](endLoc|1.000000) bound to concept (/FlightRoot/Task/RequestEndLoc)/FlightRoot/Task/endLoc.
+
+[2017-03-28 15:59:09.297] [basic_logger] [info] COR|Performing forced concept updates ...
+
+[2017-03-28 15:59:09.297] [basic_logger] [info] COR|Forced concept updates completed.
+
+[2017-03-28 15:59:09.297] [basic_logger] [info] COR|Attempted bindings dumped below:
+Success: Level.1	[endloc](shanghai|1.000000)->(/FlightRoot/Task/RequestEndLoc)/FlightRoot/Task/endLoc
+
+
+[2017-03-28 15:59:09.297] [basic_logger] [info] COR|Concepts Binding Phase completed (1 concept(s) bound, 0 concept(s) blocked out).
+
+[2017-03-28 15:59:09.297] [basic_logger] [info] COR|Acquired new user_utterance_end event.
+
+[2017-03-28 15:59:09.297] [basic_logger] [info] STA|Updating dialog state ...
+
+[2017-03-28 15:59:09.297] [basic_logger] [info] COR|Expectation Agenda Assembly Phase initiated.
+
+[2017-03-28 15:59:09.297] [basic_logger] [info] COR|Compiling Expectation Agenda ...
+
+[2017-03-28 15:59:09.298] [basic_logger] [info] COR|Compiling Expectation Agenda completed.
+
+[2017-03-28 15:59:09.298] [basic_logger] [info] COR|Enforcing binding policies ...
+
+[2017-03-28 15:59:09.298] [basic_logger] [info] COR|Enforcing binding policies completed.
+
+[2017-03-28 15:59:09.298] [basic_logger] [info] AGN|Concept expectation agenda dumped below:
+ Level 0: generated by /FlightRoot/Task/RequestEndLoc
+  O [endloc] -> (/FlightRoot/Task/RequestEndLoc)/FlightRoot/Task/endLoc
+ Level 1: generated by /FlightRoot/Task
+  O [startdate] -> (/FlightRoot/Task/RequestDate)/FlightRoot/Task/startDate
+  O [startloc] -> (/FlightRoot/Task/RequestStartLoc)/FlightRoot/Task/startLoc
+ Level 2: generated by /FlightRoot
+
+[2017-03-28 15:59:09.298] [basic_logger] [info] COR|Expectation Agenda Assembly Phase completed (3 levels).
+
+[2017-03-28 15:59:09.298] [basic_logger] [info] STA|Dialog state update completed: /FlightRoot/Task/RequestEndLoc at 4 (iEHIndex=5):
+turn_number = 4
+notify_prompts = 
+dialog_state = /FlightRoot/Task/RequestEndLoc
+nonu_threshold = 0.0000
+stack = {
+/FlightRoot/Task/RequestEndLoc
+  /FlightRoot/Task
+  /FlightRoot
+}
+agenda = {
+0:
+O[endloc]V
+1:
+O[startdate]V,
+O[startloc]V
+2:
+}
+input_line_config = {
+
+}
+
+[2017-03-28 15:59:09.298] [basic_logger] [warning] Property [uttid] not found in event. Returned empty string.
+
+[2017-03-28 15:59:09.298] [basic_logger] [info] COR|Processed new input [User:]
+
+[2017-03-28 15:59:09.298] [basic_logger] [warning] Property [uttid] not found in event. Returned empty string.
+
+[2017-03-28 15:59:09.298] [basic_logger] [info] COR|Starting DMCore processing [User:]
+
+[2017-03-28 15:59:09.298] [basic_logger] [info] COR|Eliminated 1 completed agent(s) (dumped below) from the execution stack.
+/FlightRoot/Task/RequestEndLoc
+
+[2017-03-28 15:59:09.298] [basic_logger] [info] COR|Eliminated completed agents from stack [User:]
+
+[2017-03-28 15:59:09.298] [basic_logger] [info] COR|Focus Claims Assembly Phase initiated.
+
+[2017-03-28 15:59:09.298] [basic_logger] [info] COR|0 agent(s) claiming focus.
+
+[2017-03-28 15:59:09.298] [basic_logger] [info] COR|Pruning Focus Claims list.
+
+[2017-03-28 15:59:09.298] [basic_logger] [info] COR|0 agents(s) eliminated from the focus claims list.
+
+[2017-03-28 15:59:09.298] [basic_logger] [info] COR|Focus Claims Assembly Phase completed (0 claim(s)).
+
+[2017-03-28 15:59:09.298] [basic_logger] [info] COR|Executing dialog agent /FlightRoot/Task [User:]
+
+[2017-03-28 15:59:09.298] [basic_logger] [info] COR|Agent /FlightRoot/Task/InformResults added on the execution stack by /FlightRoot/Task.
+
+[2017-03-28 15:59:09.298] [basic_logger] [warning] Property [uttid] not found in event. Returned empty string.
+
+[2017-03-28 15:59:09.298] [basic_logger] [info] COR|Starting DMCore processing [User:]
+
+[2017-03-28 15:59:09.298] [basic_logger] [info] COR|Eliminated completed agents from stack [User:]
+
+[2017-03-28 15:59:09.298] [basic_logger] [info] COR|Executing dialog agent /FlightRoot/Task/InformResults [User:]
+
+[2017-03-28 15:59:09.298] [basic_logger] [info] OTP|Processing output prompt 0 from /FlightRoot/Task/InformResults. (dump below)
+{inform|您好，您好正在为您查询，请稍等。}
+
+[2017-03-28 15:59:09.298] [basic_logger] [warning] Property [uttid] not found in event. Returned empty string.
+
+[2017-03-28 15:59:09.298] [basic_logger] [info] COR|Starting DMCore processing [User:]
+
+[2017-03-28 15:59:09.298] [basic_logger] [info] COR|Eliminated 1 completed agent(s) (dumped below) from the execution stack.
+/FlightRoot/Task/InformResults
+
+[2017-03-28 15:59:09.298] [basic_logger] [info] COR|Eliminated completed agents from stack [User:]
+
+[2017-03-28 15:59:09.298] [basic_logger] [info] COR|Executing dialog agent /FlightRoot/Task [User:]
+
+[2017-03-28 15:59:09.298] [basic_logger] [info] COR|Agent /FlightRoot/Task/ExecuteFlight added on the execution stack by /FlightRoot/Task.
+
+[2017-03-28 15:59:09.298] [basic_logger] [warning] Property [uttid] not found in event. Returned empty string.
+
+[2017-03-28 15:59:09.298] [basic_logger] [info] COR|Starting DMCore processing [User:]
+
+[2017-03-28 15:59:09.298] [basic_logger] [info] COR|Eliminated completed agents from stack [User:]
+
+[2017-03-28 15:59:09.298] [basic_logger] [info] COR|Executing dialog agent /FlightRoot/Task/ExecuteFlight [User:]
+
+[2017-03-28 15:59:09.298] [basic_logger] [info] TMS|Preparing external server call...
+
+[2017-03-28 15:59:09.298] [basic_logger] [warning] Property [uttid] not found in event. Returned empty string.
+
+[2017-03-28 15:59:09.298] [basic_logger] [info] COR|Starting DMCore processing [User:]
+
+[2017-03-28 15:59:09.298] [basic_logger] [info] COR|Eliminated 2 completed agent(s) (dumped below) from the execution stack.
+/FlightRoot/Task/ExecuteFlight
+/FlightRoot/Task
+
+[2017-03-28 15:59:09.298] [basic_logger] [info] COR|Eliminated completed agents from stack [User:]
+
+[2017-03-28 15:59:09.298] [basic_logger] [info] COR|Executing dialog agent /FlightRoot [User:]
+
+[2017-03-28 15:59:09.298] [basic_logger] [info] COR|Agent /FlightRoot/Logout added on the execution stack by /FlightRoot.
+
+[2017-03-28 15:59:09.298] [basic_logger] [warning] Property [uttid] not found in event. Returned empty string.
+
+[2017-03-28 15:59:09.298] [basic_logger] [info] COR|Starting DMCore processing [User:]
+
+[2017-03-28 15:59:09.298] [basic_logger] [info] COR|Eliminated completed agents from stack [User:]
+
+[2017-03-28 15:59:09.298] [basic_logger] [info] COR|Executing dialog agent /FlightRoot/Logout [User:]
+
+[2017-03-28 15:59:09.299] [basic_logger] [info] COR|Agent /FlightRoot/Logout/InformLogout added on the execution stack by /FlightRoot/Logout.
+
+[2017-03-28 15:59:09.299] [basic_logger] [warning] Property [uttid] not found in event. Returned empty string.
+
+[2017-03-28 15:59:09.299] [basic_logger] [info] COR|Starting DMCore processing [User:]
+
+[2017-03-28 15:59:09.299] [basic_logger] [info] COR|Eliminated completed agents from stack [User:]
+
+[2017-03-28 15:59:09.299] [basic_logger] [info] COR|Executing dialog agent /FlightRoot/Logout/InformLogout [User:]
+
+[2017-03-28 15:59:09.299] [basic_logger] [info] OTP|Processing output prompt 0 from /FlightRoot/Logout/InformLogout. (dump below)
+{end|查询结束，感谢您的使用。}
+
+[2017-03-28 15:59:09.299] [basic_logger] [warning] Property [uttid] not found in event. Returned empty string.
+
+[2017-03-28 15:59:09.299] [basic_logger] [info] COR|Starting DMCore processing [User:]
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Clearing up the registry ...
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Deallocating remaining registered agents ...
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Deallocating remaining registered agents completed.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent type CDMCoreAgent registered successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent DMCoreAgent created successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent DMCoreAgent registered successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] CTH|Creating auxiliary core dialog core agents ...
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent type CInteractionEventManagerAgent registered successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent InteractionEventManagerAgent created successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent InteractionEventManagerAgent registered successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent type COutputManagerAgent registered successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent OutputManagerAgent created successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent OutputManagerAgent registered successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent type CTrafficManagerAgent registered successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent TrafficManagerAgent created successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent TrafficManagerAgent registered successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent type CStateManagerAgent registered successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent StateManagerAgent created successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent StateManagerAgent registered successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent type CDTTManagerAgent registered successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent DTTManagerAgent created successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent DTTManagerAgent registered successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent type CGroundingManagerAgent registered successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent GroundingManagerAgent created successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent GroundingManagerAgent registered successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] CTH|Auxiliary core dialog management agents created successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] CTH|Core initialization completed successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] GMS|Registering grounding action: NO_ACTION [NO_ACTION].
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] GMS|Registering grounding action: ACCEPT [ACCEPT].
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] GMS|Registering grounding action: EXPL_CONF [EXPL_CONF].
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent type _CExplicitConfirm registered successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent type _CRequestConfirm registered successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent type _CAcknowledgeConfirm registered successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] GMS|Registering grounding action: IMPL_CONF [IMPL_CONF].
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent type _CImplicitConfirmInform registered successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent type _CImplicitConfirmExpect registered successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] GMS|Registering grounding action: ASK_REPEAT [ASK_REPEAT].
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent type _CAskRepeat registered successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_AND_ASK_REPEAT [ASK_REPEAT].
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] GMS|Registering grounding action: ASK_REPHRASE [ASK_REPHRASE].
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent type _CAskRephrase registered successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_AND_ASK_REPHRASE [ASK_REPHRASE].
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] GMS|Registering grounding action: REPEAT_PROMPT [REPEAT_PROMPT].
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent type _CRepeatPrompt registered successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_AND_REPEAT_PROMPT [REPEAT_PROMPT].
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] GMS|Registering grounding action: EXPLAIN_MORE [EXPLAIN_MORE].
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent type _CExplainMore registered successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_AND_EXPLAIN_MORE [EXPLAIN_MORE].
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] GMS|Registering grounding action: FULL_HELP [FULL_HELP].
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent type _CFullHelp registered successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_AND_FULL_HELP [FULL_HELP].
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] GMS|Registering grounding action: WHAT_CAN_I_SAY [WHAT_CAN_I_SAY].
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent type _CWhatCanISay registered successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] GMS|Registering grounding action: TERSE_WHAT_CAN_I_SAY [WHAT_CAN_I_SAY].
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_AND_WHAT_CAN_I_SAY [WHAT_CAN_I_SAY].
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_AND_TERSE_WHAT_CAN_I_SAY [WHAT_CAN_I_SAY].
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] GMS|Registering grounding action: TIPS_AND_WHAT_CAN_I_SAY [WHAT_CAN_I_SAY].
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_NONUNDERSTANDING [NOTIFY_NONUNDERSTANDING].
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent type _CNotifyNonunderstanding registered successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] GMS|Registering grounding action: YIELD_TURN [YIELD_TURN].
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent type _CYieldTurn registered successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] GMS|Registering grounding action: FAIL_REQUEST [FAIL_REQUEST].
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent type _CFailRequest registered successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] GMS|Registering grounding action: ASK_STARTOVER [ASK_STARTOVER].
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent type _CAskStartOver registered successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent type _CAskStartOverAsk registered successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent type _CAskStartOverInform registered successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent type _CAskStartOverExecute registered successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] GMS|Registering grounding action: SPEAK_LESS_LOUD_AND_REPROMPT [SPEAKLESSLOUD_AND_REPROMPT].
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent type _CSpeakLessLoudAndReprompt registered successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] GMS|Registering grounding action: ASK_SHORT_ANSWER_AND_REPROMPT [ASK_SHORT_ANSWER_AND_REPROMPT].
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent type _CAskShortAnswerAndReprompt registered successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] GMS|Registering grounding action: ASK_SHORT_ANSWER_AND_WHAT_CAN_I_SAY [ASK_SHORT_ANSWER_AND_WHAT_CAN_I_SAY].
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent type _CAskShortAnswerAndWhatCanISay registered successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] GMS|Registering grounding action: INTERACTION_TIPS [INTERACTION_TIPS].
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent type _CInteractionTips registered successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] GMS|Registering grounding action: GIVE_UP [GIVE_UP].
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent type _CGiveUp registered successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] GMS|Registering grounding action: MOVE_ON [MOVE_ON].
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent type _CMoveOn registered successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] DTT|Starting Dialog Tree Creation Phase ...
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] DTT|Registering  dialog task agent types ...
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent type CFlightRoot registered successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent type CWelcome registered successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent type CTask registered successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent type CRequestDate registered successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent type CRequestStartLoc registered successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent type CRequestEndLoc registered successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent type CInformResults registered successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent type CExecuteFlight registered successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent type CLogout registered successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent type CInformLogout registered successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] DTT|Creating Dialog Task Tree ...
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent Welcome created successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent RequestDate created successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent RequestStartLoc created successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent RequestEndLoc created successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent InformResults created successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent ExecuteFlight created successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent Task created successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent InformLogout created successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent Logout created successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent FlightRoot created successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent /FlightRoot registered successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent /FlightRoot/Welcome registered successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent /FlightRoot/Task registered successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent /FlightRoot/Task/RequestDate registered successfully.
+
+[2017-03-28 16:00:44.410] [basic_logger] [info] REG|Agent /FlightRoot/Task/RequestStartLoc registered successfully.
+
+[2017-03-28 16:00:44.411] [basic_logger] [info] REG|Agent /FlightRoot/Task/RequestEndLoc registered successfully.
+
+[2017-03-28 16:00:44.411] [basic_logger] [info] REG|Agent /FlightRoot/Task/InformResults registered successfully.
+
+[2017-03-28 16:00:44.411] [basic_logger] [info] REG|Agent /FlightRoot/Task/ExecuteFlight registered successfully.
+
+[2017-03-28 16:00:44.411] [basic_logger] [info] REG|Agent /FlightRoot/Logout registered successfully.
+
+[2017-03-28 16:00:44.411] [basic_logger] [info] REG|Agent /FlightRoot/Logout/InformLogout registered successfully.
+
+[2017-03-28 16:00:44.411] [basic_logger] [info] DTT|Dialog Tree Creation Phase completed successfully.
+
+[2017-03-28 16:00:44.411] [basic_logger] [info] COR|Set floor status to free
+
+[2017-03-28 16:00:44.411] [basic_logger] [info] COR|Starting Dialog Task execution.
+
+[2017-03-28 16:00:44.411] [basic_logger] [info] COR|Agent /FlightRoot added on the execution stack by DMCoreAgent.
+
+[2017-03-28 16:00:44.411] [basic_logger] [info] STA|Updating dialog state ...
+
+[2017-03-28 16:00:44.411] [basic_logger] [info] COR|Expectation Agenda Assembly Phase initiated.
+
+[2017-03-28 16:00:44.411] [basic_logger] [info] COR|Compiling Expectation Agenda ...
+
+[2017-03-28 16:00:44.411] [basic_logger] [info] COR|Compiling Expectation Agenda completed.
+
+[2017-03-28 16:00:44.411] [basic_logger] [info] COR|Enforcing binding policies ...
+
+[2017-03-28 16:00:44.411] [basic_logger] [info] COR|Enforcing binding policies completed.
+
+[2017-03-28 16:00:44.411] [basic_logger] [info] AGN|Concept expectation agenda dumped below:
+ Level 0: generated by /FlightRoot
+  O [endloc] -> (/FlightRoot/Task/RequestEndLoc)/FlightRoot/Task/endLoc
+  O [startdate] -> (/FlightRoot/Task/RequestDate)/FlightRoot/Task/startDate
+  O [startloc] -> (/FlightRoot/Task/RequestStartLoc)/FlightRoot/Task/startLoc
+
+[2017-03-28 16:00:44.411] [basic_logger] [info] COR|Expectation Agenda Assembly Phase completed (1 levels).
+
+[2017-03-28 16:00:44.411] [basic_logger] [info] STA|Dialog state update completed: /FlightRoot at 0 (iEHIndex=0):
+turn_number = 0
+notify_prompts = 
+dialog_state = /FlightRoot
+nonu_threshold = 0.0000
+stack = {
+/FlightRoot
+}
+agenda = {
+0:
+O[endloc]V,
+O[startdate]V,
+O[startloc]V
+}
+input_line_config = {
+
+}
+
+[2017-03-28 16:00:44.411] [basic_logger] [info] COR|Starting DMCore processing [User:???]
+
+[2017-03-28 16:00:44.411] [basic_logger] [info] COR|Eliminated completed agents from stack [User:???]
+
+[2017-03-28 16:00:44.411] [basic_logger] [info] COR|Performed grounding [User:???]
+
+[2017-03-28 16:00:44.411] [basic_logger] [info] COR|Completed grounding on [User:???]
+
+[2017-03-28 16:00:44.411] [basic_logger] [info] COR|Executing dialog agent /FlightRoot [User:???]
+
+[2017-03-28 16:00:44.411] [basic_logger] [info] COR|Agent /FlightRoot/Welcome added on the execution stack by /FlightRoot.
+
+[2017-03-28 16:00:44.411] [basic_logger] [info] COR|Starting DMCore processing [User:???]
+
+[2017-03-28 16:00:44.411] [basic_logger] [info] COR|Eliminated completed agents from stack [User:???]
+
+[2017-03-28 16:00:44.411] [basic_logger] [info] COR|Performed grounding [User:???]
+
+[2017-03-28 16:00:44.411] [basic_logger] [info] COR|Completed grounding on [User:???]
+
+[2017-03-28 16:00:44.411] [basic_logger] [info] COR|Executing dialog agent /FlightRoot/Welcome [User:???]
+
+[2017-03-28 16:00:44.411] [basic_logger] [info] OTP|Processing output prompt 0 from /FlightRoot/Welcome. (dump below)
+{inform|您好，欢迎使用航班查询系统}
+
+[2017-03-28 16:00:44.411] [basic_logger] [info] COR|Starting DMCore processing [User:???]
+
+[2017-03-28 16:00:44.411] [basic_logger] [info] COR|Eliminated 1 completed agent(s) (dumped below) from the execution stack.
+/FlightRoot/Welcome
+
+[2017-03-28 16:00:44.411] [basic_logger] [info] COR|Eliminated completed agents from stack [User:???]
+
+[2017-03-28 16:00:44.411] [basic_logger] [info] COR|Performed grounding [User:???]
+
+[2017-03-28 16:00:44.411] [basic_logger] [info] COR|Completed grounding on [User:???]
+
+[2017-03-28 16:00:44.411] [basic_logger] [info] COR|Executing dialog agent /FlightRoot [User:???]
+
+[2017-03-28 16:00:44.411] [basic_logger] [info] COR|Agent /FlightRoot/Task added on the execution stack by /FlightRoot.
+
+[2017-03-28 16:00:44.411] [basic_logger] [info] COR|Starting DMCore processing [User:???]
+
+[2017-03-28 16:00:44.411] [basic_logger] [info] COR|Eliminated completed agents from stack [User:???]
+
+[2017-03-28 16:00:44.411] [basic_logger] [info] COR|Performed grounding [User:???]
+
+[2017-03-28 16:00:44.411] [basic_logger] [info] COR|Completed grounding on [User:???]
+
+[2017-03-28 16:00:44.411] [basic_logger] [info] COR|Executing dialog agent /FlightRoot/Task [User:???]
+
+[2017-03-28 16:00:44.411] [basic_logger] [info] COR|Agent /FlightRoot/Task/RequestDate added on the execution stack by /FlightRoot/Task.
+
+[2017-03-28 16:00:44.411] [basic_lo[2017-03-28 16:01:01.126] [basic_logger] [info] REG|Clearing up the registry ...
+
+[2017-03-28 16:01:01.126] [basic_logger] [info] REG|Deallocating remaining registered agents ...
+
+[2017-03-28 16:01:01.126] [basic_logger] [info] REG|Deallocating remaining registered agents completed.
+
+[2017-03-28 16:01:01.126] [basic_logger] [info] REG|Agent type CDMCoreAgent registered successfully.
+
+[2017-03-28 16:01:01.126] [basic_logger] [info] REG|Agent DMCoreAgent created successfully.
+
+[2017-03-28 16:01:01.126] [basic_logger] [info] REG|Agent DMCoreAgent registered successfully.
+
+[2017-03-28 16:01:01.126] [basic_logger] [info] CTH|Creating auxiliary core dialog core agents ...
+
+[2017-03-28 16:01:01.126] [basic_logger] [info] REG|Agent type CInteractionEventManagerAgent registered successfully.
+
+[2017-03-28 16:01:01.126] [basic_logger] [info] REG|Agent InteractionEventManagerAgent created successfully.
+
+[2017-03-28 16:01:01.126] [basic_logger] [info] REG|Agent InteractionEventManagerAgent registered successfully.
+
+[2017-03-28 16:01:01.126] [basic_logger] [info] REG|Agent type COutputManagerAgent registered successfully.
+
+[2017-03-28 16:01:01.126] [basic_logger] [info] REG|Agent OutputManagerAgent created successfully.
+
+[2017-03-28 16:01:01.126] [basic_logger] [info] REG|Agent OutputManagerAgent registered successfully.
+
+[2017-03-28 16:01:01.126] [basic_logger] [info] REG|Agent type CTrafficManagerAgent registered successfully.
+
+[2017-03-28 16:01:01.126] [basic_logger] [info] REG|Agent TrafficManagerAgent created successfully.
+
+[2017-03-28 16:01:01.126] [basic_logger] [info] REG|Agent TrafficManagerAgent registered successfully.
+
+[2017-03-28 16:01:01.126] [basic_logger] [info] REG|Agent type CStateManagerAgent registered successfully.
+
+[2017-03-28 16:01:01.126] [basic_logger] [info] REG|Agent StateManagerAgent created successfully.
+
+[2017-03-28 16:01:01.126] [basic_logger] [info] REG|Agent StateManagerAgent registered successfully.
+
+[2017-03-28 16:01:01.126] [basic_logger] [info] REG|Agent type CDTTManagerAgent registered successfully.
+
+[2017-03-28 16:01:01.126] [basic_logger] [info] REG|Agent DTTManagerAgent created successfully.
+
+[2017-03-28 16:01:01.126] [basic_logger] [info] REG|Agent DTTManagerAgent registered successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent type CGroundingManagerAgent registered successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent GroundingManagerAgent created successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent GroundingManagerAgent registered successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] CTH|Auxiliary core dialog management agents created successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] CTH|Core initialization completed successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] GMS|Registering grounding action: NO_ACTION [NO_ACTION].
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] GMS|Registering grounding action: ACCEPT [ACCEPT].
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] GMS|Registering grounding action: EXPL_CONF [EXPL_CONF].
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent type _CExplicitConfirm registered successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent type _CRequestConfirm registered successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent type _CAcknowledgeConfirm registered successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] GMS|Registering grounding action: IMPL_CONF [IMPL_CONF].
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent type _CImplicitConfirmInform registered successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent type _CImplicitConfirmExpect registered successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] GMS|Registering grounding action: ASK_REPEAT [ASK_REPEAT].
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent type _CAskRepeat registered successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_AND_ASK_REPEAT [ASK_REPEAT].
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] GMS|Registering grounding action: ASK_REPHRASE [ASK_REPHRASE].
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent type _CAskRephrase registered successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_AND_ASK_REPHRASE [ASK_REPHRASE].
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] GMS|Registering grounding action: REPEAT_PROMPT [REPEAT_PROMPT].
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent type _CRepeatPrompt registered successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_AND_REPEAT_PROMPT [REPEAT_PROMPT].
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] GMS|Registering grounding action: EXPLAIN_MORE [EXPLAIN_MORE].
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent type _CExplainMore registered successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_AND_EXPLAIN_MORE [EXPLAIN_MORE].
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] GMS|Registering grounding action: FULL_HELP [FULL_HELP].
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent type _CFullHelp registered successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_AND_FULL_HELP [FULL_HELP].
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] GMS|Registering grounding action: WHAT_CAN_I_SAY [WHAT_CAN_I_SAY].
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent type _CWhatCanISay registered successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] GMS|Registering grounding action: TERSE_WHAT_CAN_I_SAY [WHAT_CAN_I_SAY].
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_AND_WHAT_CAN_I_SAY [WHAT_CAN_I_SAY].
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_AND_TERSE_WHAT_CAN_I_SAY [WHAT_CAN_I_SAY].
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] GMS|Registering grounding action: TIPS_AND_WHAT_CAN_I_SAY [WHAT_CAN_I_SAY].
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] GMS|Registering grounding action: NOTIFY_NONUNDERSTANDING [NOTIFY_NONUNDERSTANDING].
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent type _CNotifyNonunderstanding registered successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] GMS|Registering grounding action: YIELD_TURN [YIELD_TURN].
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent type _CYieldTurn registered successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] GMS|Registering grounding action: FAIL_REQUEST [FAIL_REQUEST].
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent type _CFailRequest registered successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] GMS|Registering grounding action: ASK_STARTOVER [ASK_STARTOVER].
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent type _CAskStartOver registered successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent type _CAskStartOverAsk registered successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent type _CAskStartOverInform registered successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent type _CAskStartOverExecute registered successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] GMS|Registering grounding action: SPEAK_LESS_LOUD_AND_REPROMPT [SPEAKLESSLOUD_AND_REPROMPT].
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent type _CSpeakLessLoudAndReprompt registered successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] GMS|Registering grounding action: ASK_SHORT_ANSWER_AND_REPROMPT [ASK_SHORT_ANSWER_AND_REPROMPT].
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent type _CAskShortAnswerAndReprompt registered successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] GMS|Registering grounding action: ASK_SHORT_ANSWER_AND_WHAT_CAN_I_SAY [ASK_SHORT_ANSWER_AND_WHAT_CAN_I_SAY].
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent type _CAskShortAnswerAndWhatCanISay registered successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] GMS|Registering grounding action: INTERACTION_TIPS [INTERACTION_TIPS].
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent type _CInteractionTips registered successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] GMS|Registering grounding action: GIVE_UP [GIVE_UP].
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent type _CGiveUp registered successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] GMS|Registering grounding action: MOVE_ON [MOVE_ON].
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent type _CMoveOn registered successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] DTT|Starting Dialog Tree Creation Phase ...
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] DTT|Registering  dialog task agent types ...
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent type CFlightRoot registered successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent type CWelcome registered successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent type CTask registered successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent type CRequestDate registered successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent type CRequestStartLoc registered successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent type CRequestEndLoc registered successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent type CInformResults registered successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent type CExecuteFlight registered successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent type CLogout registered successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent type CInformLogout registered successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] DTT|Creating Dialog Task Tree ...
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent Welcome created successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent RequestDate created successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent RequestStartLoc created successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent RequestEndLoc created successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent InformResults created successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent ExecuteFlight created successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent Task created successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent InformLogout created successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent Logout created successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent FlightRoot created successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent /FlightRoot registered successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent /FlightRoot/Welcome registered successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent /FlightRoot/Task registered successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent /FlightRoot/Task/RequestDate registered successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent /FlightRoot/Task/RequestStartLoc registered successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent /FlightRoot/Task/RequestEndLoc registered successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent /FlightRoot/Task/InformResults registered successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent /FlightRoot/Task/ExecuteFlight registered successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent /FlightRoot/Logout registered successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] REG|Agent /FlightRoot/Logout/InformLogout registered successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] DTT|Dialog Tree Creation Phase completed successfully.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] COR|Set floor status to free
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] COR|Starting Dialog Task execution.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] COR|Agent /FlightRoot added on the execution stack by DMCoreAgent.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] STA|Updating dialog state ...
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] COR|Expectation Agenda Assembly Phase initiated.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] COR|Compiling Expectation Agenda ...
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] COR|Compiling Expectation Agenda completed.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] COR|Enforcing binding policies ...
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] COR|Enforcing binding policies completed.
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] AGN|Concept expectation agenda dumped below:
+ Level 0: generated by /FlightRoot
+  O [endloc] -> (/FlightRoot/Task/RequestEndLoc)/FlightRoot/Task/endLoc
+  O [startdate] -> (/FlightRoot/Task/RequestDate)/FlightRoot/Task/startDate
+  O [startloc] -> (/FlightRoot/Task/RequestStartLoc)/FlightRoot/Task/startLoc
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] COR|Expectation Agenda Assembly Phase completed (1 levels).
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] STA|Dialog state update completed: /FlightRoot at 0 (iEHIndex=0):
+turn_number = 0
+notify_prompts = 
+dialog_state = /FlightRoot
+nonu_threshold = 0.0000
+stack = {
+/FlightRoot
+}
+agenda = {
+0:
+O[endloc]V,
+O[startdate]V,
+O[startloc]V
+}
+input_line_config = {
+
+}
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] COR|Starting DMCore processing [User:???]
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] COR|Eliminated completed agents from stack [User:???]
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] COR|Performed grounding [User:???]
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] COR|Completed grounding on [User:???]
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] COR|Executing dialog agent /FlightRoot [User:???]
+
+[2017-03-28 16:01:01.127] [basic_logger] [info] COR|Agent /FlightRoot/Welcome added on the execution stack by /FlightRoot.
+
+[2017-03-28 16:01:01.128] [basic_logger] [info] COR|Starting DMCore processing [User:???]
+
+[2017-03-28 16:01:01.128] [basic_logger] [info] COR|Eliminated completed agents from stack [User:???]
+
+[2017-03-28 16:01:01.128] [basic_logger] [info] COR|Performed grounding [User:???]
+
+[2017-03-28 16:01:01.128] [basic_logger] [info] COR|Completed grounding on [User:???]
+
+[2017-03-28 16:01:01.128] [basic_logger] [info] COR|Executing dialog agent /FlightRoot/Welcome [User:???]
+
+[2017-03-28 16:01:01.128] [basic_logger] [info] OTP|Processing output prompt 0 from /FlightRoot/Welcome. (dump below)
+{inform|您好，欢迎使用航班查询系统}
+
+[2017-03-28 16:01:01.128] [basic_logger] [info] COR|Starting DMCore processing [User:???]
+
+[2017-03-28 16:01:01.128] [basic_logger] [info] COR|Eliminated 1 completed agent(s) (dumped below) from the execution stack.
+/FlightRoot/Welcome
+
+[2017-03-28 16:01:01.128] [basic_logger] [info] COR|Eliminated completed agents from stack [User:???]
+
+[2017-03-28 16:01:01.128] [basic_logger] [info] COR|Performed grounding [User:???]
+
+[2017-03-28 16:01:01.128] [basic_logger] [info] COR|Completed grounding on [User:???]
+
+[2017-03-28 16:01:01.128] [basic_logger] [info] COR|Executing dialog agent /FlightRoot [User:???]
+
+[2017-03-28 16:01:01.128] [basic_logger] [info] COR|Agent /FlightRoot/Task added on the execution stack by /FlightRoot.
+
+[2017-03-28 16:01:01.128] [basic_logger] [info] COR|Starting DMCore processing [User:???]
+
+[2017-03-28 16:01:01.128] [basic_logger] [info] COR|Eliminated completed agents from stack [User:???]
+
+[2017-03-28 16:01:01.128] [basic_logger] [info] COR|Performed grounding [User:???]
+
+[2017-03-28 16:01:01.128] [basic_logger] [info] COR|Completed grounding on [User:???]
+
+[2017-03-28 16:01:01.128] [basic_logger] [info] COR|Executing dialog agent /FlightRoot/Task [User:???]
+
+[2017-03-28 16:01:01.128] [basic_logger] [info] COR|Agent /FlightRoot/Task/RequestDate added on the execution stack by /FlightRoot/Task.
+
+[2017-03-28 16:01:01.128] [basic_logger] [info] COR|Starting DMCore processing [User:???]
+
+[2017-03-28 16:01:01.128] [basic_logger] [info] COR|Eliminated completed agents from stack [User:???]
+
+[2017-03-28 16:01:01.128] [basic_logger] [info] COR|Performed grounding [User:???]
+
+[2017-03-28 16:01:01.128] [basic_logger] [info] COR|Completed grounding on [User:???]
+
+[2017-03-28 16:01:01.128] [basic_logger] [info] COR|Executing dialog agent /FlightRoot/Task/RequestDate [User:???]
+
+[2017-03-28 16:01:01.128] [basic_logger] [info] OTP|Processing output prompt 0 from /FlightRoot/Task/RequestDate. (dump below)
+{request|请问您要查询什么时间的航班？}
+
+[2017-03-28 16:01:01.128] [basic_logger] [info] COR|Set floor status to system
+
+[2017-03-28 16:01:10.312] [basic_logger] [info] INP|wait message form input_queue success
+
+[2017-03-28 16:01:10.312] [basic_logger] [info] INP|[startdate] jintian
+
+[2017-03-28 16:01:10.312] [basic_logger] [info] COR|Concepts Binding Phase initiated.
+
+[2017-03-28 16:01:10.313] [basic_logger] [info] COR|Event matches [startdate].
+
+[2017-03-28 16:01:10.313] [basic_logger] [info] COR|Slot [startdate](startDate|1.000000) bound to concept (/FlightRoot/Task/RequestDate)/FlightRoot/Task/startDate.
+
+[2017-03-28 16:01:10.313] [basic_logger] [info] COR|Performing forced concept updates ...
+
+[2017-03-28 16:01:10.313] [basic_logger] [info] COR|Forced concept updates completed.
+
+[2017-03-28 16:01:10.313] [basic_logger] [info] COR|Attempted bindings dumped below:
+Success: Level.0	[startdate](jintian|1.000000)->(/FlightRoot/Task/RequestDate)/FlightRoot/Task/startDate
+
+
+[2017-03-28 16:01:10.313] [basic_logger] [info] COR|Concepts Binding Phase completed (1 concept(s) bound, 0 concept(s) blocked out).
+
+[2017-03-28 16:01:10.313] [basic_logger] [info] COR|Acquired new user_utterance_end event.
+
+[2017-03-28 16:01:10.313] [basic_logger] [info] STA|Updating dialog state ...
+
+[2017-03-28 16:01:10.313] [basic_logger] [info] COR|Expectation Agenda Assembly Phase initiated.
+
+[2017-03-28 16:01:10.313] [basic_logger] [info] COR|Compiling Expectation Agenda ...
+
+[2017-03-28 16:01:10.313] [basic_logger] [info] COR|Compiling Expectation Agenda completed.
+
+[2017-03-28 16:01:10.313] [basic_logger] [info] COR|Enforcing binding policies ...
+
+[2017-03-28 16:01:10.313] [basic_logger] [info] COR|Enforcing binding policies completed.
+
+[2017-03-28 16:01:10.313] [basic_logger] [info] AGN|Concept expectation agenda dumped below:
+ Level 0: generated by /FlightRoot/Task/RequestDate
+  O [startdate] -> (/FlightRoot/Task/RequestDate)/FlightRoot/Task/startDate
+ Level 1: generated by /FlightRoot/Task
+  O [endloc] -> (/FlightRoot/Task/RequestEndLoc)/FlightRoot/Task/endLoc
+  O [startloc] -> (/FlightRoot/Task/RequestStartLoc)/FlightRoot/Task/startLoc
+ Level 2: generated by /FlightRoot
+
+[2017-03-28 16:01:10.313] [basic_logger] [info] COR|Expectation Agenda Assembly Phase completed (3 levels).
+
+[2017-03-28 16:01:10.313] [basic_logger] [info] STA|Dialog state update completed: /FlightRoot/Task/RequestDate at 1 (iEHIndex=3):
+turn_number = 1
+notify_prompts = 
+dialog_state = /FlightRoot/Task/RequestDate
+nonu_threshold = 0.0000
+stack = {
+/FlightRoot/Task/RequestDate
+  /FlightRoot/Task
+  /FlightRoot
+}
+agenda = {
+0:
+O[startdate]V
+1:
+O[endloc]V,
+O[startloc]V
+2:
+}
+input_line_config = {
+
+}
+
+[2017-03-28 16:01:10.313] [basic_logger] [warning] Property [uttid] not found in event. Returned empty string.
+
+[2017-03-28 16:01:10.313] [basic_logger] [info] COR|Processed new input [User:]
+
+[2017-03-28 16:01:10.313] [basic_logger] [warning] Property [uttid] not found in event. Returned empty string.
+
+[2017-03-28 16:01:10.313] [basic_logger] [info] COR|Starting DMCore processing [User:]
+
+[2017-03-28 16:01:10.313] [basic_logger] [info] COR|Eliminated 1 completed agent(s) (dumped below) from the execution stack.
+/FlightRoot/Task/RequestDate
+
+[2017-03-28 16:01:10.313] [basic_logger] [info] COR|Eliminated completed agents from stack [User:]
+
+[2017-03-28 16:01:10.313] [basic_logger] [info] COR|Focus Claims Assembly Phase initiated.
+
+[2017-03-28 16:01:10.313] [basic_logger] [info] COR|0 agent(s) claiming focus.
+
+[2017-03-28 16:01:10.313] [basic_logger] [info] COR|Pruning Focus Claims list.
+
+[2017-03-28 16:01:10.313] [basic_logger] [info] COR|0 agents(s) eliminated from the focus claims list.
+
+[2017-03-28 16:01:10.313] [basic_logger] [info] COR|Focus Claims Assembly Phase completed (0 claim(s)).
+
+[2017-03-28 16:01:10.313] [basic_logger] [info] COR|Executing dialog agent /FlightRoot/Task [User:]
+
+[2017-03-28 16:01:10.314] [basic_logger] [info] COR|Agent /FlightRoot/Task/RequestStartLoc added on the execution stack by /FlightRoot/Task.
+
+[2017-03-28 16:01:10.314] [basic_logger] [warning] Property [uttid] not found in event. Returned empty string.
+
+[2017-03-28 16:01:10.314] [basic_logger] [info] COR|Starting DMCore processing [User:]
+
+[2017-03-28 16:01:10.314] [basic_logger] [info] COR|Eliminated completed agents from stack [User:]
+
+[2017-03-28 16:01:10.314] [basic_logger] [info] COR|Executing dialog agent /FlightRoot/Task/RequestStartLoc [User:]
+
+[2017-03-28 16:01:10.314] [basic_logger] [info] OTP|Processing output prompt 0 from /FlightRoot/Task/RequestStartLoc. (dump below)
+{request|请说起始地点。}
+
+[2017-03-28 16:01:10.314] [basic_logger] [info] COR|Set floor status to system
+
+[2017-03-28 16:01:16.160] [basic_logger] [info] INP|wait message form input_queue success
+
+[2017-03-28 16:01:16.160] [basic_logger] [info] INP|[startloc] beijing
+
+[2017-03-28 16:01:16.160] [basic_logger] [info] COR|Concepts Binding Phase initiated.
+
+[2017-03-28 16:01:16.160] [basic_logger] [info] COR|Event matches [startloc].
+
+[2017-03-28 16:01:16.161] [basic_logger] [info] COR|Slot [startloc](startLoc|1.000000) bound to concept (/FlightRoot/Task/RequestStartLoc)/FlightRoot/Task/startLoc.
+
+[2017-03-28 16:01:16.161] [basic_logger] [info] COR|Performing forced concept updates ...
+
+[2017-03-28 16:01:16.161] [basic_logger] [info] COR|Forced concept updates completed.
+
+[2017-03-28 16:01:16.161] [basic_logger] [info] COR|Attempted bindings dumped below:
+Success: Level.1	[startloc](beijing|1.000000)->(/FlightRoot/Task/RequestStartLoc)/FlightRoot/Task/startLoc
+
+
+[2017-03-28 16:01:16.161] [basic_logger] [info] COR|Concepts Binding Phase completed (1 concept(s) bound, 0 concept(s) blocked out).
+
+[2017-03-28 16:01:16.161] [basic_logger] [info] COR|Acquired new user_utterance_end event.
+
+[2017-03-28 16:01:16.161] [basic_logger] [info] STA|Updating dialog state ...
+
+[2017-03-28 16:01:16.161] [basic_logger] [info] COR|Expectation Agenda Assembly Phase initiated.
+
+[2017-03-28 16:01:16.161] [basic_logger] [info] COR|Compiling Expectation Agenda ...
+
+[2017-03-28 16:01:16.161] [basic_logger] [info] COR|Compiling Expectation Agenda completed.
+
+[2017-03-28 16:01:16.161] [basic_logger] [info] COR|Enforcing binding policies ...
+
+[2017-03-28 16:01:16.161] [basic_logger] [info] COR|Enforcing binding policies completed.
+
+[2017-03-28 16:01:16.161] [basic_logger] [info] AGN|Concept expectation agenda dumped below:
+ Level 0: generated by /FlightRoot/Task/RequestStartLoc
+  O [startloc] -> (/FlightRoot/Task/RequestStartLoc)/FlightRoot/Task/startLoc
+ Level 1: generated by /FlightRoot/Task
+  O [endloc] -> (/FlightRoot/Task/RequestEndLoc)/FlightRoot/Task/endLoc
+  O [startdate] -> (/FlightRoot/Task/RequestDate)/FlightRoot/Task/startDate
+ Level 2: generated by /FlightRoot
+
+[2017-03-28 16:01:16.161] [basic_logger] [info] COR|Expectation Agenda Assembly Phase completed (3 levels).
+
+[2017-03-28 16:01:16.161] [basic_logger] [info] STA|Dialog state update completed: /FlightRoot/Task/RequestStartLoc at 2 (iEHIndex=4):
+turn_number = 2
+notify_prompts = 
+dialog_state = /FlightRoot/Task/RequestStartLoc
+nonu_threshold = 0.0000
+stack = {
+/FlightRoot/Task/RequestStartLoc
+  /FlightRoot/Task
+  /FlightRoot
+}
+agenda = {
+0:
+O[startloc]V
+1:
+O[endloc]V,
+O[startdate]V
+2:
+}
+input_line_config = {
+
+}
+
+[2017-03-28 16:01:16.161] [basic_logger] [warning] Property [uttid] not found in event. Returned empty string.
+
+[2017-03-28 16:01:16.161] [basic_logger] [info] COR|Processed new input [User:]
+
+[2017-03-28 16:01:16.161] [basic_logger] [warning] Property [uttid] not found in event. Returned empty string.
+
+[2017-03-28 16:01:16.161] [basic_logger] [info] COR|Starting DMCore processing [User:]
+
+[2017-03-28 16:01:16.161] [basic_logger] [info] COR|Eliminated 1 completed agent(s) (dumped below) from the execution stack.
+/FlightRoot/Task/RequestStartLoc
+
+[2017-03-28 16:01:16.161] [basic_logger] [info] COR|Eliminated completed agents from stack [User:]
+
+[2017-03-28 16:01:16.161] [basic_logger] [info] COR|Focus Claims Assembly Phase initiated.
+
+[2017-03-28 16:01:16.161] [basic_logger] [info] COR|0 agent(s) claiming focus.
+
+[2017-03-28 16:01:16.161] [basic_logger] [info] COR|Pruning Focus Claims list.
+
+[2017-03-28 16:01:16.161] [basic_logger] [info] COR|0 agents(s) eliminated from the focus claims list.
+
+[2017-03-28 16:01:16.161] [basic_logger] [info] COR|Focus Claims Assembly Phase completed (0 claim(s)).
+
+[2017-03-28 16:01:16.161] [basic_logger] [info] COR|Executing dialog agent /FlightRoot/Task [User:]
+
+[2017-03-28 16:01:16.161] [basic_logger] [info] COR|Agent /FlightRoot/Task/RequestEndLoc added on the execution stack by /FlightRoot/Task.
+
+[2017-03-28 16:01:16.161] [basic_logger] [warning] Property [uttid] not found in event. Returned empty string.
+
+[2017-03-28 16:01:16.161] [basic_logger] [info] COR|Starting DMCore processing [User:]
+
+[2017-03-28 16:01:16.162] [basic_logger] [info] COR|Eliminated completed agents from stack [User:]
+
+[2017-03-28 16:01:16.162] [basic_logger] [info] COR|Executing dialog agent /FlightRoot/Task/RequestEndLoc [User:]
+
+[2017-03-28 16:01:16.162] [basic_logger] [info] OTP|Processing output prompt 0 from /FlightRoot/Task/RequestEndLoc. (dump below)
+{request|请说目的地。}
+
+[2017-03-28 16:01:16.162] [basic_logger] [info] COR|Set floor status to system
+
+[2017-03-28 16:01:27.928] [basic_logger] [info] INP|wait message form input_queue success
+
+[2017-03-28 16:01:27.928] [basic_logger] [info] INP|[endloc] shanghai
+
+[2017-03-28 16:01:27.928] [basic_logger] [info] COR|Concepts Binding Phase initiated.
+
+[2017-03-28 16:01:27.928] [basic_logger] [info] COR|Event matches [endloc].
+
+[2017-03-28 16:01:27.929] [basic_logger] [info] COR|Slot [endloc](endLoc|1.000000) bound to concept (/FlightRoot/Task/RequestEndLoc)/FlightRoot/Task/endLoc.
+
+[2017-03-28 16:01:27.929] [basic_logger] [info] COR|Performing forced concept updates ...
+
+[2017-03-28 16:01:27.929] [basic_logger] [info] COR|Forced concept updates completed.
+
+[2017-03-28 16:01:27.929] [basic_logger] [info] COR|Attempted bindings dumped below:
+Success: Level.1	[endloc](shanghai|1.000000)->(/FlightRoot/Task/RequestEndLoc)/FlightRoot/Task/endLoc
+
+
+[2017-03-28 16:01:27.929] [basic_logger] [info] COR|Concepts Binding Phase completed (1 concept(s) bound, 0 concept(s) blocked out).
+
+[2017-03-28 16:01:27.929] [basic_logger] [info] COR|Acquired new user_utterance_end event.
+
+[2017-03-28 16:01:27.929] [basic_logger] [info] STA|Updating dialog state ...
+
+[2017-03-28 16:01:27.929] [basic_logger] [info] COR|Expectation Agenda Assembly Phase initiated.
+
+[2017-03-28 16:01:27.929] [basic_logger] [info] COR|Compiling Expectation Agenda ...
+
+[2017-03-28 16:01:27.929] [basic_logger] [info] COR|Compiling Expectation Agenda completed.
+
+[2017-03-28 16:01:27.929] [basic_logger] [info] COR|Enforcing binding policies ...
+
+[2017-03-28 16:01:27.929] [basic_logger] [info] COR|Enforcing binding policies completed.
+
+[2017-03-28 16:01:27.929] [basic_logger] [info] AGN|Concept expectation agenda dumped below:
+ Level 0: generated by /FlightRoot/Task/RequestEndLoc
+  O [endloc] -> (/FlightRoot/Task/RequestEndLoc)/FlightRoot/Task/endLoc
+ Level 1: generated by /FlightRoot/Task
+  O [startdate] -> (/FlightRoot/Task/RequestDate)/FlightRoot/Task/startDate
+  O [startloc] -> (/FlightRoot/Task/RequestStartLoc)/FlightRoot/Task/startLoc
+ Level 2: generated by /FlightRoot
+
+[2017-03-28 16:01:27.929] [basic_logger] [info] COR|Expectation Agenda Assembly Phase completed (3 levels).
+
+[2017-03-28 16:01:27.929] [basic_logger] [info] STA|Dialog state update completed: /FlightRoot/Task/RequestEndLoc at 3 (iEHIndex=5):
+turn_number = 3
+notify_prompts = 
+dialog_state = /FlightRoot/Task/RequestEndLoc
+nonu_threshold = 0.0000
+stack = {
+/FlightRoot/Task/RequestEndLoc
+  /FlightRoot/Task
+  /FlightRoot
+}
+agenda = {
+0:
+O[endloc]V
+1:
+O[startdate]V,
+O[startloc]V
+2:
+}
+input_line_config = {
+
+}
+
+[2017-03-28 16:01:27.929] [basic_logger] [warning] Property [uttid] not found in event. Returned empty string.
+
+[2017-03-28 16:01:27.929] [basic_logger] [info] COR|Processed new input [User:]
+
+[2017-03-28 16:01:27.929] [basic_logger] [warning] Property [uttid] not found in event. Returned empty string.
+
+[2017-03-28 16:01:27.929] [basic_logger] [info] COR|Starting DMCore processing [User:]
+
+[2017-03-28 16:01:27.929] [basic_logger] [info] COR|Eliminated 1 completed agent(s) (dumped below) from the execution stack.
+/FlightRoot/Task/RequestEndLoc
+
+[2017-03-28 16:01:27.929] [basic_logger] [info] COR|Eliminated completed agents from stack [User:]
+
+[2017-03-28 16:01:27.929] [basic_logger] [info] COR|Focus Claims Assembly Phase initiated.
+
+[2017-03-28 16:01:27.929] [basic_logger] [info] COR|0 agent(s) claiming focus.
+
+[2017-03-28 16:01:27.929] [basic_logger] [info] COR|Pruning Focus Claims list.
+
+[2017-03-28 16:01:27.929] [basic_logger] [info] COR|0 agents(s) eliminated from the focus claims list.
+
+[2017-03-28 16:01:27.929] [basic_logger] [info] COR|Focus Claims Assembly Phase completed (0 claim(s)).
+
+[2017-03-28 16:01:27.929] [basic_logger] [info] COR|Executing dialog agent /FlightRoot/Task [User:]
+
+[2017-03-28 16:01:27.929] [basic_logger] [info] COR|Agent /FlightRoot/Task/InformResults added on the execution stack by /FlightRoot/Task.
+
+[2017-03-28 16:01:27.929] [basic_logger] [warning] Property [uttid] not found in event. Returned empty string.
+
+[2017-03-28 16:01:27.929] [basic_logger] [info] COR|Starting DMCore processing [User:]
+
+[2017-03-28 16:01:27.929] [basic_logger] [info] COR|Eliminated completed agents from stack [User:]
+
+[2017-03-28 16:01:27.930] [basic_logger] [info] COR|Executing dialog agent /FlightRoot/Task/InformResults [User:]
+
+[2017-03-28 16:01:27.930] [basic_logger] [info] OTP|Processing output prompt 0 from /FlightRoot/Task/InformResults. (dump below)
+{inform|您好，您好正在为您查询，请稍等。}
+
+[2017-03-28 16:01:27.930] [basic_logger] [warning] Property [uttid] not found in event. Returned empty string.
+
+[2017-03-28 16:01:27.930] [basic_logger] [info] COR|Starting DMCore processing [User:]
+
+[2017-03-28 16:01:27.930] [basic_logger] [info] COR|Eliminated 1 completed agent(s) (dumped below) from the execution stack.
+/FlightRoot/Task/InformResults
+
+[2017-03-28 16:01:27.930] [basic_logger] [info] COR|Eliminated completed agents from stack [User:]
+
+[2017-03-28 16:01:27.930] [basic_logger] [info] COR|Executing dialog agent /FlightRoot/Task [User:]
+
+[2017-03-28 16:01:27.930] [basic_logger] [info] COR|Agent /FlightRoot/Task/ExecuteFlight added on the execution stack by /FlightRoot/Task.
+
+[2017-03-28 16:01:27.930] [basic_logger] [warning] Property [uttid] not found in event. Returned empty string.
+
+[2017-03-28 16:01:27.930] [basic_logger] [info] COR|Starting DMCore processing [User:]
+
+[2017-03-28 16:01:27.930] [basic_logger] [info] COR|Eliminated completed agents from stack [User:]
+
+[2017-03-28 16:01:27.930] [basic_logger] [info] COR|Executing dialog agent /FlightRoot/Task/ExecuteFlight [User:]
+
+[2017-03-28 16:01:27.930] [basic_logger] [info] TMS|Preparing external server call...
+
+[2017-03-28 16:01:27.930] [basic_logger] [warning] Property [uttid] not found in event. Returned empty string.
+
+[2017-03-28 16:01:27.930] [basic_logger] [info] COR|Starting DMCore processing [User:]
+
+[2017-03-28 16:01:27.930] [basic_logger] [info] COR|Eliminated 2 completed agent(s) (dumped below) from the execution stack.
+/FlightRoot/Task/ExecuteFlight
+/FlightRoot/Task
+
+[2017-03-28 16:01:27.930] [basic_logger] [info] COR|Eliminated completed agents from stack [User:]
+
+[2017-03-28 16:01:27.930] [basic_logger] [info] COR|Executing dialog agent /FlightRoot [User:]
+
+[2017-03-28 16:01:27.930] [basic_logger] [info] COR|Agent /FlightRoot/Logout added on the execution stack by /FlightRoot.
+
+[2017-03-28 16:01:27.930] [basic_logger] [warning] Property [uttid] not found in event. Returned empty string.
+
+[2017-03-28 16:01:27.930] [basic_logger] [info] COR|Starting DMCore processing [User:]
+
+[2017-03-28 16:01:27.930] [basic_logger] [info] COR|Eliminated completed agents from stack [User:]
+
+[2017-03-28 16:01:27.930] [basic_logger] [info] COR|Executing dialog agent /FlightRoot/Logout [User:]
+
+[2017-03-28 16:01:27.930] [basic_logger] [info] COR|Agent /FlightRoot/Logout/InformLogout added on the execution stack by /FlightRoot/Logout.
+
+[2017-03-28 16:01:27.930] [basic_logger] [warning] Property [uttid] not found in event. Returned empty string.
+
+[2017-03-28 16:01:27.930] [basic_logger] [info] COR|Starting DMCore processing [User:]
+
+[2017-03-28 16:01:27.930] [basic_logger] [info] COR|Eliminated completed agents from stack [User:]
+
+[2017-03-28 16:01:27.930] [basic_logger] [info] COR|Executing dialog agent /FlightRoot/Logout/InformLogout [User:]
+
+[2017-03-28 16:01:27.930] [basic_logger] [info] OTP|Processing output prompt 0 from /FlightRoot/Logout/InformLogout. (dump below)
+{end|查询结束，感谢您的使用。}
+
+[2017-03-28 16:01:27.930] [basic_logger] [warning] Property [uttid] not found in event. Returned empty string.
+
+[2017-03-28 16:01:27.930] [basic_logger] [info] COR|Starting DMCore processing [User:]
+
+[2017-03-28 16:01:27.930] [basic_logger] [info] COR|Eliminated 3 completed agent(s) (dumped below) from the execution stack.
+/FlightRoot/Logout/InformLogout
+/FlightRoot/Logout
+/FlightRoot
+
+[2017-03-28 16:01:27.930] [basic_logger] [info] COR|Eliminated completed agents from stack [User:]
+
+[2017-03-28 16:01:27.930] [basic_logger] [info] COR|Sending close_session to the hub
+

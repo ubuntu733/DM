@@ -68,6 +68,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/RAVENCLAW.dir/DMCore/Outputs/FrameOutput.cpp.o"
   "CMakeFiles/RAVENCLAW.dir/DMCore/Outputs/Output.cpp.o"
   "CMakeFiles/RAVENCLAW.dir/Utils/Utils.cpp.o"
+  "CMakeFiles/RAVENCLAW.dir/main.cpp.o"
+  "CMakeFiles/RAVENCLAW.dir/DMCore/message/message.cpp.o"
   "RAVENCLAW.pdb"
   "RAVENCLAW"
 )

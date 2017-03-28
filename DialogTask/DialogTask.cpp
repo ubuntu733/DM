@@ -22,7 +22,7 @@ DEFINE_AGENCY(CFlightRoot,
 	SUCCEEDS_WHEN(COMPLETED(Logout))
 )
 DEFINE_INFORM_AGENT( CWelcome,
-    PROMPT(":non-interruptable 您好，欢迎使用航班查询系统")
+    PROMPT("inform|您好，欢迎使用航班查询系统")
 )
 DEFINE_AGENCY(CTask,
 	DEFINE_CONCEPTS(
@@ -45,29 +45,29 @@ DEFINE_AGENCY(CTask,
 DEFINE_REQUEST_AGENT( CRequestDate,
     REQUEST_CONCEPT(startDate)
  //   PRECONDITION(!IS_TRUE("flight_query.startDate"))
-    PROMPT(" 请问您要查询什么时间的航班？")
+    PROMPT(" request|请问您要查询什么时间的航班？")
     GRAMMAR_MAPPING(" [startDate]>startDate")
   //  SUCCEEDS_WHEN(IS_TRUE("flight_query.startDate"))
 )
 DEFINE_REQUEST_AGENT( CRequestStartLoc,
     REQUEST_CONCEPT(startLoc)
 //    PRECONDITION(!IS_TRUE("flight_query.RequestStartLoc"))
-    PROMPT("请说起始地点。")
+    PROMPT("request|请说起始地点。")
     GRAMMAR_MAPPING(" [startLoc]>startLoc")
 //    SUCCEEDS_WHEN(IS_TRUE("flight_query.startLoc"))
 )
 DEFINE_REQUEST_AGENT( CRequestEndLoc,
     REQUEST_CONCEPT(endLoc)
  //   PRECONDITION(!IS_TRUE("flight_query.RequestEndLoc"))
-    PROMPT("请说目的地。")
+    PROMPT("request|请说目的地。")
     GRAMMAR_MAPPING(" [endLoc]>endLoc")
  //   SUCCEEDS_WHEN(IS_TRUE("flight_query.endLoc"))
 )
 DEFINE_INFORM_AGENT( CInformResults,
-    PROMPT("您好，您好正在为您查询，请稍等。")
+    PROMPT("inform|您好，您好正在为您查询，请稍等。")
 )
 DEFINE_EXECUTE_AGENT( CExecuteFlight,
-    CALL("对不起，未查到相应的航班")
+    CALL("inform|对不起，未查到相应的航班")
 )
 
 DEFINE_AGENCY(CLogout,
@@ -76,7 +76,7 @@ DEFINE_AGENCY(CLogout,
 	SUCCEEDS_WHEN(COMPLETED(InformLogout))
 	)
 DEFINE_INFORM_AGENT( CInformLogout,
-    PROMPT("查询结束，感谢您的使用。")
+    PROMPT("end|查询结束，感谢您的使用。")
 )
 
 //-----------------------------------------------------------------------------

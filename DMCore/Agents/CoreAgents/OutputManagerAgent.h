@@ -100,7 +100,7 @@
 #include "DMCore/Agents/DialogAgents/DialogAgent.h"
 #include "DMCore/Concepts/AllConcepts.h"
 #include "DMCore/Outputs/Output.h"
-
+#include "DMCore/message/message.h"
 
 // A: Output Device parameters
 // if defined, device will send notifications back to output manager

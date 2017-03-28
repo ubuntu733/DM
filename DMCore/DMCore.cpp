@@ -225,8 +225,8 @@ void TerminateDialogCore() {
 //-----------------------------------------------------------------------------
 // THE DIALOG CORE THREAD FUNCTION
 //-----------------------------------------------------------------------------
-//int DialogCoreThread() {
-  int main() {
+int DialogCoreThread() {
+  //int main() {
   //暂时注释
  /* TRavenClawConfigParams rcpParams = *(TRavenClawConfigParams *)pParams;*/
 	//InitializeLogging(rcpParams.Get(RCP_LOG_DIR), 

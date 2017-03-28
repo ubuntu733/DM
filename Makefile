@@ -1722,6 +1722,30 @@ DMCore/Outputs/Output.cpp.s:
 	$(MAKE) -f CMakeFiles/RAVENCLAW.dir/build.make CMakeFiles/RAVENCLAW.dir/DMCore/Outputs/Output.cpp.s
 .PHONY : DMCore/Outputs/Output.cpp.s
 
+DMCore/message/message.o: DMCore/message/message.cpp.o
+.PHONY : DMCore/message/message.o
+
+# target to build an object file
+DMCore/message/message.cpp.o:
+	$(MAKE) -f CMakeFiles/RAVENCLAW.dir/build.make CMakeFiles/RAVENCLAW.dir/DMCore/message/message.cpp.o
+.PHONY : DMCore/message/message.cpp.o
+
+DMCore/message/message.i: DMCore/message/message.cpp.i
+.PHONY : DMCore/message/message.i
+
+# target to preprocess a source file
+DMCore/message/message.cpp.i:
+	$(MAKE) -f CMakeFiles/RAVENCLAW.dir/build.make CMakeFiles/RAVENCLAW.dir/DMCore/message/message.cpp.i
+.PHONY : DMCore/message/message.cpp.i
+
+DMCore/message/message.s: DMCore/message/message.cpp.s
+.PHONY : DMCore/message/message.s
+
+# target to generate assembly for a file
+DMCore/message/message.cpp.s:
+	$(MAKE) -f CMakeFiles/RAVENCLAW.dir/build.make CMakeFiles/RAVENCLAW.dir/DMCore/message/message.cpp.s
+.PHONY : DMCore/message/message.cpp.s
+
 DialogTask/DialogTask.o: DialogTask/DialogTask.cpp.o
 .PHONY : DialogTask/DialogTask.o
 
@@ -1769,6 +1793,30 @@ Utils/Utils.s: Utils/Utils.cpp.s
 Utils/Utils.cpp.s:
 	$(MAKE) -f CMakeFiles/RAVENCLAW.dir/build.make CMakeFiles/RAVENCLAW.dir/Utils/Utils.cpp.s
 .PHONY : Utils/Utils.cpp.s
+
+main.o: main.cpp.o
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	$(MAKE) -f CMakeFiles/RAVENCLAW.dir/build.make CMakeFiles/RAVENCLAW.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	$(MAKE) -f CMakeFiles/RAVENCLAW.dir/build.make CMakeFiles/RAVENCLAW.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	$(MAKE) -f CMakeFiles/RAVENCLAW.dir/build.make CMakeFiles/RAVENCLAW.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -1980,12 +2028,18 @@ help:
 	@echo "... DMCore/Outputs/Output.o"
 	@echo "... DMCore/Outputs/Output.i"
 	@echo "... DMCore/Outputs/Output.s"
+	@echo "... DMCore/message/message.o"
+	@echo "... DMCore/message/message.i"
+	@echo "... DMCore/message/message.s"
 	@echo "... DialogTask/DialogTask.o"
 	@echo "... DialogTask/DialogTask.i"
 	@echo "... DialogTask/DialogTask.s"
 	@echo "... Utils/Utils.o"
 	@echo "... Utils/Utils.i"
 	@echo "... Utils/Utils.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

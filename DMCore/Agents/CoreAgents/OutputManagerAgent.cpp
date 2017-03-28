@@ -390,7 +390,8 @@ vector<COutput*> COutputManagerAgent::Output(CDialogAgent* pGeneratorAgent,
         Log(OUTPUTMANAGER_STREAM, "Processing output prompt %d from %s. (dump "\
 			"below)\n%s", iOutputCounter, pGeneratorAgent->GetName().c_str(),
 			sFirstPrompt.c_str());
-    cout << sFirstPrompt << endl;
+      pushMessage(output_queue,sFirstPrompt);
+ //   cout << sFirstPrompt << endl;
 		// create the new output; if we are in a Galaxy configuration, 
 		// it's a CFrameOutput; if in an OAA configuration, it's a 
 		// CLFOutput

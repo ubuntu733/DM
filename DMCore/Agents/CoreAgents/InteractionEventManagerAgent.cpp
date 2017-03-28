@@ -91,10 +91,13 @@ void CInteractionEventManagerAgent::WaitForEvent() {
   if (qpieEventQueue.empty()) {
     CInteractionEvent *newinput = new CInteractionEvent(IET_USER_UTT_END);
     //cout << newinput->GetType() <<endl;
-    cout<<"请输入您想说的话:"<<endl;
+    //cout<<"请输入您想说的话:"<<endl;
     string slot,value;
-    string command;
-    getline(cin,command);
+    //string command;
+    //getline(cin,command);
+    string command = *waitMessage(input_queue);
+    Log(INPUTMANAGER_STREAM,"wait message form input_queue success");
+    Log(INPUTMANAGER_STREAM,command);
     while (!command.empty()){
      SplitOnFirst(command,";",slot,command);
      SplitOnFirst(slot," ",slot,value);

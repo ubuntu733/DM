@@ -6,7 +6,7 @@
 #include "DMCore/Events/InteractionEvent.h"
 #include "Utils/Utils.h"
 #include "DMCore/Agents/Agent.h"
-
+#include "DMCore/message/message.h"
 #define IET_DIALOG_STATE_CHANGE	"dialog_state_change"
 #define IET_USER_UTT_START	"user_utterance_start"
 #define IET_USER_UTT_END	"user_utterance_end"

@@ -1,0 +1,6 @@
+!.gitignore
+!/DialogTask/
+!/DMCore/
+!/spdlog/
+!/Tools/
+!/Utils/
