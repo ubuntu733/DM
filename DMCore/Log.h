@@ -70,8 +70,9 @@
 
 #include "Core.h"
 #include "Utils/Utils.h"
-#include "spdlog/spdlog.h"
-namespace spd = spdlog;
+#include <glog/logging.h>
+//#include "spdlog/spdlog.h"
+//namespace spd = spdlog;
 //-----------------------------------------------------------------------------
 // Logging streams: definition and functions
 //-----------------------------------------------------------------------------
@@ -175,7 +176,9 @@ void InitializeLogging(string sALogFolder, string sALogPrefix, string sALogFilen
 
 // D: logging closing function
 void TerminateLogging();
+void InitLog(char* logName,char* logFolder);
 
+void ShutdownLog();
 //-----------------------------------------------------------------------------
 // Error handling functions 
 //   these functions are basically stubs for the Log function

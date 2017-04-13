@@ -72,7 +72,7 @@
 // D: Exit on fatal error flag
 //-----------------------------------------------------------------------------
 
-auto my_logger = spd::basic_logger_mt("basic_logger","/home/alex/c++/DM/logs/log.txt");
+//auto my_logger = spd::basic_logger_mt("basic_logger","/home/alex/c++/DM/logs/log.txt");
 bool bExitOnFatalError; 
 
 //-----------------------------------------------------------------------------
@@ -241,14 +241,14 @@ int Log(string sLoggingStream, const char* lpszFormat, ... ) {
         //DWORD cWritten;
         //WriteFile(hStdOutput, lpszBuffer1, lstrlen(lpszBuffer1), &cWritten, NULL);
   if (sLoggingStream == "WAR"){
-    my_logger->warn(static_cast<string>(lpszBuffer));
+    LOG(WARNING) << static_cast<string>(lpszBuffer);
   } else if (sLoggingStream == "ERR") {
-    my_logger->error(static_cast<string>(lpszBuffer));
+    LOG(ERROR) << static_cast<string>(lpszBuffer);
   } else if (sLoggingStream == "FATAL_ERROR"){
-    my_logger->error(static_cast<string>(lpszBuffer));
+    LOG(FATAL) << static_cast<string>(lpszBuffer);
   }else {
-    string output = sLoggingStream + "|" + static_cast<string>(lpszBuffer);
-    my_logger->info(output);
+    LOG(INFO) << static_cast<string>(lpszBuffer);
+    //my_logger->info(output);
   }
    //my_logger->info(static_cast<string>(lpszBuffer1));
 
@@ -256,8 +256,7 @@ int Log(string sLoggingStream, const char* lpszFormat, ... ) {
   // and the stream is to enabled for logging
   /*if(fileLog && iPtr->second.bEnabled) {*/
 
-    //// then do the printf into the file
-    //fprintf(fileLog, "[%s@%s (%d)] ", sLoggingStream.c_str(), 
+    //// then do the printf into the file //fprintf(fileLog, "[%s@%s (%d)] ", sLoggingStream.c_str(), 
                  //TimestampToString(liTimestamp).c_str(), 
                  //GetSessionTimestamp(liTimestamp));
     //returnCode = vfprintf(fileLog, lpszFormat, pArgs);
@@ -274,6 +273,14 @@ int Log(string sLoggingStream, string sMessage) {
 	return Log(sLoggingStream, sMessage.c_str());
 }
 
+void InitLog(char* logName,char* logFolder) {
+  google::InitGoogleLogging(logName);
+  FLAGS_log_dir = logFolder;
+}
+
+void ShutdownLog(){
+  google::ShutdownGoogleLogging();
+}
 //-----------------------------------------------------------------------------
 // Logging initialization and closing functions
 //-----------------------------------------------------------------------------

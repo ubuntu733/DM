@@ -226,6 +226,7 @@ void TerminateDialogCore() {
 // THE DIALOG CORE THREAD FUNCTION
 //-----------------------------------------------------------------------------
 int DialogCoreThread() {
+  InitLog("DialogTask","/home/alex/c++/DM/logs");
   //int main() {
   //暂时注释
  /* TRavenClawConfigParams rcpParams = *(TRavenClawConfigParams *)pParams;*/
@@ -250,6 +251,7 @@ int DialogCoreThread() {
 	// Terminate the dialog core
 	TerminateDialogCore();
 
+  ShutdownLog();
 	// Finally, send a message to signal that this session of the 
 	// Dialog Core is over
 	//PostThreadMessage(g_idDMInterfaceThread, WM_DIALOGFINISHED, 0, 0);

@@ -1835,8 +1835,8 @@ void CDMCoreAgent::ContinueWith(CAgent* paPusher, CDialogAgent* pdaDialogAgent) 
 	// signals that the agenda needs to be recomputed
 	bAgendaModifiedFlag = true;
 
-    Log(DMCORE_STREAM, "Agent %s added on the execution stack by %s.", 
-        ehi.sCurrentAgent.c_str(), ehi.sScheduledBy.c_str());
+    //Log(DMCORE_STREAM, "Agent %s added on the execution stack by %s.", 
+        //ehi.sCurrentAgent.c_str(), ehi.sScheduledBy.c_str());
 }
 
 // D: Restarts a topic

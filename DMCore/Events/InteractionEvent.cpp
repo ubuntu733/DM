@@ -114,7 +114,7 @@ string CInteractionEvent::GetStringProperty(string sSlot) {
 	if (i != s2sProperties.end()) {
 		return i->second;
 	} else {
-		Log(WARNING_STREAM, "Property %s not found in event. "\
+		//Log(WARNING_STREAM, "Property %s not found in event. "\
 			"Returned empty string.", sSlot.c_str());
 		return "";
 	}

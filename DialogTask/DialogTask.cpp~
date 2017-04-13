@@ -13,92 +13,165 @@ DEFINE_FRAME_CONCEPT_TYPE( CFlightQuery,
     )
 )
 **/
-DEFINE_AGENCY(CFlightRoot,
+DEFINE_AGENCY(CRoot,
 	IS_MAIN_TOPIC()
+        DEFINE_CONCEPTS(
+            STRING_USER_CONCEPT(query,"expl"))
+	DEFINE_SUBAGENTS(
+		SUBAGENT(RootWelcome, CRootWelcome, "")
+                SUBAGENT(RequestQuery,CRequestQuery,"")
+		SUBAGENT(FlightRoot, CFlightRoot, "")
+                SUBAGENT(MusicRoot,CMusicRoot,"")
+		SUBAGENT(RootLogout, CRootLogout, ""))
+	SUCCEEDS_WHEN(COMPLETED(FlightRoot) || COMPLETED(MusicRoot))
+)
+DEFINE_INFORM_AGENT( CRootWelcome,
+    PROMPT("inform|您好，欢迎使用对话系统")
+)
+DEFINE_REQUEST_AGENT( CRequestQuery,
+    REQUEST_CONCEPT(query)
+ //   PRECONDITION(!IS_TRUE("flight_query.startDate"))
+    PROMPT(" request|请问您要使用什么业务？")
+    GRAMMAR_MAPPING(" [query]")
+//    ON_COMPLETION(std::cout<<C("query").GetHyp(0)->ValueToString()<<std::endl;)
+  //  SUCCEEDS_WHEN(IS_TRUE("flight_query.startDate"))
+)
+DEFINE_AGENCY(CFlightRoot,
+        PRECONDITION(C("query")==CString("flight"))
+//	IS_MAIN_TOPIC()
+        DEFINE_CONCEPTS(                                                                                                                        
+                STRING_SYSTEM_CONCEPT(startDate)
+                STRING_SYSTEM_CONCEPT(startLoc)
+                STRING_SYSTEM_CONCEPT(endLoc))
 	DEFINE_SUBAGENTS(
 		SUBAGENT(Welcome, CWelcome, "")
-		SUBAGENT(Task, CTask, "")
-		SUBAGENT(Logout, CLogout, ""))
-	SUCCEEDS_WHEN(COMPLETED(Logout))
-)
-DEFINE_INFORM_AGENT( CWelcome,
-    PROMPT(":non-interruptable 您好，欢迎使用航班查询系统")
-)
-DEFINE_AGENCY(CTask,
-	DEFINE_CONCEPTS(
-            STRING_SYSTEM_CONCEPT(startDate)
-            STRING_SYSTEM_CONCEPT(startLoc)
-            STRING_SYSTEM_CONCEPT(endLoc))
-//	    CUSTOM_SYSTEM_CONCEPT(FlightQuery, CFlightQuery))
-	DEFINE_SUBAGENTS(
-		SUBAGENT(RequestDate, CRequestDate, "")
+                SUBAGENT(RequestDate, CRequestDate, "")
 		SUBAGENT(RequestStartLoc, CRequestStartLoc, "")
 		SUBAGENT(RequestEndLoc, CRequestEndLoc, "")
 		SUBAGENT(InformResults, CInformResults, "")
 		SUBAGENT(ExecuteFlight, CExecuteFlight, ""))
-	SUCCEEDS_WHEN(COMPLETED(RequestDate) && 
-				  COMPLETED(RequestStartLoc) &&
-				  COMPLETED(RequestEndLoc) && 
-				  COMPLETED(InformResults) && 
-				  COMPLETED(ExecuteFlight))
-	)
+        TRIGGERED_BY(UPDATED(startDate) || UPDATED(startLoc) || UPDATED(endLoc))
+	SUCCEEDS_WHEN(COMPLETED(ExecuteFlight))
+)
+DEFINE_INFORM_AGENT( CWelcome,
+    PROMPT("inform|您好，欢迎使用航班查询系统")
+)
 DEFINE_REQUEST_AGENT( CRequestDate,
     REQUEST_CONCEPT(startDate)
  //   PRECONDITION(!IS_TRUE("flight_query.startDate"))
-    PROMPT(" 请问您要查询什么时间的航班？")
-    GRAMMAR_MAPPING(" [startDate]>startDate")
+    PROMPT(" request|请问您要查询什么时间的航班？")
+    GRAMMAR_MAPPING(" [startDate]")
+//    ON_COMPLETION(std::cout<<C("startDate").GetTopHyp()->ValueToString()<<std::endl;)
   //  SUCCEEDS_WHEN(IS_TRUE("flight_query.startDate"))
 )
 DEFINE_REQUEST_AGENT( CRequestStartLoc,
     REQUEST_CONCEPT(startLoc)
 //    PRECONDITION(!IS_TRUE("flight_query.RequestStartLoc"))
-    PROMPT("请说起始地点。")
-    GRAMMAR_MAPPING(" [startLoc]>startLoc")
+    PROMPT("request|请说起始地点。")
+    GRAMMAR_MAPPING(" [startLoc]")
 //    SUCCEEDS_WHEN(IS_TRUE("flight_query.startLoc"))
 )
 DEFINE_REQUEST_AGENT( CRequestEndLoc,
     REQUEST_CONCEPT(endLoc)
  //   PRECONDITION(!IS_TRUE("flight_query.RequestEndLoc"))
-    PROMPT("请说目的地。")
-    GRAMMAR_MAPPING(" [endLoc]>endLoc")
+    PROMPT("request|请说目的地。")
+    GRAMMAR_MAPPING(" [endLoc]")
  //   SUCCEEDS_WHEN(IS_TRUE("flight_query.endLoc"))
 )
 DEFINE_INFORM_AGENT( CInformResults,
-    PROMPT("您好，您好正在为您查询，请稍等。")
+    PROMPT("end|您好，您好正在为您查询，请稍等。")
 )
 DEFINE_EXECUTE_AGENT( CExecuteFlight,
-    CALL("对不起，未查到相应的航班")
+    CALL("inform|对不起，未查到相应的航班")
 )
 
-DEFINE_AGENCY(CLogout,
-	IS_MAIN_TOPIC()
-	DEFINE_SUBAGENTS(SUBAGENT(InformLogout, CInformLogout, ""))
-	SUCCEEDS_WHEN(COMPLETED(InformLogout))
-	)
-DEFINE_INFORM_AGENT( CInformLogout,
-    PROMPT("查询结束，感谢您的使用。")
+
+//////////////////////////////////////
+DEFINE_AGENCY(CMusicRoot,
+        PRECONDITION(C("query")==CString("music"))
+        DEFINE_CONCEPTS(
+            STRING_SYSTEM_CONCEPT(song)
+            STRING_SYSTEM_CONCEPT(singer)
+            STRING_SYSTEM_CONCEPT(time))
+//	IS_MAIN_TOPIC()
+	DEFINE_SUBAGENTS(
+		SUBAGENT(MusicWelcome, CMusicWelcome, "")
+		SUBAGENT(RequestSinger, CRequestSinger, "")
+		SUBAGENT(RequestSong, CRequestSong, "")
+//		SUBAGENT(RequestTime, CRequestTime, "")
+		SUBAGENT(InformMusic, CInformMusic, "")
+		SUBAGENT(ExecuteMusic, CExecuteMusic, ""))
+        TRIGGERED_BY(UPDATED(song) || UPDATED(singer))
+	SUCCEEDS_WHEN(COMPLETED(ExecuteMusic) && COMPLETED(RequestSinger) && COMPLETED(RequestSong))
 )
 
+DEFINE_INFORM_AGENT( CMusicWelcome,
+    PROMPT("inform|您好，欢迎使用歌曲搜索系统")
+)
+
+DEFINE_REQUEST_AGENT( CRequestSinger,
+    REQUEST_CONCEPT(singer)
+ //   PRECONDITION(!IS_TRUE("flight_query.startDate"))
+    PROMPT(" request|请问您需要查询谁的歌曲？")
+    GRAMMAR_MAPPING(" [singer]")
+  //  SUCCEEDS_WHEN(IS_TRUE("flight_query.startDate"))
+)
+DEFINE_REQUEST_AGENT( CRequestSong,
+    REQUEST_CONCEPT(song)
+//    PRECONDITION(!IS_TRUE("flight_query.RequestStartLoc"))
+    PROMPT("request|请说歌名。")
+    GRAMMAR_MAPPING(" [song]")
+//    SUCCEEDS_WHEN(IS_TRUE("flight_query.startLoc"))
+)
+/**
+DEFINE_REQUEST_AGENT( CRequestTime,
+    REQUEST_CONCEPT(time)
+ //   PRECONDITION(!IS_TRUE("flight_query.RequestEndLoc"))
+    PROMPT("request|请说时间。")
+    GRAMMAR_MAPPING(" [time]>time")
+ //   SUCCEEDS_WHEN(IS_TRUE("flight_query.endLoc"))
+)
+**/
+DEFINE_INFORM_AGENT( CInformMusic,
+    PROMPT("inform|您好，您好正在为您查询，请稍等。")
+)
+DEFINE_EXECUTE_AGENT( CExecuteMusic,
+    CALL("inform|对不起，未查到相应的歌曲")
+)
+
+
+DEFINE_INFORM_AGENT( CRootLogout,
+    PROMPT("end|感谢您的使用。")
+)
 //-----------------------------------------------------------------------------
 //
 // AGENT DECLARATIONS
 //
 //-----------------------------------------------------------------------------
 DECLARE_AGENTS(
-	DECLARE_AGENT(CFlightRoot)
-        DECLARE_AGENT(CWelcome)               
-        DECLARE_AGENT(CTask)
-            DECLARE_AGENT(CRequestDate)
-            DECLARE_AGENT(CRequestStartLoc)
-            DECLARE_AGENT(CRequestEndLoc)
-            DECLARE_AGENT(CInformResults)
-            DECLARE_AGENT(CExecuteFlight)
-        DECLARE_AGENT(CLogout)
-            DECLARE_AGENT(CInformLogout)
+	DECLARE_AGENT(CRoot)
+                DECLARE_AGENT(CRootWelcome)
+                DECLARE_AGENT(CFlightRoot)
+                        DECLARE_AGENT(CWelcome)
+                        DECLARE_AGENT(CRequestQuery)
+                        DECLARE_AGENT(CRequestDate)
+                        DECLARE_AGENT(CRequestStartLoc)
+                        DECLARE_AGENT(CRequestEndLoc)
+                        DECLARE_AGENT(CInformResults)
+                        DECLARE_AGENT(CExecuteFlight) 
+                DECLARE_AGENT(CMusicRoot)
+                        DECLARE_AGENT(CMusicWelcome)
+                        DECLARE_AGENT(CRequestSinger)
+                        DECLARE_AGENT(CRequestSong)
+  //                      DECLARE_AGENT(CRequestTime)
+                        DECLARE_AGENT(CInformMusic)
+                        DECLARE_AGENT(CExecuteMusic)
+                DECLARE_AGENT(CRootLogout)
+                
             
 )
 
 //-----------------------------------------------------------------------------
 // DIALOG TASK ROOT DECLARATION
 //-----------------------------------------------------------------------------
-DECLARE_DIALOG_TASK_ROOT(FlightRoot, CFlightRoot, "")
+DECLARE_DIALOG_TASK_ROOT(Root, CRoot, "")

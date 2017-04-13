@@ -96,8 +96,8 @@ void CInteractionEventManagerAgent::WaitForEvent() {
     //string command;
     //getline(cin,command);
     string command = *waitMessage(input_queue);
-    Log(INPUTMANAGER_STREAM,"wait message form input_queue success");
-    Log(INPUTMANAGER_STREAM,command);
+    //Log(INPUTMANAGER_STREAM,"wait message form input_queue success");
+    //Log(INPUTMANAGER_STREAM,command);
     while (!command.empty()){
      SplitOnFirst(command,";",slot,command);
      SplitOnFirst(slot," ",slot,value);
