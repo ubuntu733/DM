@@ -87,7 +87,7 @@
 
 // D: Other includes for generic headers
 #include <stdio.h>
-#include <malloc.h>
+#include <sys/malloc.h>
 #include <stdlib.h>
 #include <stdarg.h>
 #include <time.h>

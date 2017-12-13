@@ -1407,7 +1407,7 @@ void CDMCoreAgent::processNonUnderstanding() {
 
     // sets meta information on the input, specifying it's a non-understanding
     Log(DMCORE_STREAM, "Non-understanding %s detected.", NON_UNDERSTANDING);
-    pInteractionEventManager->GetLastInput()->SetProperty("["NON_UNDERSTANDING"]", "true");
+    pInteractionEventManager->GetLastInput()->SetProperty("[\"NON_UNDERSTANDING\"]", "true");
 
     Log(DMCORE_STREAM, "Process Non-Understanding Phase completed.");
 }

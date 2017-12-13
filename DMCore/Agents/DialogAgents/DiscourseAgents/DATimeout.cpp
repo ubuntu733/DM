@@ -106,7 +106,7 @@ DEFINE_EXECUTE_AGENT( CTS_HandleFirstTimeout,
 	EXPECT_WHEN(pDMCore->GetLastInputTurnNumber() >
 				(int)C("LastTimeoutTurnNumber"))
     CAN_TRIGGER_DURING_GROUNDING
-	TRIGGERED_BY_COMMANDS("@"TIMEOUT_ELAPSED, "none")
+	//TRIGGERED_BY_COMMANDS("@"TIMEOUT_ELAPSED, "none")
 	ON_COMPLETION(RESET)
 	virtual TDialogExecuteReturnCode Execute() {
 		// obtain a pointer to the previously focused agent 
@@ -138,7 +138,7 @@ DEFINE_AGENCY( CTS_ReestablishChannel,
 	EXPECT_WHEN(pDMCore->GetLastInputTurnNumber() ==
 				(int)C("LastTimeoutTurnNumber"))
 	CAN_TRIGGER_DURING_GROUNDING
-	TRIGGERED_BY_COMMANDS("@"TIMEOUT_ELAPSED, "none")
+//	TRIGGERED_BY_COMMANDS("@"TIMEOUT_ELAPSED, "none")
 	IS_MAIN_TOPIC()
 	ON_COMPLETION(RESET)
 	DEFINE_CONCEPTS(
@@ -247,7 +247,7 @@ DEFINE_EXECUTE_AGENT( CTT_HandleFirstTimeout,
 
 	EXPECT_WHEN(pDMCore->GetLastInputTurnNumber() >
 				(int)C("LastTimeoutTurnNumber"))
-	TRIGGERED_BY_COMMANDS("@"TIMEOUT_ELAPSED, "none")
+	//TRIGGERED_BY_COMMANDS("@"TIMEOUT_ELAPSED, "none")
 	ON_COMPLETION(RESET)
 	virtual TDialogExecuteReturnCode Execute() {
 		// obtain a pointer to the previously focused agent 
@@ -279,7 +279,7 @@ DEFINE_AGENCY( CTT_ReestablishChannel,
     IS_NOT_DTS_AGENT()
 
 	EXPECT_WHEN(iExecuteCounter==0)
-	TRIGGERED_BY_COMMANDS("@"TIMEOUT_ELAPSED, "none")
+	//TRIGGERED_BY_COMMANDS("@"TIMEOUT_ELAPSED, "none")
 	IS_MAIN_TOPIC()
 	ON_COMPLETION(RESET)
 	DEFINE_CONCEPTS(

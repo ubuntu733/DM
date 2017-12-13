@@ -65,7 +65,7 @@
 //    [TERMINATE_SESSION]
 DEFINE_EXECUTE_AGENT( CTerminate, 
 	CAN_TRIGGER_DURING_GROUNDING
-	TRIGGERED_BY_COMMANDS("*[session:"TERMINATE_SESSION"]", "")
+	TRIGGERED_BY_COMMANDS("*[session:\"TERMINATE_SESSION\"]", "")
 	virtual TDialogExecuteReturnCode Execute() {
 		// return a session complete code
 		return dercFinishDialog;
@@ -82,7 +82,7 @@ void RegisterTerminateAgent() {
 //    [TERMINATE_SESSION]
 DEFINE_EXECUTE_AGENT( CTerminateAndCloseSession, 
 	CAN_TRIGGER_DURING_GROUNDING
-	TRIGGERED_BY_COMMANDS("*[session:"TERMINATE_SESSION"]", "")
+	TRIGGERED_BY_COMMANDS("*[session:\"TERMINATE_SESSION\"]", "")
 	virtual TDialogExecuteReturnCode Execute() {
 		// return a session complete code
 		return dercFinishDialogAndCloseSession;

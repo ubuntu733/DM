@@ -226,7 +226,8 @@ void TerminateDialogCore() {
 // THE DIALOG CORE THREAD FUNCTION
 //-----------------------------------------------------------------------------
 int DialogCoreThread() {
-  InitLog("DialogTask","/home/alex/c++/DM/logs");
+  InitLog("DialogTask","/Users/chenchengen/CLionProjects/DM/logs");
+
   //int main() {
   //暂时注释
  /* TRavenClawConfigParams rcpParams = *(TRavenClawConfigParams *)pParams;*/
